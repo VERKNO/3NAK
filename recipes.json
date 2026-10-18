@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-18",
+  "recipes": [
+    {
+      "id": "candied-fruit-loaf-cake",
+      "title": "Candied Fruit Loaf Cake",
+      "category": "Cake",
+      "cuisine": "European",
+      "description": "Simple buttery loaf cake to use up leftover candied fruit mix (e.g. Belbake).",
+      "servings": 8,
+      "time": "20 min prep + 50-60 min bake",
+      "oven": "160°C top & bottom heat, no fan (glass tin)",
+      "equipment": ["Lauben 550BC mixer (flat beater)", "wall oven", "loaf tin (glass is fine)"],
+      "ingredients": [
+        {"amount": 125, "unit": "g", "name": "butter, softened"},
+        {"amount": 100, "unit": "g", "name": "sugar"},
+        {"amount": 8, "unit": "g", "name": "vanilla sugar (1 sachet, optional)"},
+        {"amount": 2, "unit": null, "name": "eggs"},
+        {"amount": 200, "unit": "g", "name": "plain flour (hladká mouka)"},
+        {"amount": 2, "unit": "tsp", "name": "baking powder (prášek do pečiva), a bit less than half a packet"},
+        {"amount": 0.25, "unit": "tsp", "name": "salt"},
+        {"amount": 80, "unit": "ml", "name": "milk"},
+        {"amount": 150, "unit": "g", "name": "candied fruit mix (100-200 g works)"},
+        {"amount": 1, "unit": "tbsp", "name": "extra flour, to coat the fruit"}
+      ],
+      "steps": [
+        {"title": "Prep", "text": "Heat the oven to 160°C, top and bottom heat, no fan. Grease the tin and line it with baking paper."},
+        {"title": "Coat the fruit", "text": "Toss the candied fruit with 1 tbsp flour so it doesn't sink."},
+        {"title": "Cream", "text": "With the flat beater on medium, beat butter, sugar and vanilla sugar for about 3 minutes until pale and fluffy."},
+        {"title": "Eggs", "text": "Add the eggs one at a time on medium speed."},
+        {"title": "Batter", "text": "Mix flour, baking powder and salt. On the lowest speed, add half the flour, then the milk, then the rest. Stop as soon as it's combined."},
+        {"title": "Fruit", "text": "Fold in the fruit by hand with a spatula. Spread in the tin."},
+        {"title": "Bake", "text": "Bake on the middle rack. Start checking with a skewer at 35-40 min; usually done at 50-60 min. If the top browns too fast, cover loosely with foil."},
+        {"title": "Cool", "text": "Cool 10 min in the tin, then on a rack. Don't put the hot glass tin on a cold or wet surface."}
+      ],
+      "notes": [
+        "Lemon or orange zest goes well with it.",
+        "Glaze: 4 tbsp powdered sugar + 1 tbsp lemon juice, drizzled over the cooled cake.",
+        "No mixer: melt the butter, whisk with sugar, eggs and milk, then stir in the dry ingredients and fruit."
+      ],
+      "tags": ["baking", "leftovers", "sweet"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "arsik-kapr",
+      "title": "Arsik Kapr (Batak Carp Arsik)",
+      "category": "Fish",
+      "cuisine": "Batak",
+      "description": "Arsik ikan mas made with Czech carp, simmered in a yellow turmeric and Sichuan-pepper paste with beans and lemongrass. Simplified: no kecombrang or asam cikala.",
+      "servings": 4,
+      "time": "20 min prep + 40 min cooking",
+      "oven": null,
+      "equipment": ["chopper (for the paste)", "gas stove", "wide pan with lid"],
+      "ingredients": [
+        {"amount": 1, "unit": null, "name": "carp (kapr), about 1-1.2 kg, cleaned and cut in 4 pieces, or 800 g carp/trout fillets"},
+        {"amount": 1, "unit": null, "name": "lime, juiced (for rubbing the fish)"},
+        {"amount": 1, "unit": "tsp", "name": "salt (for the fish)"},
+        {"amount": 6, "unit": null, "name": "shallots (šalotky), for the paste"},
+        {"amount": 4, "unit": null, "name": "garlic cloves, for the paste"},
+        {"amount": 4, "unit": null, "name": "macadamia nuts (instead of kemiri), for the paste"},
+        {"amount": 1.5, "unit": "tsp", "name": "ground turmeric (kurkuma), or 3 cm fresh, for the paste"},
+        {"amount": 3, "unit": "cm", "name": "ginger, for the paste"},
+        {"amount": 3, "unit": "cm", "name": "galangal (or 1 tsp galangal powder), for the paste"},
+        {"amount": 1.5, "unit": "tsp", "name": "Sichuan pepper, toasted (instead of andaliman), for the paste"},
+        {"amount": 4, "unit": null, "name": "red chilies, for the paste (fewer for milder)"},
+        {"amount": 2, "unit": null, "name": "lemongrass stalks, bruised and knotted"},
+        {"amount": 4, "unit": null, "name": "kaffir lime leaves (optional)"},
+        {"amount": 200, "unit": "g", "name": "green beans (fazolové lusky) or long beans, in 5 cm pieces"},
+        {"amount": 4, "unit": null, "name": "spring onions, in 5 cm pieces"},
+        {"amount": 400, "unit": "ml", "name": "water"},
+        {"amount": 1, "unit": "tbsp", "name": "lime juice, to finish (instead of asam cikala)"}
+      ],
+      "steps": [
+        {"title": "Marinate", "text": "Rub the fish with lime juice and salt. Leave 15 minutes."},
+        {"title": "Paste", "text": "Toast the Sichuan pepper in a dry pan for 1 minute. Put all paste ingredients in the chopper and blitz to a fairly smooth paste, adding a splash of water if needed."},
+        {"title": "Layer", "text": "In a wide pan, lay the beans and lemongrass on the bottom, then the fish on top. Mix the paste with the water and pour over. Add the lime leaves."},
+        {"title": "Simmer", "text": "Cover and simmer on low heat for 30-40 minutes. Don't stir; spoon the sauce over the fish now and then and gently shake the pan. The sauce should reduce to a thick yellow gravy."},
+        {"title": "Finish", "text": "Add the spring onions and lime juice in the last 5 minutes. Taste for salt. Serve with rice."}
+      ],
+      "notes": [
+        "Carp has many small bones; trout (pstruh) is easier and cooks in about 20 minutes.",
+        "Live and fresh carp are easiest to find in December; frozen carp portions are sold year-round in bigger supermarkets.",
+        "Sichuan pepper is a close relative of andaliman and gives the same tingly feeling."
+      ],
+      "shopping": {
+        "Sichuan pepper, galangal, lemongrass, lime leaves, long beans": "Sapa market (Praha-Libuš) or Asian grocery shops",
+        "carp, trout, green beans, shallots, macadamia, ground turmeric": "regular supermarkets (Albert, Tesco, Kaufland, Billa, Lidl)"
+      },
+      "tags": ["batak", "fish", "stovetop"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "saksang-santan",
+      "title": "Saksang Santan (Pork in Coconut, no blood)",
+      "category": "Meat",
+      "cuisine": "Batak",
+      "description": "Spicy Batak pork stew with andaliman-style spices, made with coconut milk instead of pork blood. Good in the multi-cooker.",
+      "servings": 4,
+      "time": "20 min prep + 60-75 min cooking",
+      "oven": null,
+      "equipment": ["chopper", "Lauben multi-cooker 18SB or a pot on the gas stove"],
+      "ingredients": [
+        {"amount": 800, "unit": "g", "name": "pork shoulder (vepřová plec) or pork belly (bůček), 3 cm cubes"},
+        {"amount": 6, "unit": null, "name": "shallots, for the paste"},
+        {"amount": 5, "unit": null, "name": "garlic cloves, for the paste"},
+        {"amount": 3, "unit": "cm", "name": "ginger, for the paste"},
+        {"amount": 3, "unit": "cm", "name": "galangal (or 1 tsp powder), for the paste"},
+        {"amount": 1, "unit": "tsp", "name": "ground turmeric, for the paste"},
+        {"amount": 2, "unit": "tsp", "name": "Sichuan pepper, toasted, for the paste"},
+        {"amount": 5, "unit": null, "name": "red chilies (or 1-2 tbsp sambal oelek), for the paste"},
+        {"amount": 4, "unit": null, "name": "macadamia nuts, for the paste"},
+        {"amount": 2, "unit": null, "name": "lemongrass stalks, bruised"},
+        {"amount": 4, "unit": null, "name": "kaffir lime leaves (optional)"},
+        {"amount": 3, "unit": null, "name": "bay leaves (bobkový list, instead of salam)"},
+        {"amount": 1, "unit": "tbsp", "name": "oil"},
+        {"amount": 200, "unit": "ml", "name": "water"},
+        {"amount": 400, "unit": "ml", "name": "coconut milk (1 can)"},
+        {"amount": 1, "unit": "tsp", "name": "salt, to taste"},
+        {"amount": 1, "unit": "tsp", "name": "sugar"}
+      ],
+      "steps": [
+        {"title": "Paste", "text": "Toast the Sichuan pepper briefly, then blitz all paste ingredients in the chopper."},
+        {"title": "Brown", "text": "Brown the pork in the oil, in a pan or using the multi-cooker's frying/sauté program, until lightly coloured."},
+        {"title": "Fry the paste", "text": "Add the paste and fry for 5 minutes, stirring, until fragrant and the oil separates a little."},
+        {"title": "Stew", "text": "Add lemongrass, lime leaves, bay leaves, water, salt and sugar. Pot: cover and simmer on low for about 60 minutes. Multi-cooker: use the stew/slow-cook program; check your manual for the time setting (meat should end up fork-tender)."},
+        {"title": "Coconut", "text": "Add the coconut milk and cook uncovered for 10-15 minutes more, stirring, until the sauce thickens. Taste and adjust salt and chili. Serve with rice."}
+      ],
+      "notes": [
+        "Traditional saksang uses pork blood; the coconut milk version is a common alternative.",
+        "Tastes even better the next day.",
+        "Works with chicken thighs too; cut the stewing time to about 30 minutes."
+      ],
+      "shopping": {
+        "Sichuan pepper, galangal, lemongrass, lime leaves": "Sapa or Asian grocery shops",
+        "pork, coconut milk, shallots, macadamia, bay leaves": "regular supermarkets"
+      },
+      "tags": ["batak", "pork", "multicooker"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "mie-gomak-spaghetti",
+      "title": "Mie Gomak Goreng (with spaghetti)",
+      "category": "Noodles",
+      "cuisine": "Batak",
+      "description": "Batak fried noodles made with thick spaghetti instead of mie lidi, with a turmeric and Sichuan-pepper paste. Quick weeknight dish.",
+      "servings": 2,
+      "time": "25 min",
+      "oven": null,
+      "equipment": ["chopper", "gas stove", "pan or wok"],
+      "ingredients": [
+        {"amount": 200, "unit": "g", "name": "thick spaghetti or linguine"},
+        {"amount": 4, "unit": null, "name": "shallots, for the paste"},
+        {"amount": 3, "unit": null, "name": "garlic cloves, for the paste"},
+        {"amount": 0.5, "unit": "tsp", "name": "ground turmeric, for the paste"},
+        {"amount": 1, "unit": "tsp", "name": "Sichuan pepper, toasted, for the paste"},
+        {"amount": 2, "unit": null, "name": "red chilies, for the paste"},
+        {"amount": 2, "unit": null, "name": "macadamia nuts, for the paste"},
+        {"amount": 2, "unit": "tbsp", "name": "oil"},
+        {"amount": 150, "unit": "g", "name": "chicken or pork, thin strips (optional)"},
+        {"amount": 1, "unit": null, "name": "egg"},
+        {"amount": 100, "unit": "g", "name": "white cabbage (zelí), shredded"},
+        {"amount": 1, "unit": "tbsp", "name": "kecap manis (sweet soy sauce, optional)"},
+        {"amount": 1, "unit": "tbsp", "name": "soy sauce"},
+        {"amount": 2, "unit": null, "name": "spring onions, sliced"}
+      ],
+      "steps": [
+        {"title": "Pasta", "text": "Cook the spaghetti in salted water until just al dente. Drain and toss with a few drops of oil."},
+        {"title": "Paste", "text": "Blitz the paste ingredients in the chopper."},
+        {"title": "Fry", "text": "Fry the paste in the oil for 3-4 minutes. Add the meat and cook through."},
+        {"title": "Egg and cabbage", "text": "Push everything aside, scramble the egg in the gap, then add the cabbage and stir-fry for 2 minutes."},
+        {"title": "Toss", "text": "Add the spaghetti, kecap manis and soy sauce. Toss on high heat for 2 minutes. Finish with spring onions."}
+      ],
+      "notes": [
+        "Thick spaghetti (No. 7 or thicker) is the closest to mie lidi.",
+        "For mie gomak kuah (soup), add 500 ml chicken stock and 100 ml coconut milk after frying the paste, then add the pasta."
+      ],
+      "shopping": {
+        "Sichuan pepper, kecap manis": "Asian grocery shops; kecap manis is also in some big supermarkets",
+        "everything else": "regular supermarkets"
+      },
+      "tags": ["batak", "noodles", "quick"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "daun-ubi-tumbuk",
+      "title": "Daun Ubi Tumbuk (Greens in Coconut)",
+      "category": "Vegetables",
+      "cuisine": "Batak",
+      "description": "Batak pounded cassava leaves in coconut milk. The chopper does the pounding. Uses frozen cassava leaves, or kale/spinach as a substitute.",
+      "servings": 4,
+      "time": "15 min prep + 30-40 min cooking",
+      "oven": null,
+      "equipment": ["chopper", "gas stove", "pot"],
+      "ingredients": [
+        {"amount": 500, "unit": "g", "name": "frozen cassava leaves, thawed, or 400 g kale (kadeřávek) without stems"},
+        {"amount": 5, "unit": null, "name": "shallots, for the paste"},
+        {"amount": 3, "unit": null, "name": "garlic cloves, for the paste"},
+        {"amount": 3, "unit": null, "name": "macadamia nuts, for the paste"},
+        {"amount": 1, "unit": "tsp", "name": "Sichuan pepper, toasted, for the paste"},
+        {"amount": 2, "unit": null, "name": "red chilies, for the paste"},
+        {"amount": 2, "unit": "cm", "name": "galangal, for the paste"},
+        {"amount": 1, "unit": null, "name": "lemongrass stalk, bruised"},
+        {"amount": 200, "unit": "ml", "name": "water"},
+        {"amount": 400, "unit": "ml", "name": "coconut milk (1 can)"},
+        {"amount": 1, "unit": "tsp", "name": "salt, to taste"},
+        {"amount": 1, "unit": "tsp", "name": "sugar"},
+        {"amount": 30, "unit": "g", "name": "dried anchovies (ikan teri), optional"}
+      ],
+      "steps": [
+        {"title": "Chop the leaves", "text": "Pulse the leaves in the chopper in batches until finely chopped. This replaces pounding."},
+        {"title": "Paste", "text": "Blitz the paste ingredients in the chopper."},
+        {"title": "Cook the leaves", "text": "Simmer the leaves in the water with the lemongrass. Cassava leaves: at least 20 minutes, until soft. Kale: about 8 minutes."},
+        {"title": "Coconut", "text": "Add the paste, coconut milk, salt, sugar and anchovies. Simmer uncovered for 15-20 minutes, stirring often, until thick."}
+      ],
+      "notes": [
+        "Cassava leaves must be cooked thoroughly; never eat them raw or undercooked.",
+        "Kale gives the closest texture; spinach works but cooks down a lot and is softer."
+      ],
+      "shopping": {
+        "frozen cassava leaves": "some Asian or African grocery shops (check the freezer section)",
+        "kale, coconut milk, shallots, macadamia": "regular supermarkets",
+        "galangal, Sichuan pepper, dried anchovies": "Sapa or Asian grocery shops"
+      },
+      "tags": ["batak", "vegetables", "side"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "ayam-panggang-andaliman",
+      "title": "Ayam Panggang Andaliman (Oven Chicken)",
+      "category": "Chicken",
+      "cuisine": "Batak",
+      "description": "Simplified ayam napinadar: oven-roasted turmeric chicken thighs tossed in a fresh Sichuan-pepper sambal. No blood sauce.",
+      "servings": 4,
+      "time": "15 min prep + 30 min marinate + 40 min roast",
+      "oven": "200°C top & bottom heat",
+      "equipment": ["wall oven", "chopper", "baking tray or glass dish"],
+      "ingredients": [
+        {"amount": 1, "unit": "kg", "name": "chicken thighs (kuřecí stehna), bone-in"},
+        {"amount": 1, "unit": "tsp", "name": "ground turmeric"},
+        {"amount": 3, "unit": null, "name": "garlic cloves, grated"},
+        {"amount": 1, "unit": null, "name": "lime, juiced"},
+        {"amount": 1, "unit": "tsp", "name": "salt"},
+        {"amount": 1, "unit": "tbsp", "name": "oil"},
+        {"amount": 1, "unit": null, "name": "batch Sambal Andaliman (see that recipe)"}
+      ],
+      "steps": [
+        {"title": "Marinate", "text": "Rub the chicken with turmeric, garlic, lime juice, salt and oil. Leave at least 30 minutes (or overnight in the fridge)."},
+        {"title": "Roast", "text": "Heat the oven to 200°C. Roast skin side up for 35-40 minutes until golden and the juices run clear. In a glass dish, use 190°C and allow a few extra minutes."},
+        {"title": "Sambal", "text": "Meanwhile make the Sambal Andaliman."},
+        {"title": "Toss", "text": "Toss the hot chicken with half the sambal and serve the rest on the side, with rice."}
+      ],
+      "notes": [
+        "Traditional napinadar uses a sauce thickened with chicken blood; this version leaves it out.",
+        "Can also be pan-grilled on the gas stove: about 8-10 minutes per side on medium heat."
+      ],
+      "shopping": {
+        "Sichuan pepper": "Sapa or Asian grocery shops",
+        "everything else": "regular supermarkets"
+      },
+      "tags": ["batak", "chicken", "oven"],
+      "added": "2026-10-18"
+    },
+    {
+      "id": "sambal-andaliman",
+      "title": "Sambal Andaliman (Sichuan pepper sambal)",
+      "category": "Sambal",
+      "cuisine": "Batak",
+      "description": "Fresh Batak sambal with the tingly citrus kick of andaliman, using Sichuan pepper. Made in the chopper.",
+      "servings": 6,
+      "time": "10 min",
+      "oven": null,
+      "equipment": ["chopper"],
+      "ingredients": [
+        {"amount": 8, "unit": null, "name": "red chilies (or 5 chilies + ½ red bell pepper for milder)"},
+        {"amount": 4, "unit": null, "name": "bird's eye chilies (optional, for heat)"},
+        {"amount": 5, "unit": null, "name": "shallots"},
+        {"amount": 2, "unit": null, "name": "garlic cloves"},
+        {"amount": 1.5, "unit": "tbsp", "name": "Sichuan pepper, toasted"},
+        {"amount": 1, "unit": null, "name": "lime, juiced"},
+        {"amount": 0.5, "unit": "tsp", "name": "salt"}
+      ],
+      "steps": [
+        {"title": "Toast", "text": "Toast the Sichuan pepper in a dry pan for about 1 minute until fragrant. Let it cool."},
+        {"title": "Chop", "text": "Pulse everything except the lime juice in the chopper to a coarse sambal. Don't make it a smooth purée."},
+        {"title": "Season", "text": "Stir in the lime juice and salt to taste."}
+      ],
+      "notes": [
+        "Keeps 3-4 days in a closed jar in the fridge.",
+        "Use it with grilled fish, chicken, eggs, or as a side for any of the Batak dishes here."
+      ],
+      "shopping": {
+        "Sichuan pepper, bird's eye chilies": "Sapa or Asian grocery shops",
+        "red chilies, shallots, garlic, limes": "regular supermarkets"
+      },
+      "tags": ["batak", "sambal", "no-cook"],
+      "added": "2026-10-18"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Andrew's Recipe Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: recipe index on the left, open recipe card on the right; stacks to one column on phones */
+:root {
+  --bg: #F3F5F1;
+  --surface: #FFFFFF;
+  --fg: #1C221E;
+  --muted: #5F6A63;
+  --line: #D9DFD8;
+  --accent: #8A2D52;       /* candied-cherry red */
+  --accent-soft: #F4E3EA;
+  --warn: #8A5A00;
+  --warn-soft: #FFF2D6;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #131714; --surface: #1B201C; --fg: #E8ECE7; --muted: #9AA59D; --line: #2D352F;
+  --accent: #EC93B5; --accent-soft: #3A2230; --warn: #F2C46B; --warn-soft: #3A2F17; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #131714; --surface: #1B201C; --fg: #E8ECE7; --muted: #9AA59D; --line: #2D352F;
+  --accent: #EC93B5; --accent-soft: #3A2230; --warn: #F2C46B; --warn-soft: #3A2F17; color-scheme: dark; }
+
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 22px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -0.02em; margin: 0; }
+.sub { color: var(--muted); margin: 0; font-size: 0.95rem; }
+.grid { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: start; }
+@media (max-width: 780px) { .grid { grid-template-columns: 1fr; } }
+
+.index { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.search { width: 100%; box-sizing: border-box; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--fg); }
+.search:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.list { display: flex; flex-direction: column; gap: 2px; }
+.item { all: unset; cursor: pointer; display: grid; gap: 2px; padding: 10px 12px; border-radius: 8px; }
+.item:hover { background: var(--surface); }
+.item[aria-current="true"] { background: var(--accent-soft); }
+.item .t { font-weight: 600; }
+.item .m { font-size: 0.85rem; color: var(--muted); }
+.empty { color: var(--muted); font-size: 0.95rem; padding: 10px 12px; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(18px, 3vw, 32px); min-width: 0; }
+.card h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.015em; line-height: 1.15; margin: 4px 0 6px; text-wrap: balance; }
+.desc { color: var(--muted); margin: 0 0 18px; max-width: 62ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.chip { font-size: 0.85rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); }
+.chip.oven { background: var(--warn-soft); border-color: transparent; color: var(--warn); font-weight: 600; }
+.cols { display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; gap: 32px; }
+@media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+.cols > section { min-width: 0; }
+h3 { font-family: var(--display); font-weight: 500; font-size: 1.15rem; margin: 0 0 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.serv { display: inline-flex; align-items: center; gap: 6px; font-family: var(--body); font-size: 0.9rem; color: var(--muted); }
+.serv button { all: unset; cursor: pointer; width: 26px; height: 26px; text-align: center; line-height: 26px; border-radius: 6px; border: 1px solid var(--line); color: var(--fg); }
+.serv button:hover { border-color: var(--accent); color: var(--accent); }
+.serv output { font-family: var(--mono); color: var(--fg); min-width: 2ch; text-align: center; }
+ul.ing { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+ul.ing li { display: grid; grid-template-columns: 7.5ch 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); }
+ul.ing .q { font-family: var(--mono); font-size: 0.9rem; font-variant-numeric: tabular-nums; text-align: right; color: var(--accent); }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 10px; }
+ol.steps li::before { content: counter(s); font-family: var(--mono); font-size: 0.85rem; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+ol.steps b { display: block; }
+.notes { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+.notes ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; color: var(--muted); max-width: 70ch; }
+.tips { margin-top: 28px; }
+.tips .card { padding: 20px 24px; }
+.tiplist { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; }
+.tiplist b { display: block; font-weight: 600; }
+.tiplist span { color: var(--muted); font-size: 0.95rem; }
+.back { all: unset; cursor: pointer; color: var(--accent); font-size: 0.9rem; display: none; margin-bottom: 8px; }
+@media (max-width: 780px) {
+  .grid.open .index { display: none; }
+  .grid:not(.open) .detail { display: none; }
+  .back { display: inline-block; }
+}
+.status { color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .item { transition: background .15s; } }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <h1>Andrew's Recipe Book</h1>
+    <p class="sub">Batak home cooking and baking, adapted for Prague shops.</p>
+  </header>
+
+  <div class="grid" id="grid">
+    <aside class="index">
+      <input class="search" id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes">
+      <div class="label">Recipes</div>
+      <div class="list" id="list"><div class="empty">Loading recipes…</div></div>
+    </aside>
+
+    <main class="detail" id="detail">
+      <div class="card"><p class="status" id="status">Pick a recipe from the list.</p></div>
+    </main>
+  </div>
+
+  <section class="tips" id="tipsWrap" hidden>
+    <div class="card">
+      <h3>Kitchen notes</h3>
+      <div class="tiplist" id="tips"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const state = { recipes: [], current: null, servings: null, q: "" };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function fmtAmount(a, unit) {
+  if (a == null || a === "") return "";
+  let v = Number(a);
+  if (!isFinite(v)) return esc(a);
+  if (!unit) v = Math.round(v * 2) / 2;
+  else if (["tsp","tbsp","cup"].includes(unit)) v = Math.round(v * 4) / 4;
+  else if (v >= 20) v = Math.round(v / 5) * 5;
+  else v = Math.round(v * 10) / 10;
+  const fr = { 0.25: "¼", 0.5: "½", 0.75: "¾" };
+  const whole = Math.floor(v), part = +(v - whole).toFixed(2);
+  let txt = fr[part] ? (whole ? whole + fr[part] : fr[part]) : String(v);
+  return unit ? txt + " " + unit : txt;
+}
+
+function renderList() {
+  const q = state.q.trim().toLowerCase();
+  const rows = state.recipes.filter(r => {
+    if (!q) return true;
+    const hay = [r.title, r.category, r.description, ...(r.ingredients || []).map(i => i.name)].join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+  const el = $("list");
+  if (!state.recipes.length) { el.innerHTML = '<div class="empty">No recipes yet. Ask Claude to save one.</div>'; return; }
+  if (!rows.length) { el.innerHTML = '<div class="empty">No recipe matches that search.</div>'; return; }
+  el.innerHTML = rows.map(r => `<button class="item" data-id="${esc(r.id)}" aria-current="${state.current === r.id}">
+      <span class="t">${esc(r.title)}</span>
+      <span class="m">${esc([r.category, r.time].filter(Boolean).join(" · "))}</span></button>`).join("");
+}
+
+function renderDetail() {
+  const r = state.recipes.find(x => x.id === state.current);
+  if (!r) return;
+  const base = Number(r.servings) || 1;
+  const s = state.servings ?? base;
+  const k = s / base;
+  const chips = [
+    r.oven ? `<span class="chip oven">${esc(r.oven)}</span>` : "",
+    r.time ? `<span class="chip">${esc(r.time)}</span>` : "",
+    ...(r.equipment || []).map(e => `<span class="chip">${esc(e)}</span>`)
+  ].join("");
+  $("detail").innerHTML = `<div class="card">
+    <button class="back" id="back">← All recipes</button>
+    <div class="label">${esc(r.category || "Recipe")}</div>
+    <h2>${esc(r.title)}</h2>
+    ${r.description ? `<p class="desc">${esc(r.description)}</p>` : ""}
+    <div class="facts">${chips}</div>
+    <div class="cols">
+      <section>
+        <h3>Ingredients
+          <span class="serv"><button id="minus" aria-label="Fewer servings">−</button><output id="sv">${s}</output><button id="plus" aria-label="More servings">+</button> servings</span>
+        </h3>
+        <ul class="ing">${(r.ingredients || []).map(i => `<li><span class="q">${fmtAmount(i.amount != null ? i.amount * k : null, i.unit)}</span><span>${esc(i.name)}</span></li>`).join("")}</ul>
+      </section>
+      <section>
+        <h3>Method</h3>
+        <ol class="steps">${(r.steps || []).map(st => `<li><div>${st.title ? `<b>${esc(st.title)}</b>` : ""}${esc(st.text)}</div></li>`).join("")}</ol>
+      </section>
+    </div>
+    ${(r.notes || []).length ? `<div class="notes"><h3>Notes</h3><ul>${r.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}
+  </div>`;
+  $("minus").onclick = () => { state.servings = Math.max(1, s - 1); renderDetail(); };
+  $("plus").onclick = () => { state.servings = s + 1; renderDetail(); };
+  $("back").onclick = () => { $("grid").classList.remove("open"); };
+}
+
+function openRecipe(id) {
+  state.current = id; state.servings = null;
+  $("grid").classList.add("open");
+  try { localStorage.setItem("lastRecipe", id); } catch (e) {}
+  renderList(); renderDetail();
+}
+
+$("list").addEventListener("click", e => { const b = e.target.closest(".item"); if (b) openRecipe(b.dataset.id); });
+$("q").addEventListener("input", e => { state.q = e.target.value; renderList(); });
+
+(async () => {
+  try {
+    const data = await (await fetch("recipes.json", {cache: "no-store"})).json();
+    state.recipes = (data.recipes || []).slice().sort((a, b) => a.title.localeCompare(b.title));
+    let last = null; try { last = localStorage.getItem("lastRecipe"); } catch (e) {}
+    const hash = location.hash.slice(1);
+    const pick = [hash, last].find(id => state.recipes.some(r => r.id === id));
+    state.current = pick || (state.recipes[0] && state.recipes[0].id);
+    renderList(); renderDetail();
+  } catch (e) {
+    $("list").innerHTML = '<div class="empty">Couldn\'t load recipes.json. Open this page through a web server or GitHub Pages, not as a local file.</div>';
+  }
+  try {
+    const k = await (await fetch("kitchen.json", {cache: "no-store"})).json();
+    const items = k.tips || [];
+    $("tipsWrap").hidden = !items.length;
+    $("tips").innerHTML = items.map(t => `<div><b>${esc(t.title)}</b><span>${esc(t.text)}</span></div>`).join("");
+  } catch (e) {}
+})();
+</script>
+
+</body>
+</html>

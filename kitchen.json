@@ -1,0 +1,21 @@
+{
+  "equipment": [
+    "Lauben 550BC stand mixer (flat beater, whisk, dough hook)",
+    "Lauben Multi Cooker 18SB (CZ edition)",
+    "chopper",
+    "smoothie blender",
+    "gas stove",
+    "pan",
+    "wall oven",
+    "glass baking tin"
+  ],
+  "tips": [
+    {"title": "Mixer attachments", "text": "Flat beater for cakes, cookies and creaming butter. Whisk for egg whites, cream and sponge cake. Dough hook for bread and yeast dough."},
+    {"title": "No fan for loaf cakes", "text": "Use top & bottom heat for dense, tall cakes (banana, fruit, loaf). Fan browns and dries the top too fast. If using fan, lower the temperature by about 20°C."},
+    {"title": "Glass tin", "text": "Bake about 10-15°C lower than a metal tin, line with paper, check early, and never set it hot on a cold or wet surface."},
+    {"title": "Dry outside, wet middle", "text": "Lower heat and bake longer, tent with foil once brown, fill the tin only 2/3, or use a light metal tin."},
+    {"title": "Andaliman substitute", "text": "Sichuan pepper, toasted 1 minute in a dry pan, is the closest substitute."},
+    {"title": "Kemiri substitute", "text": "Macadamia nuts, same amount."},
+    {"title": "Where to shop in Prague", "text": "Sapa market (Praha-Libuš) and Asian grocery shops for galangal, lemongrass, lime leaves, Sichuan pepper and chilies. Regular supermarkets for the rest."}
+  ]
+}
