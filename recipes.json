@@ -1,251 +1,492 @@
 {
-  "schema_version": 1,
-  "updated": "2026-10-18",
+  "schema_version": 2,
+  "updated": "2026-10-19",
   "recipes": [
     {
       "id": "candied-fruit-loaf-cake",
-      "title": "Candied Fruit Loaf Cake",
-      "category": "Cake",
+      "title": [
+        "Candied Fruit Loaf Cake",
+        "Kue Loaf Buah Kering"
+      ],
+      "category": [
+        "Cake",
+        "Kue"
+      ],
       "cuisine": "European",
-      "description": "Simple buttery loaf cake to use up leftover candied fruit mix (e.g. Belbake).",
+      "description": [
+        "Simple buttery loaf cake to use up leftover candied fruit mix (e.g. Belbake).",
+        "Kue loaf mentega yang sederhana untuk menghabiskan sisa campuran buah kering manisan (misalnya Belbake)."
+      ],
       "servings": 8,
-      "time": "20 min prep + 50-60 min bake",
-      "oven": "160°C top & bottom heat, no fan (glass tin)",
+      "time": [
+        "20 min prep + 50-60 min bake",
+        "20 menit persiapan + 50-60 menit panggang"
+      ],
+      "oven": [
+        "160°C top & bottom heat, no fan (glass tin)",
+        "160°C api atas & bawah, tanpa kipas (loyang kaca)"
+      ],
       "equipment": [
-        "Lauben 550BC mixer (flat beater)",
-        "wall oven",
-        "loaf tin (glass is fine)"
+        [
+          "Lauben 550BC mixer (flat beater)",
+          "Mixer Lauben 550BC (pengaduk pipih)"
+        ],
+        [
+          "wall oven",
+          "oven tanam"
+        ],
+        [
+          "loaf tin (glass is fine)",
+          "loyang loaf (loyang kaca juga bisa)"
+        ]
       ],
       "ingredients": [
         {
           "amount": 125,
           "unit": "g",
-          "name": "butter, softened"
+          "name": [
+            "butter, softened",
+            "mentega, dilembutkan"
+          ]
         },
         {
           "amount": 100,
           "unit": "g",
-          "name": "sugar"
+          "name": [
+            "sugar",
+            "gula"
+          ]
         },
         {
           "amount": 8,
           "unit": "g",
-          "name": "vanilla sugar (1 sachet, optional)"
+          "name": [
+            "vanilla sugar (1 sachet, optional)",
+            "gula vanili (1 sachet, opsional)"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "eggs"
+          "name": [
+            "eggs",
+            "telur"
+          ]
         },
         {
           "amount": 200,
           "unit": "g",
-          "name": "plain flour (hladká mouka)"
+          "name": [
+            "plain flour (hladká mouka)",
+            "tepung terigu serbaguna (hladká mouka)"
+          ]
         },
         {
           "amount": 2,
           "unit": "tsp",
-          "name": "baking powder (prášek do pečiva), a bit less than half a packet"
+          "name": [
+            "baking powder (prášek do pečiva), a bit less than half a packet",
+            "baking powder (prášek do pečiva), sedikit kurang dari setengah bungkus"
+          ]
         },
         {
           "amount": 0.25,
           "unit": "tsp",
-          "name": "salt"
+          "name": [
+            "salt",
+            "garam"
+          ]
         },
         {
           "amount": 80,
           "unit": "ml",
-          "name": "milk"
+          "name": [
+            "milk",
+            "susu"
+          ]
         },
         {
           "amount": 150,
           "unit": "g",
-          "name": "candied fruit mix (100-200 g works)"
+          "name": [
+            "candied fruit mix (100-200 g works)",
+            "campuran buah kering manisan (100-200 g bisa)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "extra flour, to coat the fruit"
+          "name": [
+            "extra flour, to coat the fruit",
+            "tepung tambahan, untuk membalur buah"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Prep",
-          "text": "Heat the oven to 160°C, top and bottom heat, no fan. Grease the tin and line it with baking paper."
+          "title": [
+            "Prep",
+            "Persiapan"
+          ],
+          "text": [
+            "Heat the oven to 160°C, top and bottom heat, no fan. Grease the tin and line it with baking paper.",
+            "Panaskan oven 160°C, api atas dan bawah, tanpa kipas. Olesi loyang dengan mentega dan alasi dengan kertas roti."
+          ]
         },
         {
-          "title": "Coat the fruit",
-          "text": "Toss the candied fruit with 1 tbsp flour so it doesn't sink."
+          "title": [
+            "Coat the fruit",
+            "Balur buah"
+          ],
+          "text": [
+            "Toss the candied fruit with 1 tbsp flour so it doesn't sink.",
+            "Aduk buah kering dengan 1 sdm tepung supaya tidak tenggelam ke dasar."
+          ]
         },
         {
-          "title": "Cream",
-          "text": "With the flat beater on medium, beat butter, sugar and vanilla sugar for about 3 minutes until pale and fluffy."
+          "title": [
+            "Cream",
+            "Kocok mentega"
+          ],
+          "text": [
+            "With the flat beater on medium, beat butter, sugar and vanilla sugar for about 3 minutes until pale and fluffy.",
+            "Dengan pengaduk pipih di kecepatan sedang, kocok mentega, gula, dan gula vanili sekitar 3 menit sampai pucat dan mengembang."
+          ]
         },
         {
-          "title": "Eggs",
-          "text": "Add the eggs one at a time on medium speed."
+          "title": [
+            "Eggs",
+            "Telur"
+          ],
+          "text": [
+            "Add the eggs one at a time on medium speed.",
+            "Masukkan telur satu per satu dengan kecepatan sedang."
+          ]
         },
         {
-          "title": "Batter",
-          "text": "Mix flour, baking powder and salt. On the lowest speed, add half the flour, then the milk, then the rest. Stop as soon as it's combined."
+          "title": [
+            "Batter",
+            "Adonan"
+          ],
+          "text": [
+            "Mix flour, baking powder and salt. On the lowest speed, add half the flour, then the milk, then the rest. Stop as soon as it's combined.",
+            "Campur tepung, baking powder, dan garam. Dengan kecepatan paling rendah, masukkan setengah tepung, lalu susu, lalu sisa tepung. Berhenti begitu tercampur rata."
+          ]
         },
         {
-          "title": "Fruit",
-          "text": "Fold in the fruit by hand with a spatula. Spread in the tin."
+          "title": [
+            "Fruit",
+            "Buah"
+          ],
+          "text": [
+            "Fold in the fruit by hand with a spatula. Spread in the tin.",
+            "Aduk balik buah dengan spatula secara manual. Ratakan di loyang."
+          ]
         },
         {
-          "title": "Bake",
-          "text": "Bake on the middle rack. Start checking with a skewer at 35-40 min; usually done at 50-60 min. If the top browns too fast, cover loosely with foil."
+          "title": [
+            "Bake",
+            "Panggang"
+          ],
+          "text": [
+            "Bake on the middle rack. Start checking with a skewer at 35-40 min; usually done at 50-60 min. If the top browns too fast, cover loosely with foil.",
+            "Panggang di rak tengah. Mulai cek dengan tusuk sate di menit 35-40; biasanya matang di menit 50-60. Kalau atasnya terlalu cepat cokelat, tutup longgar dengan aluminium foil."
+          ]
         },
         {
-          "title": "Cool",
-          "text": "Cool 10 min in the tin, then on a rack. Don't put the hot glass tin on a cold or wet surface."
+          "title": [
+            "Cool",
+            "Dinginkan"
+          ],
+          "text": [
+            "Cool 10 min in the tin, then on a rack. Don't put the hot glass tin on a cold or wet surface.",
+            "Diamkan 10 menit di loyang, lalu pindahkan ke rak. Jangan taruh loyang kaca panas di permukaan dingin atau basah."
+          ]
         }
       ],
       "notes": [
-        "Lemon or orange zest goes well with it.",
-        "Glaze: 4 tbsp powdered sugar + 1 tbsp lemon juice, drizzled over the cooled cake.",
-        "No mixer: melt the butter, whisk with sugar, eggs and milk, then stir in the dry ingredients and fruit."
+        [
+          "Lemon or orange zest goes well with it.",
+          "Parutan kulit lemon atau jeruk cocok ditambahkan."
+        ],
+        [
+          "Glaze: 4 tbsp powdered sugar + 1 tbsp lemon juice, drizzled over the cooled cake.",
+          "Glasur: 4 sdm gula halus + 1 sdm air lemon, siramkan di atas kue yang sudah dingin."
+        ],
+        [
+          "No mixer: melt the butter, whisk with sugar, eggs and milk, then stir in the dry ingredients and fruit.",
+          "Tanpa mixer: lelehkan mentega, kocok dengan gula, telur, dan susu, lalu aduk bahan kering dan buah."
+        ]
       ],
       "tags": [
         "baking",
         "leftovers",
         "sweet"
       ],
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "shopping": []
     },
     {
       "id": "arsik-kapr",
-      "title": "Arsik Kapr (Batak Carp Arsik)",
-      "category": "Fish",
+      "title": [
+        "Arsik Kapr (Batak Carp Arsik)",
+        "Arsik Ikan Mas (Kapr)"
+      ],
+      "category": [
+        "Fish",
+        "Ikan"
+      ],
       "cuisine": "Batak",
-      "description": "Arsik ikan mas made with Czech carp, simmered in a yellow turmeric and Sichuan-pepper paste with beans and lemongrass. Simplified: no kecombrang or asam cikala.",
+      "description": [
+        "Arsik ikan mas made with Czech carp, simmered in a yellow turmeric and Sichuan-pepper paste with beans and lemongrass. Simplified: no kecombrang or asam cikala.",
+        "Arsik ikan mas dengan ikan kapr Ceko, dimasak dengan bumbu kuning kunyit dan lada Sichuan, bersama buncis dan serai. Versi sederhana: tanpa kecombrang dan asam cikala."
+      ],
       "servings": 4,
-      "time": "20 min prep + 40 min cooking",
+      "time": [
+        "20 min prep + 40 min cooking",
+        "20 menit persiapan + 40 menit masak"
+      ],
       "oven": null,
       "equipment": [
-        "chopper (for the paste)",
-        "gas stove",
-        "wide pan with lid"
+        [
+          "chopper (for the paste)",
+          "chopper (untuk bumbu halus)"
+        ],
+        [
+          "gas stove",
+          "kompor gas"
+        ],
+        [
+          "wide pan with lid",
+          "wajan lebar bertutup"
+        ]
       ],
       "ingredients": [
         {
           "amount": 1,
           "unit": null,
-          "name": "carp (kapr), about 1-1.2 kg, cleaned and cut in 4 pieces, or 800 g carp/trout fillets"
+          "name": [
+            "carp (kapr), about 1-1.2 kg, cleaned and cut in 4 pieces, or 800 g carp/trout fillets",
+            "ikan mas (kapr), sekitar 1-1,2 kg, dibersihkan dan dipotong 4, atau 800 g fillet ikan mas/trout"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "lime, juiced (for rubbing the fish)"
+          "name": [
+            "lime, juiced (for rubbing the fish)",
+            "jeruk nipis, diperas (untuk melumuri ikan)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt (for the fish)"
+          "name": [
+            "salt (for the fish)",
+            "garam (untuk ikan)"
+          ]
         },
         {
           "amount": 6,
           "unit": null,
-          "name": "shallots (šalotky), for the paste"
+          "name": [
+            "shallots (šalotky), for the paste",
+            "bawang merah (šalotky), untuk bumbu halus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "garlic cloves, for the paste"
+          "name": [
+            "garlic cloves, for the paste",
+            "bawang putih, untuk bumbu halus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "macadamia nuts (instead of kemiri), for the paste"
+          "name": [
+            "macadamia nuts (instead of kemiri), for the paste",
+            "kacang macadamia (pengganti kemiri), untuk bumbu halus"
+          ]
         },
         {
           "amount": 1.5,
           "unit": "tsp",
-          "name": "ground turmeric (kurkuma), or 3 cm fresh, for the paste"
+          "name": [
+            "ground turmeric (kurkuma), or 3 cm fresh, for the paste",
+            "kunyit bubuk (kurkuma), atau 3 cm kunyit segar, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "ginger, for the paste"
+          "name": [
+            "ginger, for the paste",
+            "jahe, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "galangal (or 1 tsp galangal powder), for the paste"
+          "name": [
+            "galangal (or 1 tsp galangal powder), for the paste",
+            "lengkuas (atau 1 sdt lengkuas bubuk), untuk bumbu halus"
+          ]
         },
         {
           "amount": 1.5,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted (instead of andaliman), for the paste"
+          "name": [
+            "Sichuan pepper, toasted (instead of andaliman), for the paste",
+            "lada Sichuan, disangrai (pengganti andaliman), untuk bumbu halus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "red chilies, for the paste (fewer for milder)"
+          "name": [
+            "red chilies, for the paste (fewer for milder)",
+            "cabai merah, untuk bumbu halus (kurangi supaya tidak terlalu pedas)"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "lemongrass stalks, bruised and knotted"
+          "name": [
+            "lemongrass stalks, bruised and knotted",
+            "serai, dimemarkan dan disimpul"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "kaffir lime leaves (optional)"
+          "name": [
+            "kaffir lime leaves (optional)",
+            "daun jeruk (opsional)"
+          ]
         },
         {
           "amount": 200,
           "unit": "g",
-          "name": "green beans (fazolové lusky) or long beans, in 5 cm pieces"
+          "name": [
+            "green beans (fazolové lusky) or long beans, in 5 cm pieces",
+            "buncis (fazolové lusky) atau kacang panjang, potong 5 cm"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "spring onions, in 5 cm pieces"
+          "name": [
+            "spring onions, in 5 cm pieces",
+            "daun bawang, potong 5 cm"
+          ]
         },
         {
           "amount": 400,
           "unit": "ml",
-          "name": "water"
+          "name": [
+            "water",
+            "air"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "lime juice, to finish (instead of asam cikala)"
+          "name": [
+            "lime juice, to finish (instead of asam cikala)",
+            "air jeruk nipis, untuk akhir (pengganti asam cikala)"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Marinate",
-          "text": "Rub the fish with lime juice and salt. Leave 15 minutes."
+          "title": [
+            "Marinate",
+            "Marinasi"
+          ],
+          "text": [
+            "Rub the fish with lime juice and salt. Leave 15 minutes.",
+            "Lumuri ikan dengan air jeruk nipis dan garam. Diamkan 15 menit."
+          ]
         },
         {
-          "title": "Paste",
-          "text": "Toast the Sichuan pepper in a dry pan for 1 minute. Put all paste ingredients in the chopper and blitz to a fairly smooth paste, adding a splash of water if needed."
+          "title": [
+            "Paste",
+            "Bumbu halus"
+          ],
+          "text": [
+            "Toast the Sichuan pepper in a dry pan for 1 minute. Put all paste ingredients in the chopper and blitz to a fairly smooth paste, adding a splash of water if needed.",
+            "Sangrai lada Sichuan di wajan kering selama 1 menit. Masukkan semua bahan bumbu ke chopper dan haluskan, tambahkan sedikit air kalau perlu."
+          ]
         },
         {
-          "title": "Layer",
-          "text": "In a wide pan, lay the beans and lemongrass on the bottom, then the fish on top. Mix the paste with the water and pour over. Add the lime leaves."
+          "title": [
+            "Layer",
+            "Susun"
+          ],
+          "text": [
+            "In a wide pan, lay the beans and lemongrass on the bottom, then the fish on top. Mix the paste with the water and pour over. Add the lime leaves.",
+            "Di wajan lebar, susun buncis dan serai di dasar, lalu ikan di atasnya. Campur bumbu halus dengan air dan tuang di atasnya. Masukkan daun jeruk."
+          ]
         },
         {
-          "title": "Simmer",
-          "text": "Cover and simmer on low heat for 30-40 minutes. Don't stir; spoon the sauce over the fish now and then and gently shake the pan. The sauce should reduce to a thick yellow gravy."
+          "title": [
+            "Simmer",
+            "Masak perlahan"
+          ],
+          "text": [
+            "Cover and simmer on low heat for 30-40 minutes. Don't stir; spoon the sauce over the fish now and then and gently shake the pan. The sauce should reduce to a thick yellow gravy.",
+            "Tutup dan masak dengan api kecil selama 30-40 menit. Jangan diaduk; sesekali siram ikan dengan kuahnya dan goyangkan wajan perlahan. Kuah akan menyusut jadi kuah kuning yang kental."
+          ]
         },
         {
-          "title": "Finish",
-          "text": "Add the spring onions and lime juice in the last 5 minutes. Taste for salt. Serve with rice."
+          "title": [
+            "Finish",
+            "Selesaikan"
+          ],
+          "text": [
+            "Add the spring onions and lime juice in the last 5 minutes. Taste for salt. Serve with rice.",
+            "Masukkan daun bawang dan air jeruk nipis di 5 menit terakhir. Cicipi garamnya. Sajikan dengan nasi."
+          ]
         }
       ],
       "notes": [
-        "Carp has many small bones; trout (pstruh) is easier and cooks in about 20 minutes.",
-        "Live and fresh carp are easiest to find in December; frozen carp portions are sold year-round in bigger supermarkets.",
-        "Sichuan pepper is a close relative of andaliman and gives the same tingly feeling."
+        [
+          "Carp has many small bones; trout (pstruh) is easier and cooks in about 20 minutes.",
+          "Ikan mas banyak durinya; ikan trout (pstruh) lebih mudah dan matang sekitar 20 menit."
+        ],
+        [
+          "Live and fresh carp are easiest to find in December; frozen carp portions are sold year-round in bigger supermarkets.",
+          "Ikan mas hidup dan segar paling mudah dicari di bulan Desember; potongan ikan mas beku dijual sepanjang tahun di supermarket besar."
+        ],
+        [
+          "Sichuan pepper is a close relative of andaliman and gives the same tingly feeling.",
+          "Lada Sichuan masih kerabat dekat andaliman dan memberi rasa getir-kebas yang sama."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, galangal, lemongrass, lime leaves, long beans": "Sapa market (Praha-Libuš) or Asian grocery shops",
-        "carp, trout, green beans, shallots, macadamia, ground turmeric": "regular supermarkets (Albert, Tesco, Kaufland, Billa, Lidl)"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, galangal, lemongrass, lime leaves, long beans",
+            "lada Sichuan, lengkuas, serai, daun jeruk, kacang panjang"
+          ],
+          "where": [
+            "Sapa market (Praha-Libuš) or Asian grocery shops",
+            "Pasar Sapa (Praha-Libuš) atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "carp, trout, green beans, shallots, macadamia, ground turmeric",
+            "ikan mas, trout, buncis, bawang merah, macadamia, kunyit bubuk"
+          ],
+          "where": [
+            "regular supermarkets (Albert, Tesco, Kaufland, Billa, Lidl)",
+            "supermarket biasa (Albert, Tesco, Kaufland, Billa, Lidl)"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "fish",
@@ -255,135 +496,261 @@
     },
     {
       "id": "saksang-santan",
-      "title": "Saksang Santan (Pork in Coconut, no blood)",
-      "category": "Meat",
+      "title": [
+        "Saksang Santan (Pork in Coconut, no blood)",
+        "Saksang Santan (Babi Bersantan, tanpa darah)"
+      ],
+      "category": [
+        "Meat",
+        "Daging"
+      ],
       "cuisine": "Batak",
-      "description": "Spicy Batak pork stew with andaliman-style spices, made with coconut milk instead of pork blood. Good in the multi-cooker.",
+      "description": [
+        "Spicy Batak pork stew with andaliman-style spices, made with coconut milk instead of pork blood. Good in the multi-cooker.",
+        "Saksang babi pedas khas Batak dengan bumbu ala andaliman, memakai santan sebagai pengganti darah babi. Cocok dimasak di multi-cooker."
+      ],
       "servings": 4,
-      "time": "20 min prep + 60-75 min cooking",
+      "time": [
+        "20 min prep + 60-75 min cooking",
+        "20 menit persiapan + 60-75 menit masak"
+      ],
       "oven": null,
       "equipment": [
-        "chopper",
-        "Lauben multi-cooker 18SB or a pot on the gas stove"
+        [
+          "chopper",
+          "chopper"
+        ],
+        [
+          "Lauben multi-cooker 18SB or a pot on the gas stove",
+          "Multi-cooker Lauben 18SB atau panci di kompor gas"
+        ]
       ],
       "ingredients": [
         {
           "amount": 800,
           "unit": "g",
-          "name": "pork shoulder (vepřová plec) or pork belly (bůček), 3 cm cubes"
+          "name": [
+            "pork shoulder (vepřová plec) or pork belly (bůček), 3 cm cubes",
+            "daging bahu babi (vepřová plec) atau samcan (bůček), potong dadu 3 cm"
+          ]
         },
         {
           "amount": 6,
           "unit": null,
-          "name": "shallots, for the paste"
+          "name": [
+            "shallots, for the paste",
+            "bawang merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 5,
           "unit": null,
-          "name": "garlic cloves, for the paste"
+          "name": [
+            "garlic cloves, for the paste",
+            "bawang putih, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "ginger, for the paste"
+          "name": [
+            "ginger, for the paste",
+            "jahe, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "galangal (or 1 tsp powder), for the paste"
+          "name": [
+            "galangal (or 1 tsp powder), for the paste",
+            "lengkuas (atau 1 sdt bubuk), untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "ground turmeric, for the paste"
+          "name": [
+            "ground turmeric, for the paste",
+            "kunyit bubuk, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted, for the paste"
+          "name": [
+            "Sichuan pepper, toasted, for the paste",
+            "lada Sichuan, disangrai, untuk bumbu halus"
+          ]
         },
         {
           "amount": 5,
           "unit": null,
-          "name": "red chilies (or 1-2 tbsp sambal oelek), for the paste"
+          "name": [
+            "red chilies (or 1-2 tbsp sambal oelek), for the paste",
+            "cabai merah (atau 1-2 sdm sambal oelek), untuk bumbu halus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "macadamia nuts, for the paste"
+          "name": [
+            "macadamia nuts, for the paste",
+            "kacang macadamia, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "lemongrass stalks, bruised"
+          "name": [
+            "lemongrass stalks, bruised",
+            "serai, dimemarkan"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "kaffir lime leaves (optional)"
+          "name": [
+            "kaffir lime leaves (optional)",
+            "daun jeruk (opsional)"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "bay leaves (bobkový list, instead of salam)"
+          "name": [
+            "bay leaves (bobkový list, instead of salam)",
+            "daun salam Eropa (bobkový list, pengganti daun salam)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "oil"
+          "name": [
+            "oil",
+            "minyak"
+          ]
         },
         {
           "amount": 200,
           "unit": "ml",
-          "name": "water"
+          "name": [
+            "water",
+            "air"
+          ]
         },
         {
           "amount": 400,
           "unit": "ml",
-          "name": "coconut milk (1 can)"
+          "name": [
+            "coconut milk (1 can)",
+            "santan (1 kaleng)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt, to taste"
+          "name": [
+            "salt, to taste",
+            "garam, secukupnya"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "sugar"
+          "name": [
+            "sugar",
+            "gula"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Paste",
-          "text": "Toast the Sichuan pepper briefly, then blitz all paste ingredients in the chopper."
+          "title": [
+            "Paste",
+            "Bumbu halus"
+          ],
+          "text": [
+            "Toast the Sichuan pepper briefly, then blitz all paste ingredients in the chopper.",
+            "Sangrai lada Sichuan sebentar, lalu haluskan semua bahan bumbu di chopper."
+          ]
         },
         {
-          "title": "Brown",
-          "text": "Brown the pork in the oil, in a pan or using the multi-cooker's frying/sauté program, until lightly coloured."
+          "title": [
+            "Brown",
+            "Tumis daging"
+          ],
+          "text": [
+            "Brown the pork in the oil, in a pan or using the multi-cooker's frying/sauté program, until lightly coloured.",
+            "Tumis daging babi dengan minyak, di wajan atau dengan program goreng/tumis di multi-cooker, sampai agak kecokelatan."
+          ]
         },
         {
-          "title": "Fry the paste",
-          "text": "Add the paste and fry for 5 minutes, stirring, until fragrant and the oil separates a little."
+          "title": [
+            "Fry the paste",
+            "Tumis bumbu"
+          ],
+          "text": [
+            "Add the paste and fry for 5 minutes, stirring, until fragrant and the oil separates a little.",
+            "Masukkan bumbu halus dan tumis 5 menit sambil diaduk, sampai harum dan minyaknya sedikit keluar."
+          ]
         },
         {
-          "title": "Stew",
-          "text": "Add lemongrass, lime leaves, bay leaves, water, salt and sugar. Pot: cover and simmer on low for about 60 minutes. Multi-cooker: use the stew/slow-cook program; check your manual for the time setting (meat should end up fork-tender)."
+          "title": [
+            "Stew",
+            "Masak lama"
+          ],
+          "text": [
+            "Add lemongrass, lime leaves, bay leaves, water, salt and sugar. Pot: cover and simmer on low for about 60 minutes. Multi-cooker: use the stew/slow-cook program; check your manual for the time setting (meat should end up fork-tender).",
+            "Masukkan serai, daun jeruk, daun salam, air, garam, dan gula. Panci: tutup dan masak dengan api kecil sekitar 60 menit. Multi-cooker: pakai program stew/slow cook; cek buku manual untuk pengaturan waktunya (daging harus sampai empuk)."
+          ]
         },
         {
-          "title": "Coconut",
-          "text": "Add the coconut milk and cook uncovered for 10-15 minutes more, stirring, until the sauce thickens. Taste and adjust salt and chili. Serve with rice."
+          "title": [
+            "Coconut",
+            "Santan"
+          ],
+          "text": [
+            "Add the coconut milk and cook uncovered for 10-15 minutes more, stirring, until the sauce thickens. Taste and adjust salt and chili. Serve with rice.",
+            "Masukkan santan dan masak tanpa tutup 10-15 menit lagi sambil diaduk, sampai kuahnya mengental. Cicipi lalu sesuaikan garam dan cabainya. Sajikan dengan nasi."
+          ]
         }
       ],
       "notes": [
-        "Traditional saksang uses pork blood; the coconut milk version is a common alternative.",
-        "Tastes even better the next day.",
-        "Works with chicken thighs too; cut the stewing time to about 30 minutes."
+        [
+          "Traditional saksang uses pork blood; the coconut milk version is a common alternative.",
+          "Saksang tradisional memakai darah babi; versi santan adalah alternatif yang umum."
+        ],
+        [
+          "Tastes even better the next day.",
+          "Rasanya lebih enak lagi keesokan harinya."
+        ],
+        [
+          "Works with chicken thighs too; cut the stewing time to about 30 minutes.",
+          "Bisa juga pakai paha ayam; kurangi waktu masak jadi sekitar 30 menit."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, galangal, lemongrass, lime leaves": "Sapa or Asian grocery shops",
-        "pork, coconut milk, shallots, macadamia, bay leaves": "regular supermarkets"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, galangal, lemongrass, lime leaves",
+            "lada Sichuan, lengkuas, serai, daun jeruk"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "pork, coconut milk, shallots, macadamia, bay leaves",
+            "daging babi, santan, bawang merah, macadamia, daun salam Eropa"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "pork",
@@ -393,120 +760,237 @@
     },
     {
       "id": "mie-gomak-spaghetti",
-      "title": "Mie Gomak Goreng (with spaghetti)",
-      "category": "Noodles",
+      "title": [
+        "Mie Gomak Goreng (with spaghetti)",
+        "Mie Gomak Goreng (pakai spaghetti)"
+      ],
+      "category": [
+        "Noodles",
+        "Mi"
+      ],
       "cuisine": "Batak",
-      "description": "Batak fried noodles made with thick spaghetti instead of mie lidi, with a turmeric and Sichuan-pepper paste. Quick weeknight dish.",
+      "description": [
+        "Batak fried noodles made with thick spaghetti instead of mie lidi, with a turmeric and Sichuan-pepper paste. Quick weeknight dish.",
+        "Mie gomak goreng khas Batak dengan spaghetti tebal sebagai pengganti mie lidi, dengan bumbu kunyit dan lada Sichuan. Cepat untuk makan malam sehari-hari."
+      ],
       "servings": 2,
-      "time": "25 min",
+      "time": [
+        "25 min",
+        "25 menit"
+      ],
       "oven": null,
       "equipment": [
-        "chopper",
-        "gas stove",
-        "pan or wok"
+        [
+          "chopper",
+          "chopper"
+        ],
+        [
+          "gas stove",
+          "kompor gas"
+        ],
+        [
+          "pan or wok",
+          "wajan atau wok"
+        ]
       ],
       "ingredients": [
         {
           "amount": 200,
           "unit": "g",
-          "name": "thick spaghetti or linguine"
+          "name": [
+            "thick spaghetti or linguine",
+            "spaghetti tebal atau linguine"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "shallots, for the paste"
+          "name": [
+            "shallots, for the paste",
+            "bawang merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "garlic cloves, for the paste"
+          "name": [
+            "garlic cloves, for the paste",
+            "bawang putih, untuk bumbu halus"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "ground turmeric, for the paste"
+          "name": [
+            "ground turmeric, for the paste",
+            "kunyit bubuk, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted, for the paste"
+          "name": [
+            "Sichuan pepper, toasted, for the paste",
+            "lada Sichuan, disangrai, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "red chilies, for the paste"
+          "name": [
+            "red chilies, for the paste",
+            "cabai merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "macadamia nuts, for the paste"
+          "name": [
+            "macadamia nuts, for the paste",
+            "kacang macadamia, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": "tbsp",
-          "name": "oil"
+          "name": [
+            "oil",
+            "minyak"
+          ]
         },
         {
           "amount": 150,
           "unit": "g",
-          "name": "chicken or pork, thin strips (optional)"
+          "name": [
+            "chicken or pork, thin strips (optional)",
+            "daging ayam atau babi, iris tipis (opsional)"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "egg"
+          "name": [
+            "egg",
+            "telur"
+          ]
         },
         {
           "amount": 100,
           "unit": "g",
-          "name": "white cabbage (zelí), shredded"
+          "name": [
+            "white cabbage (zelí), shredded",
+            "kol putih (zelí), diiris halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "kecap manis (sweet soy sauce, optional)"
+          "name": [
+            "kecap manis (sweet soy sauce, optional)",
+            "kecap manis (opsional)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "soy sauce"
+          "name": [
+            "soy sauce",
+            "kecap asin"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "spring onions, sliced"
+          "name": [
+            "spring onions, sliced",
+            "daun bawang, diiris"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Pasta",
-          "text": "Cook the spaghetti in salted water until just al dente. Drain and toss with a few drops of oil."
+          "title": [
+            "Pasta",
+            "Pasta"
+          ],
+          "text": [
+            "Cook the spaghetti in salted water until just al dente. Drain and toss with a few drops of oil.",
+            "Rebus spaghetti di air bergaram sampai al dente. Tiriskan dan aduk dengan sedikit minyak."
+          ]
         },
         {
-          "title": "Paste",
-          "text": "Blitz the paste ingredients in the chopper."
+          "title": [
+            "Paste",
+            "Bumbu halus"
+          ],
+          "text": [
+            "Blitz the paste ingredients in the chopper.",
+            "Haluskan bahan bumbu di chopper."
+          ]
         },
         {
-          "title": "Fry",
-          "text": "Fry the paste in the oil for 3-4 minutes. Add the meat and cook through."
+          "title": [
+            "Fry",
+            "Goreng"
+          ],
+          "text": [
+            "Fry the paste in the oil for 3-4 minutes. Add the meat and cook through.",
+            "Tumis bumbu halus dengan minyak selama 3-4 menit. Masukkan daging dan masak sampai matang."
+          ]
         },
         {
-          "title": "Egg and cabbage",
-          "text": "Push everything aside, scramble the egg in the gap, then add the cabbage and stir-fry for 2 minutes."
+          "title": [
+            "Egg and cabbage",
+            "Telur dan kol"
+          ],
+          "text": [
+            "Push everything aside, scramble the egg in the gap, then add the cabbage and stir-fry for 2 minutes.",
+            "Sisihkan semuanya ke pinggir, orak-arik telur di tengah, lalu masukkan kol dan tumis 2 menit."
+          ]
         },
         {
-          "title": "Toss",
-          "text": "Add the spaghetti, kecap manis and soy sauce. Toss on high heat for 2 minutes. Finish with spring onions."
+          "title": [
+            "Toss",
+            "Aduk"
+          ],
+          "text": [
+            "Add the spaghetti, kecap manis and soy sauce. Toss on high heat for 2 minutes. Finish with spring onions.",
+            "Masukkan spaghetti, kecap manis, dan kecap asin. Aduk di api besar selama 2 menit. Taburi daun bawang."
+          ]
         }
       ],
       "notes": [
-        "Thick spaghetti (No. 7 or thicker) is the closest to mie lidi.",
-        "For mie gomak kuah (soup), add 500 ml chicken stock and 100 ml coconut milk after frying the paste, then add the pasta."
+        [
+          "Thick spaghetti (No. 7 or thicker) is the closest to mie lidi.",
+          "Spaghetti tebal (No. 7 atau lebih tebal) paling mirip mie lidi."
+        ],
+        [
+          "For mie gomak kuah (soup), add 500 ml chicken stock and 100 ml coconut milk after frying the paste, then add the pasta.",
+          "Untuk mie gomak kuah, tambahkan 500 ml kaldu ayam dan 100 ml santan setelah menumis bumbu, lalu masukkan pasta."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, kecap manis": "Asian grocery shops; kecap manis is also in some big supermarkets",
-        "everything else": "regular supermarkets"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, kecap manis",
+            "lada Sichuan, kecap manis"
+          ],
+          "where": [
+            "Asian grocery shops; kecap manis is also in some big supermarkets",
+            "Toko Asia; kecap manis juga ada di beberapa supermarket besar"
+          ]
+        },
+        {
+          "items": [
+            "everything else",
+            "bahan lainnya"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "noodles",
@@ -516,112 +1000,229 @@
     },
     {
       "id": "daun-ubi-tumbuk",
-      "title": "Daun Ubi Tumbuk (Greens in Coconut)",
-      "category": "Vegetables",
+      "title": [
+        "Daun Ubi Tumbuk (Greens in Coconut)",
+        "Daun Ubi Tumbuk (Sayur Bersantan)"
+      ],
+      "category": [
+        "Vegetables",
+        "Sayur"
+      ],
       "cuisine": "Batak",
-      "description": "Batak pounded cassava leaves in coconut milk. The chopper does the pounding. Uses frozen cassava leaves, or kale/spinach as a substitute.",
+      "description": [
+        "Batak pounded cassava leaves in coconut milk. The chopper does the pounding. Uses frozen cassava leaves, or kale/spinach as a substitute.",
+        "Daun singkong tumbuk khas Batak dengan santan. Chopper menggantikan proses menumbuk. Memakai daun singkong beku, atau kale/bayam sebagai pengganti."
+      ],
       "servings": 4,
-      "time": "15 min prep + 30-40 min cooking",
+      "time": [
+        "15 min prep + 30-40 min cooking",
+        "15 menit persiapan + 30-40 menit masak"
+      ],
       "oven": null,
       "equipment": [
-        "chopper",
-        "gas stove",
-        "pot"
+        [
+          "chopper",
+          "chopper"
+        ],
+        [
+          "gas stove",
+          "kompor gas"
+        ],
+        [
+          "pot",
+          "panci"
+        ]
       ],
       "ingredients": [
         {
           "amount": 500,
           "unit": "g",
-          "name": "frozen cassava leaves, thawed, or 400 g kale (kadeřávek) without stems"
+          "name": [
+            "frozen cassava leaves, thawed, or 400 g kale (kadeřávek) without stems",
+            "daun singkong beku, dicairkan, atau 400 g kale (kadeřávek) tanpa batang"
+          ]
         },
         {
           "amount": 5,
           "unit": null,
-          "name": "shallots, for the paste"
+          "name": [
+            "shallots, for the paste",
+            "bawang merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "garlic cloves, for the paste"
+          "name": [
+            "garlic cloves, for the paste",
+            "bawang putih, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "macadamia nuts, for the paste"
+          "name": [
+            "macadamia nuts, for the paste",
+            "kacang macadamia, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted, for the paste"
+          "name": [
+            "Sichuan pepper, toasted, for the paste",
+            "lada Sichuan, disangrai, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "red chilies, for the paste"
+          "name": [
+            "red chilies, for the paste",
+            "cabai merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": "cm",
-          "name": "galangal, for the paste"
+          "name": [
+            "galangal, for the paste",
+            "lengkuas, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "lemongrass stalk, bruised"
+          "name": [
+            "lemongrass stalk, bruised",
+            "serai, dimemarkan"
+          ]
         },
         {
           "amount": 200,
           "unit": "ml",
-          "name": "water"
+          "name": [
+            "water",
+            "air"
+          ]
         },
         {
           "amount": 400,
           "unit": "ml",
-          "name": "coconut milk (1 can)"
+          "name": [
+            "coconut milk (1 can)",
+            "santan (1 kaleng)"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt, to taste"
+          "name": [
+            "salt, to taste",
+            "garam, secukupnya"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "sugar"
+          "name": [
+            "sugar",
+            "gula"
+          ]
         },
         {
           "amount": 30,
           "unit": "g",
-          "name": "dried anchovies (ikan teri), optional"
+          "name": [
+            "dried anchovies (ikan teri), optional",
+            "ikan teri kering, opsional"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Chop the leaves",
-          "text": "Pulse the leaves in the chopper in batches until finely chopped. This replaces pounding."
+          "title": [
+            "Chop the leaves",
+            "Cincang daun"
+          ],
+          "text": [
+            "Pulse the leaves in the chopper in batches until finely chopped. This replaces pounding.",
+            "Cincang daun di chopper sedikit demi sedikit sampai halus. Ini pengganti menumbuk."
+          ]
         },
         {
-          "title": "Paste",
-          "text": "Blitz the paste ingredients in the chopper."
+          "title": [
+            "Paste",
+            "Bumbu halus"
+          ],
+          "text": [
+            "Blitz the paste ingredients in the chopper.",
+            "Haluskan bahan bumbu di chopper."
+          ]
         },
         {
-          "title": "Cook the leaves",
-          "text": "Simmer the leaves in the water with the lemongrass. Cassava leaves: at least 20 minutes, until soft. Kale: about 8 minutes."
+          "title": [
+            "Cook the leaves",
+            "Rebus daun"
+          ],
+          "text": [
+            "Simmer the leaves in the water with the lemongrass. Cassava leaves: at least 20 minutes, until soft. Kale: about 8 minutes.",
+            "Rebus daun dengan air dan serai. Daun singkong: minimal 20 menit, sampai empuk. Kale: sekitar 8 menit."
+          ]
         },
         {
-          "title": "Coconut",
-          "text": "Add the paste, coconut milk, salt, sugar and anchovies. Simmer uncovered for 15-20 minutes, stirring often, until thick."
+          "title": [
+            "Coconut",
+            "Santan"
+          ],
+          "text": [
+            "Add the paste, coconut milk, salt, sugar and anchovies. Simmer uncovered for 15-20 minutes, stirring often, until thick.",
+            "Masukkan bumbu halus, santan, garam, gula, dan teri. Masak tanpa tutup 15-20 menit, sering diaduk, sampai kental."
+          ]
         }
       ],
       "notes": [
-        "Cassava leaves must be cooked thoroughly; never eat them raw or undercooked.",
-        "Kale gives the closest texture; spinach works but cooks down a lot and is softer."
+        [
+          "Cassava leaves must be cooked thoroughly; never eat them raw or undercooked.",
+          "Daun singkong harus dimasak sampai benar-benar matang; jangan dimakan mentah atau setengah matang."
+        ],
+        [
+          "Kale gives the closest texture; spinach works but cooks down a lot and is softer.",
+          "Kale paling mirip teksturnya; bayam juga bisa tapi menyusut banyak dan lebih lembek."
+        ]
       ],
-      "shopping": {
-        "frozen cassava leaves": "some Asian or African grocery shops (check the freezer section)",
-        "kale, coconut milk, shallots, macadamia": "regular supermarkets",
-        "galangal, Sichuan pepper, dried anchovies": "Sapa or Asian grocery shops"
-      },
+      "shopping": [
+        {
+          "items": [
+            "frozen cassava leaves",
+            "daun singkong beku"
+          ],
+          "where": [
+            "some Asian or African grocery shops (check the freezer section)",
+            "beberapa toko Asia atau Afrika (cek bagian frozen)"
+          ]
+        },
+        {
+          "items": [
+            "kale, coconut milk, shallots, macadamia",
+            "kale, santan, bawang merah, macadamia"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        },
+        {
+          "items": [
+            "galangal, Sichuan pepper, dried anchovies",
+            "lengkuas, lada Sichuan, ikan teri kering"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "vegetables",
@@ -631,81 +1232,174 @@
     },
     {
       "id": "ayam-panggang-andaliman",
-      "title": "Ayam Panggang Andaliman (Oven Chicken)",
-      "category": "Chicken",
+      "title": [
+        "Ayam Panggang Andaliman (Oven Chicken)",
+        "Ayam Panggang Andaliman (Ayam Oven)"
+      ],
+      "category": [
+        "Chicken",
+        "Ayam"
+      ],
       "cuisine": "Batak",
-      "description": "Simplified ayam napinadar: oven-roasted turmeric chicken thighs tossed in a fresh Sichuan-pepper sambal. No blood sauce.",
+      "description": [
+        "Simplified ayam napinadar: oven-roasted turmeric chicken thighs tossed in a fresh Sichuan-pepper sambal. No blood sauce.",
+        "Ayam napinadar versi sederhana: paha ayam bumbu kunyit dipanggang di oven, lalu diaduk dengan sambal lada Sichuan segar. Tanpa saus darah."
+      ],
       "servings": 4,
-      "time": "15 min prep + 30 min marinate + 40 min roast",
-      "oven": "200°C top & bottom heat",
+      "time": [
+        "15 min prep + 30 min marinate + 40 min roast",
+        "15 menit persiapan + 30 menit marinasi + 40 menit panggang"
+      ],
+      "oven": [
+        "200°C top & bottom heat",
+        "200°C api atas & bawah"
+      ],
       "equipment": [
-        "wall oven",
-        "chopper",
-        "baking tray or glass dish"
+        [
+          "wall oven",
+          "oven tanam"
+        ],
+        [
+          "chopper",
+          "chopper"
+        ],
+        [
+          "baking tray or glass dish",
+          "loyang atau pinggan kaca"
+        ]
       ],
       "ingredients": [
         {
           "amount": 1,
           "unit": "kg",
-          "name": "chicken thighs (kuřecí stehna), bone-in"
+          "name": [
+            "chicken thighs (kuřecí stehna), bone-in",
+            "paha ayam (kuřecí stehna), dengan tulang"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "ground turmeric"
+          "name": [
+            "ground turmeric",
+            "kunyit bubuk"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "garlic cloves, grated"
+          "name": [
+            "garlic cloves, grated",
+            "bawang putih, diparut"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "lime, juiced"
+          "name": [
+            "lime, juiced",
+            "jeruk nipis, diperas"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt"
+          "name": [
+            "salt",
+            "garam"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "oil"
+          "name": [
+            "oil",
+            "minyak"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "batch Sambal Andaliman (see that recipe)"
+          "name": [
+            "batch Sambal Andaliman (see that recipe)",
+            "satu resep Sambal Andaliman (lihat resepnya)"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Marinate",
-          "text": "Rub the chicken with turmeric, garlic, lime juice, salt and oil. Leave at least 30 minutes (or overnight in the fridge)."
+          "title": [
+            "Marinate",
+            "Marinasi"
+          ],
+          "text": [
+            "Rub the chicken with turmeric, garlic, lime juice, salt and oil. Leave at least 30 minutes (or overnight in the fridge).",
+            "Lumuri ayam dengan kunyit, bawang putih, air jeruk nipis, garam, dan minyak. Diamkan minimal 30 menit (atau semalaman di kulkas)."
+          ]
         },
         {
-          "title": "Roast",
-          "text": "Heat the oven to 200°C. Roast skin side up for 35-40 minutes until golden and the juices run clear. In a glass dish, use 190°C and allow a few extra minutes."
+          "title": [
+            "Roast",
+            "Panggang"
+          ],
+          "text": [
+            "Heat the oven to 200°C. Roast skin side up for 35-40 minutes until golden and the juices run clear. In a glass dish, use 190°C and allow a few extra minutes.",
+            "Panaskan oven 200°C. Panggang dengan sisi kulit di atas selama 35-40 menit sampai keemasan dan cairannya bening. Di pinggan kaca, pakai 190°C dan tambah beberapa menit."
+          ]
         },
         {
-          "title": "Sambal",
-          "text": "Meanwhile make the Sambal Andaliman."
+          "title": [
+            "Sambal",
+            "Sambal"
+          ],
+          "text": [
+            "Meanwhile make the Sambal Andaliman.",
+            "Sementara itu, buat Sambal Andaliman."
+          ]
         },
         {
-          "title": "Toss",
-          "text": "Toss the hot chicken with half the sambal and serve the rest on the side, with rice."
+          "title": [
+            "Toss",
+            "Aduk"
+          ],
+          "text": [
+            "Toss the hot chicken with half the sambal and serve the rest on the side, with rice.",
+            "Aduk ayam panas dengan setengah sambal, sisanya disajikan terpisah, dengan nasi."
+          ]
         }
       ],
       "notes": [
-        "Traditional napinadar uses a sauce thickened with chicken blood; this version leaves it out.",
-        "Can also be pan-grilled on the gas stove: about 8-10 minutes per side on medium heat."
+        [
+          "Traditional napinadar uses a sauce thickened with chicken blood; this version leaves it out.",
+          "Napinadar tradisional memakai saus yang dikentalkan dengan darah ayam; versi ini tanpa darah."
+        ],
+        [
+          "Can also be pan-grilled on the gas stove: about 8-10 minutes per side on medium heat.",
+          "Bisa juga dipanggang di wajan grill di kompor gas: sekitar 8-10 menit per sisi dengan api sedang."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper": "Sapa or Asian grocery shops",
-        "everything else": "regular supermarkets"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper",
+            "lada Sichuan"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "everything else",
+            "bahan lainnya"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "chicken",
@@ -715,75 +1409,153 @@
     },
     {
       "id": "sambal-andaliman",
-      "title": "Sambal Andaliman (Sichuan pepper sambal)",
-      "category": "Sambal",
+      "title": [
+        "Sambal Andaliman (Sichuan pepper sambal)",
+        "Sambal Andaliman (sambal lada Sichuan)"
+      ],
+      "category": [
+        "Sambal",
+        "Sambal"
+      ],
       "cuisine": "Batak",
-      "description": "Fresh Batak sambal with the tingly citrus kick of andaliman, using Sichuan pepper. Made in the chopper.",
+      "description": [
+        "Fresh Batak sambal with the tingly citrus kick of andaliman, using Sichuan pepper. Made in the chopper.",
+        "Sambal segar khas Batak dengan rasa getir-segar andaliman, memakai lada Sichuan. Dibuat di chopper."
+      ],
       "servings": 6,
-      "time": "10 min",
+      "time": [
+        "10 min",
+        "10 menit"
+      ],
       "oven": null,
       "equipment": [
-        "chopper"
+        [
+          "chopper",
+          "chopper"
+        ]
       ],
       "ingredients": [
         {
           "amount": 8,
           "unit": null,
-          "name": "red chilies (or 5 chilies + ½ red bell pepper for milder)"
+          "name": [
+            "red chilies (or 5 chilies + ½ red bell pepper for milder)",
+            "cabai merah (atau 5 cabai + ½ paprika merah supaya tidak terlalu pedas)"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "bird's eye chilies (optional, for heat)"
+          "name": [
+            "bird's eye chilies (optional, for heat)",
+            "cabai rawit (opsional, untuk pedas)"
+          ]
         },
         {
           "amount": 5,
           "unit": null,
-          "name": "shallots"
+          "name": [
+            "shallots",
+            "bawang merah"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "garlic cloves"
+          "name": [
+            "garlic cloves",
+            "bawang putih"
+          ]
         },
         {
           "amount": 1.5,
           "unit": "tbsp",
-          "name": "Sichuan pepper, toasted"
+          "name": [
+            "Sichuan pepper, toasted",
+            "lada Sichuan, disangrai"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "lime, juiced"
+          "name": [
+            "lime, juiced",
+            "jeruk nipis, diperas"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "salt"
+          "name": [
+            "salt",
+            "garam"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Toast",
-          "text": "Toast the Sichuan pepper in a dry pan for about 1 minute until fragrant. Let it cool."
+          "title": [
+            "Toast",
+            "Sangrai"
+          ],
+          "text": [
+            "Toast the Sichuan pepper in a dry pan for about 1 minute until fragrant. Let it cool.",
+            "Sangrai lada Sichuan di wajan kering sekitar 1 menit sampai harum. Biarkan dingin."
+          ]
         },
         {
-          "title": "Chop",
-          "text": "Pulse everything except the lime juice in the chopper to a coarse sambal. Don't make it a smooth purée."
+          "title": [
+            "Chop",
+            "Cincang"
+          ],
+          "text": [
+            "Pulse everything except the lime juice in the chopper to a coarse sambal. Don't make it a smooth purée.",
+            "Cincang semua bahan kecuali air jeruk nipis di chopper sampai jadi sambal kasar. Jangan sampai halus seperti pure."
+          ]
         },
         {
-          "title": "Season",
-          "text": "Stir in the lime juice and salt to taste."
+          "title": [
+            "Season",
+            "Bumbui"
+          ],
+          "text": [
+            "Stir in the lime juice and salt to taste.",
+            "Aduk air jeruk nipis dan garam secukupnya."
+          ]
         }
       ],
       "notes": [
-        "Keeps 3-4 days in a closed jar in the fridge.",
-        "Use it with grilled fish, chicken, eggs, or as a side for any of the Batak dishes here."
+        [
+          "Keeps 3-4 days in a closed jar in the fridge.",
+          "Tahan 3-4 hari di toples tertutup dalam kulkas."
+        ],
+        [
+          "Use it with grilled fish, chicken, eggs, or as a side for any of the Batak dishes here.",
+          "Cocok dengan ikan bakar, ayam, telur, atau sebagai pendamping semua masakan Batak di sini."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, bird's eye chilies": "Sapa or Asian grocery shops",
-        "red chilies, shallots, garlic, limes": "regular supermarkets"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, bird's eye chilies",
+            "lada Sichuan, cabai rawit"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "red chilies, shallots, garlic, limes",
+            "cabai merah, bawang merah, bawang putih, jeruk nipis"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "sambal",
@@ -793,131 +1565,260 @@
     },
     {
       "id": "babi-panggang-karo",
-      "title": "BPK (Babi Panggang Karo)",
-      "category": "Meat",
+      "title": [
+        "BPK (Babi Panggang Karo)",
+        "BPK (Babi Panggang Karo)"
+      ],
+      "category": [
+        "Meat",
+        "Daging"
+      ],
       "cuisine": "Batak (Karo)",
-      "description": "Karo-style roast pork, sliced thin and served with a spicy andaliman sauce, rice and greens soup. Simplified: oven or grill pan instead of charcoal, and a blood-free sauce.",
+      "description": [
+        "Karo-style roast pork, sliced thin and served with a spicy andaliman sauce, rice and greens soup. Simplified: oven or grill pan instead of charcoal, and a blood-free sauce.",
+        "Babi panggang ala Karo, diiris tipis dan disajikan dengan saus andaliman pedas, nasi, dan sop daun. Versi sederhana: oven atau wajan grill sebagai pengganti arang, dan saus tanpa darah."
+      ],
       "servings": 4,
-      "time": "15 min prep + 1 h marinate + 40 min roast",
-      "oven": "220°C top & bottom heat (or fan 200°C), then grill 3-5 min",
+      "time": [
+        "15 min prep + 1 h marinate + 40 min roast",
+        "15 menit persiapan + 1 jam marinasi + 40 menit panggang"
+      ],
+      "oven": [
+        "220°C top & bottom heat (or fan 200°C), then grill 3-5 min",
+        "220°C api atas & bawah (atau kipas 200°C), lalu grill 3-5 menit"
+      ],
       "equipment": [
-        "wall oven (or grill pan on the gas stove)",
-        "chopper (for the sauce)",
-        "baking tray with rack"
+        [
+          "wall oven (or grill pan on the gas stove)",
+          "oven tanam (atau wajan grill di kompor gas)"
+        ],
+        [
+          "chopper (for the sauce)",
+          "chopper (untuk saus)"
+        ],
+        [
+          "baking tray with rack",
+          "loyang dengan rak"
+        ]
       ],
       "ingredients": [
         {
           "amount": 1,
           "unit": "kg",
-          "name": "pork neck (krkovice) or pork belly (bůček), slices 2-3 cm thick"
+          "name": [
+            "pork neck (krkovice) or pork belly (bůček), slices 2-3 cm thick",
+            "daging leher babi (krkovice) atau samcan (bůček), iris setebal 2-3 cm"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "garlic cloves, grated, for the marinade"
+          "name": [
+            "garlic cloves, grated, for the marinade",
+            "bawang putih, diparut, untuk marinasi"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "ginger, grated, for the marinade"
+          "name": [
+            "ginger, grated, for the marinade",
+            "jahe, diparut, untuk marinasi"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted and ground, for the marinade"
+          "name": [
+            "Sichuan pepper, toasted and ground, for the marinade",
+            "lada Sichuan, disangrai dan dihaluskan, untuk marinasi"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "black pepper, for the marinade"
+          "name": [
+            "black pepper, for the marinade",
+            "lada hitam, untuk marinasi"
+          ]
         },
         {
           "amount": 1.5,
           "unit": "tsp",
-          "name": "salt, for the marinade"
+          "name": [
+            "salt, for the marinade",
+            "garam, untuk marinasi"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "oil, for the marinade"
+          "name": [
+            "oil, for the marinade",
+            "minyak, untuk marinasi"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "shallots, for the sauce"
+          "name": [
+            "shallots, for the sauce",
+            "bawang merah, untuk saus"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "garlic cloves, for the sauce"
+          "name": [
+            "garlic cloves, for the sauce",
+            "bawang putih, untuk saus"
+          ]
         },
         {
           "amount": 2,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted, for the sauce"
+          "name": [
+            "Sichuan pepper, toasted, for the sauce",
+            "lada Sichuan, disangrai, untuk saus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "red chilies, for the sauce"
+          "name": [
+            "red chilies, for the sauce",
+            "cabai merah, untuk saus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "macadamia nuts, for the sauce"
+          "name": [
+            "macadamia nuts, for the sauce",
+            "kacang macadamia, untuk saus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "oil, for the sauce"
+          "name": [
+            "oil, for the sauce",
+            "minyak, untuk saus"
+          ]
         },
         {
           "amount": 150,
           "unit": "ml",
-          "name": "water"
+          "name": [
+            "water",
+            "air"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "kecap manis (sweet soy sauce)"
+          "name": [
+            "kecap manis (sweet soy sauce)",
+            "kecap manis"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "lime, juiced"
+          "name": [
+            "lime, juiced",
+            "jeruk nipis, diperas"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Marinate",
-          "text": "Mix garlic, ginger, ground Sichuan pepper, black pepper, salt and oil. Rub into the pork. Marinate at least 1 hour, or overnight in the fridge."
+          "title": [
+            "Marinate",
+            "Marinasi"
+          ],
+          "text": [
+            "Mix garlic, ginger, ground Sichuan pepper, black pepper, salt and oil. Rub into the pork. Marinate at least 1 hour, or overnight in the fridge.",
+            "Campur bawang putih, jahe, lada Sichuan halus, lada hitam, garam, dan minyak. Lumurkan ke daging babi. Marinasi minimal 1 jam, atau semalaman di kulkas."
+          ]
         },
         {
-          "title": "Roast",
-          "text": "Heat the oven to 220°C. Put the pork on a rack over a tray (add a little water to the tray so the drippings don't burn). Roast 30-40 minutes, turning once, until cooked through and browned."
+          "title": [
+            "Roast",
+            "Panggang"
+          ],
+          "text": [
+            "Heat the oven to 220°C. Put the pork on a rack over a tray (add a little water to the tray so the drippings don't burn). Roast 30-40 minutes, turning once, until cooked through and browned.",
+            "Panaskan oven 220°C. Taruh daging di rak di atas loyang (beri sedikit air di loyang supaya tetesan lemak tidak gosong). Panggang 30-40 menit, balik sekali, sampai matang dan kecokelatan."
+          ]
         },
         {
-          "title": "Char",
-          "text": "Switch to the grill (top heat) for 3-5 minutes to get charred edges. Watch closely. Stovetop option: grill pan on medium-high, 5-7 minutes per side."
+          "title": [
+            "Char",
+            "Bakar"
+          ],
+          "text": [
+            "Switch to the grill (top heat) for 3-5 minutes to get charred edges. Watch closely. Stovetop option: grill pan on medium-high, 5-7 minutes per side.",
+            "Pindah ke mode grill (api atas) selama 3-5 menit supaya pinggirannya gosong sedikit. Awasi terus. Pilihan kompor: wajan grill di api sedang-besar, 5-7 menit per sisi."
+          ]
         },
         {
-          "title": "Sauce",
-          "text": "Blitz the sauce ingredients (shallots, garlic, Sichuan pepper, chilies, macadamia) in the chopper. Fry in oil for 3-4 minutes, add the tray drippings, water and kecap manis, and simmer 5 minutes until slightly thick. Finish with lime juice and salt to taste."
+          "title": [
+            "Sauce",
+            "Saus"
+          ],
+          "text": [
+            "Blitz the sauce ingredients (shallots, garlic, Sichuan pepper, chilies, macadamia) in the chopper. Fry in oil for 3-4 minutes, add the tray drippings, water and kecap manis, and simmer 5 minutes until slightly thick. Finish with lime juice and salt to taste.",
+            "Haluskan bahan saus (bawang merah, bawang putih, lada Sichuan, cabai, macadamia) di chopper. Tumis dengan minyak 3-4 menit, masukkan tetesan dari loyang, air, dan kecap manis, lalu masak 5 menit sampai agak kental. Beri air jeruk nipis dan garam secukupnya."
+          ]
         },
         {
-          "title": "Serve",
-          "text": "Rest the pork 5 minutes, slice thin, and serve with the sauce, Sambal Andaliman, rice and a bowl of greens soup."
+          "title": [
+            "Serve",
+            "Sajikan"
+          ],
+          "text": [
+            "Rest the pork 5 minutes, slice thin, and serve with the sauce, Sambal Andaliman, rice and a bowl of greens soup.",
+            "Diamkan daging 5 menit, iris tipis, dan sajikan dengan saus, Sambal Andaliman, nasi, dan semangkuk sop daun."
+          ]
         }
       ],
       "notes": [
-        "Traditional BPK sauce is made with pork blood; this version uses the roasting juices instead.",
-        "Krkovice (pork neck) stays juicy and is the easiest cut; bůček gives more fat and crisp edges.",
-        "BPK is usually served with a light cassava-leaf soup: make Daun Ubi Tumbuk with extra water and less coconut milk."
+        [
+          "Traditional BPK sauce is made with pork blood; this version uses the roasting juices instead.",
+          "Saus BPK tradisional dibuat dengan darah babi; versi ini memakai cairan dari panggangan."
+        ],
+        [
+          "Krkovice (pork neck) stays juicy and is the easiest cut; bůček gives more fat and crisp edges.",
+          "Krkovice (leher babi) tetap juicy dan paling mudah; bůček lebih berlemak dan pinggirannya renyah."
+        ],
+        [
+          "BPK is usually served with a light cassava-leaf soup: make Daun Ubi Tumbuk with extra water and less coconut milk.",
+          "BPK biasanya disajikan dengan sop daun singkong yang ringan: buat Daun Ubi Tumbuk dengan air lebih banyak dan santan lebih sedikit."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, chilies, kecap manis": "Sapa or Asian grocery shops",
-        "pork (bůček, krkovice), shallots, garlic, ginger, limes": "regular supermarkets or butchers (řeznictví)"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, chilies, kecap manis",
+            "lada Sichuan, cabai, kecap manis"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "pork (bůček, krkovice), shallots, garlic, ginger, limes",
+            "daging babi (bůček, krkovice), bawang merah, bawang putih, jahe, jeruk nipis"
+          ],
+          "where": [
+            "regular supermarkets or butchers (řeznictví)",
+            "supermarket biasa atau tukang daging (řeznictví)"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "pork",
@@ -927,110 +1828,230 @@
     },
     {
       "id": "babi-panggang-toba",
-      "title": "Babi Panggang Batak (Toba-style, crispy skin)",
-      "category": "Meat",
+      "title": [
+        "Babi Panggang Batak (Toba-style, crispy skin)",
+        "Babi Panggang Batak (ala Toba, kulit renyah)"
+      ],
+      "category": [
+        "Meat",
+        "Daging"
+      ],
       "cuisine": "Batak (Toba)",
-      "description": "Slow-roasted pork belly with crispy skin, the meat side rubbed with a turmeric and andaliman paste. Served with fresh sambal andaliman.",
+      "description": [
+        "Slow-roasted pork belly with crispy skin, the meat side rubbed with a turmeric and andaliman paste. Served with fresh sambal andaliman.",
+        "Samcan dipanggang perlahan dengan kulit renyah, sisi dagingnya dilumuri bumbu kunyit dan andaliman. Disajikan dengan sambal andaliman segar."
+      ],
       "servings": 4,
-      "time": "15 min prep + overnight drying (optional) + 1 h 50 min roast",
-      "oven": "160°C top & bottom heat, then 230°C to crisp the skin",
+      "time": [
+        "15 min prep + overnight drying (optional) + 1 h 50 min roast",
+        "15 menit persiapan + dikeringkan semalaman (opsional) + 1 jam 50 menit panggang"
+      ],
+      "oven": [
+        "160°C top & bottom heat, then 230°C to crisp the skin",
+        "160°C api atas & bawah, lalu 230°C untuk merenyahkan kulit"
+      ],
       "equipment": [
-        "wall oven",
-        "chopper",
-        "baking tray with rack"
+        [
+          "wall oven",
+          "oven tanam"
+        ],
+        [
+          "chopper",
+          "chopper"
+        ],
+        [
+          "baking tray with rack",
+          "loyang dengan rak"
+        ]
       ],
       "ingredients": [
         {
           "amount": 1.2,
           "unit": "kg",
-          "name": "pork belly with skin (bůček s kůží), one slab"
+          "name": [
+            "pork belly with skin (bůček s kůží), one slab",
+            "samcan dengan kulit (bůček s kůží), satu lembar utuh"
+          ]
         },
         {
           "amount": 2,
           "unit": "tsp",
-          "name": "salt, for the skin"
+          "name": [
+            "salt, for the skin",
+            "garam, untuk kulit"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "shallots, for the paste"
+          "name": [
+            "shallots, for the paste",
+            "bawang merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 4,
           "unit": null,
-          "name": "garlic cloves, for the paste"
+          "name": [
+            "garlic cloves, for the paste",
+            "bawang putih, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "ground turmeric, for the paste"
+          "name": [
+            "ground turmeric, for the paste",
+            "kunyit bubuk, untuk bumbu halus"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "galangal or ginger, for the paste"
+          "name": [
+            "galangal or ginger, for the paste",
+            "lengkuas atau jahe, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1.5,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted, for the paste"
+          "name": [
+            "Sichuan pepper, toasted, for the paste",
+            "lada Sichuan, disangrai, untuk bumbu halus"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "red chilies, for the paste"
+          "name": [
+            "red chilies, for the paste",
+            "cabai merah, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt, for the paste"
+          "name": [
+            "salt, for the paste",
+            "garam, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": "tbsp",
-          "name": "oil, for the paste"
+          "name": [
+            "oil, for the paste",
+            "minyak, untuk bumbu halus"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "batch Sambal Andaliman (see that recipe)"
+          "name": [
+            "batch Sambal Andaliman (see that recipe)",
+            "satu resep Sambal Andaliman (lihat resepnya)"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Dry the skin",
-          "text": "Pat the skin very dry and score it in a fine grid with a sharp knife (cut the skin and fat, not the meat). For the crispiest skin, leave it uncovered in the fridge overnight."
+          "title": [
+            "Dry the skin",
+            "Keringkan kulit"
+          ],
+          "text": [
+            "Pat the skin very dry and score it in a fine grid with a sharp knife (cut the skin and fat, not the meat). For the crispiest skin, leave it uncovered in the fridge overnight.",
+            "Tepuk-tepuk kulit sampai benar-benar kering dan sayat kotak-kotak kecil dengan pisau tajam (sayat kulit dan lemaknya, jangan dagingnya). Supaya paling renyah, simpan tanpa tutup di kulkas semalaman."
+          ]
         },
         {
-          "title": "Paste",
-          "text": "Blitz the paste ingredients in the chopper. Rub it only on the meat side and edges. Keep the skin clean and dry."
+          "title": [
+            "Paste",
+            "Bumbu halus"
+          ],
+          "text": [
+            "Blitz the paste ingredients in the chopper. Rub it only on the meat side and edges. Keep the skin clean and dry.",
+            "Haluskan bahan bumbu di chopper. Lumurkan hanya ke sisi daging dan pinggirannya. Jaga kulit tetap bersih dan kering."
+          ]
         },
         {
-          "title": "Salt the skin",
-          "text": "Rub 2 tsp salt into the scored skin. Place skin side up on a rack over a tray with a little water in it."
+          "title": [
+            "Salt the skin",
+            "Garami kulit"
+          ],
+          "text": [
+            "Rub 2 tsp salt into the scored skin. Place skin side up on a rack over a tray with a little water in it.",
+            "Gosokkan 2 sdt garam ke kulit yang sudah disayat. Taruh dengan kulit di atas, di rak di atas loyang berisi sedikit air."
+          ]
         },
         {
-          "title": "Slow roast",
-          "text": "Roast at 160°C, top and bottom heat, for 1.5 hours."
+          "title": [
+            "Slow roast",
+            "Panggang perlahan"
+          ],
+          "text": [
+            "Roast at 160°C, top and bottom heat, for 1.5 hours.",
+            "Panggang di 160°C, api atas dan bawah, selama 1,5 jam."
+          ]
         },
         {
-          "title": "Crisp",
-          "text": "Brush off excess salt, raise the heat to 230°C (or use the grill) and roast 15-25 minutes until the skin puffs and crackles. Watch closely so it doesn't burn."
+          "title": [
+            "Crisp",
+            "Renyahkan"
+          ],
+          "text": [
+            "Brush off excess salt, raise the heat to 230°C (or use the grill) and roast 15-25 minutes until the skin puffs and crackles. Watch closely so it doesn't burn.",
+            "Sikat sisa garam, naikkan suhu ke 230°C (atau pakai grill) dan panggang 15-25 menit sampai kulit menggelembung dan renyah. Awasi terus supaya tidak gosong."
+          ]
         },
         {
-          "title": "Serve",
-          "text": "Rest 10 minutes, cut into bite-size pieces with a heavy knife, and serve with Sambal Andaliman and rice."
+          "title": [
+            "Serve",
+            "Sajikan"
+          ],
+          "text": [
+            "Rest 10 minutes, cut into bite-size pieces with a heavy knife, and serve with Sambal Andaliman and rice.",
+            "Diamkan 10 menit, potong seukuran gigitan dengan pisau besar, lalu sajikan dengan Sambal Andaliman dan nasi."
+          ]
         }
       ],
       "notes": [
-        "Dry skin is the key to crackling: the drier, the crispier.",
-        "If parts of the skin don't puff, put those pieces under the grill for a few minutes.",
-        "Ask the butcher for 'bůček s kůží' in one piece; supermarkets often sell it pre-packed."
+        [
+          "Dry skin is the key to crackling: the drier, the crispier.",
+          "Kulit yang kering adalah kunci kerenyahan: makin kering, makin renyah."
+        ],
+        [
+          "If parts of the skin don't puff, put those pieces under the grill for a few minutes.",
+          "Kalau ada bagian kulit yang tidak menggelembung, taruh potongan itu di bawah grill beberapa menit."
+        ],
+        [
+          "Ask the butcher for 'bůček s kůží' in one piece; supermarkets often sell it pre-packed.",
+          "Minta 'bůček s kůží' satu potong utuh ke tukang daging; supermarket juga sering menjualnya dalam kemasan."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, galangal": "Sapa or Asian grocery shops",
-        "pork belly with skin, shallots, garlic, turmeric": "regular supermarkets or butchers (řeznictví)"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, galangal",
+            "lada Sichuan, lengkuas"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "pork belly with skin, shallots, garlic, turmeric",
+            "samcan dengan kulit, bawang merah, bawang putih, kunyit"
+          ],
+          "where": [
+            "regular supermarkets or butchers (řeznictví)",
+            "supermarket biasa atau tukang daging (řeznictví)"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "pork",
@@ -1040,110 +2061,221 @@
     },
     {
       "id": "babi-goreng-batak",
-      "title": "Babi Goreng Batak",
-      "category": "Meat",
+      "title": [
+        "Babi Goreng Batak",
+        "Babi Goreng Batak"
+      ],
+      "category": [
+        "Meat",
+        "Daging"
+      ],
       "cuisine": "Batak",
-      "description": "Pork belly first simmered until tender, then fried until golden and crisp, eaten with sambal andaliman and rice. Simple and very forgiving.",
+      "description": [
+        "Pork belly first simmered until tender, then fried until golden and crisp, eaten with sambal andaliman and rice. Simple and very forgiving.",
+        "Samcan direbus dulu sampai empuk, lalu digoreng sampai keemasan dan renyah, dimakan dengan sambal andaliman dan nasi. Sederhana dan sulit gagal."
+      ],
       "servings": 4,
-      "time": "10 min prep + 30 min simmer + 15 min fry",
+      "time": [
+        "10 min prep + 30 min simmer + 15 min fry",
+        "10 menit persiapan + 30 menit rebus + 15 menit goreng"
+      ],
       "oven": null,
       "equipment": [
-        "Lauben multi-cooker 18SB or a pot (for simmering)",
-        "gas stove",
-        "pan"
+        [
+          "Lauben multi-cooker 18SB or a pot (for simmering)",
+          "Multi-cooker Lauben 18SB atau panci (untuk merebus)"
+        ],
+        [
+          "gas stove",
+          "kompor gas"
+        ],
+        [
+          "pan",
+          "wajan"
+        ]
       ],
       "ingredients": [
         {
           "amount": 800,
           "unit": "g",
-          "name": "pork belly (bůček), 3 cm cubes"
+          "name": [
+            "pork belly (bůček), 3 cm cubes",
+            "samcan (bůček), potong dadu 3 cm"
+          ]
         },
         {
           "amount": 1,
           "unit": "l",
-          "name": "water"
+          "name": [
+            "water",
+            "air"
+          ]
         },
         {
           "amount": 1,
           "unit": "tsp",
-          "name": "salt, for the water"
+          "name": [
+            "salt, for the water",
+            "garam, untuk air rebusan"
+          ]
         },
         {
           "amount": 3,
           "unit": null,
-          "name": "garlic cloves, smashed"
+          "name": [
+            "garlic cloves, smashed",
+            "bawang putih, digeprek"
+          ]
         },
         {
           "amount": 3,
           "unit": "cm",
-          "name": "ginger, sliced"
+          "name": [
+            "ginger, sliced",
+            "jahe, diiris"
+          ]
         },
         {
           "amount": 2,
           "unit": null,
-          "name": "bay leaves"
+          "name": [
+            "bay leaves",
+            "daun salam Eropa"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "salt, for frying"
+          "name": [
+            "salt, for frying",
+            "garam, untuk menggoreng"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "ground turmeric"
+          "name": [
+            "ground turmeric",
+            "kunyit bubuk"
+          ]
         },
         {
           "amount": 0.5,
           "unit": "tsp",
-          "name": "Sichuan pepper, toasted and ground"
+          "name": [
+            "Sichuan pepper, toasted and ground",
+            "lada Sichuan, disangrai dan dihaluskan"
+          ]
         },
         {
           "amount": 3,
           "unit": "tbsp",
-          "name": "oil"
+          "name": [
+            "oil",
+            "minyak"
+          ]
         },
         {
           "amount": 2,
           "unit": "tbsp",
-          "name": "fried shallots (optional, ready-made)"
+          "name": [
+            "fried shallots (optional, ready-made)",
+            "bawang goreng (opsional, siap pakai)"
+          ]
         },
         {
           "amount": 1,
           "unit": null,
-          "name": "batch Sambal Andaliman (see that recipe)"
+          "name": [
+            "batch Sambal Andaliman (see that recipe)",
+            "satu resep Sambal Andaliman (lihat resepnya)"
+          ]
         }
       ],
       "steps": [
         {
-          "title": "Simmer",
-          "text": "Simmer the pork with water, salt, garlic, ginger and bay leaves for 30 minutes until tender. Multi-cooker: use the stew or soup program; check your manual for the time."
+          "title": [
+            "Simmer",
+            "Masak perlahan"
+          ],
+          "text": [
+            "Simmer the pork with water, salt, garlic, ginger and bay leaves for 30 minutes until tender. Multi-cooker: use the stew or soup program; check your manual for the time.",
+            "Rebus daging babi dengan air, garam, bawang putih, jahe, dan daun salam selama 30 menit sampai empuk. Multi-cooker: pakai program stew atau sup; cek buku manual untuk waktunya."
+          ]
         },
         {
-          "title": "Dry",
-          "text": "Drain well and pat the pieces dry with kitchen paper. Dry pork fries crisp; wet pork splatters."
+          "title": [
+            "Dry",
+            "Keringkan"
+          ],
+          "text": [
+            "Drain well and pat the pieces dry with kitchen paper. Dry pork fries crisp; wet pork splatters.",
+            "Tiriskan dan keringkan potongan daging dengan tisu dapur. Daging kering jadi renyah; daging basah memercik minyak."
+          ]
         },
         {
-          "title": "Season",
-          "text": "Toss with salt, turmeric and ground Sichuan pepper."
+          "title": [
+            "Season",
+            "Bumbui"
+          ],
+          "text": [
+            "Toss with salt, turmeric and ground Sichuan pepper.",
+            "Aduk dengan garam, kunyit, dan lada Sichuan halus."
+          ]
         },
         {
-          "title": "Fry",
-          "text": "Heat the oil in a pan on medium-high. Fry the pork in one layer, turning now and then, for 10-15 minutes until golden and crisp. Use a lid or splatter screen."
+          "title": [
+            "Fry",
+            "Goreng"
+          ],
+          "text": [
+            "Heat the oil in a pan on medium-high. Fry the pork in one layer, turning now and then, for 10-15 minutes until golden and crisp. Use a lid or splatter screen.",
+            "Panaskan minyak di wajan dengan api sedang-besar. Goreng daging dalam satu lapis, sesekali dibalik, selama 10-15 menit sampai keemasan dan renyah. Pakai tutup atau saringan anti-percikan."
+          ]
         },
         {
-          "title": "Serve",
-          "text": "Sprinkle with fried shallots and serve with Sambal Andaliman and rice."
+          "title": [
+            "Serve",
+            "Sajikan"
+          ],
+          "text": [
+            "Sprinkle with fried shallots and serve with Sambal Andaliman and rice.",
+            "Taburi bawang goreng dan sajikan dengan Sambal Andaliman dan nasi."
+          ]
         }
       ],
       "notes": [
-        "Keep the simmering broth: with some greens and andaliman it makes a good soup.",
-        "For extra crunch, toss the dried pieces in 2 tbsp cornstarch (kukuřičný škrob / Solamyl) before frying."
+        [
+          "Keep the simmering broth: with some greens and andaliman it makes a good soup.",
+          "Simpan air rebusannya: ditambah sayur dan andaliman jadi sup yang enak."
+        ],
+        [
+          "For extra crunch, toss the dried pieces in 2 tbsp cornstarch (kukuřičný škrob / Solamyl) before frying.",
+          "Supaya lebih renyah, balur potongan yang sudah kering dengan 2 sdm maizena (kukuřičný škrob / Solamyl) sebelum digoreng."
+        ]
       ],
-      "shopping": {
-        "Sichuan pepper, fried shallots": "Sapa or Asian grocery shops",
-        "pork belly, ginger, bay leaves": "regular supermarkets"
-      },
+      "shopping": [
+        {
+          "items": [
+            "Sichuan pepper, fried shallots",
+            "lada Sichuan, bawang goreng"
+          ],
+          "where": [
+            "Sapa or Asian grocery shops",
+            "Sapa atau toko Asia"
+          ]
+        },
+        {
+          "items": [
+            "pork belly, ginger, bay leaves",
+            "samcan, jahe, daun salam Eropa"
+          ],
+          "where": [
+            "regular supermarkets",
+            "supermarket biasa"
+          ]
+        }
+      ],
       "tags": [
         "batak",
         "pork",
@@ -1152,5 +2284,9 @@
       ],
       "added": "2026-10-18"
     }
+  ],
+  "languages": [
+    "en",
+    "id"
   ]
 }

@@ -10,12 +10,75 @@
     "glass baking tin"
   ],
   "tips": [
-    {"title": "Mixer attachments", "text": "Flat beater for cakes, cookies and creaming butter. Whisk for egg whites, cream and sponge cake. Dough hook for bread and yeast dough."},
-    {"title": "No fan for loaf cakes", "text": "Use top & bottom heat for dense, tall cakes (banana, fruit, loaf). Fan browns and dries the top too fast. If using fan, lower the temperature by about 20°C."},
-    {"title": "Glass tin", "text": "Bake about 10-15°C lower than a metal tin, line with paper, check early, and never set it hot on a cold or wet surface."},
-    {"title": "Dry outside, wet middle", "text": "Lower heat and bake longer, tent with foil once brown, fill the tin only 2/3, or use a light metal tin."},
-    {"title": "Andaliman substitute", "text": "Sichuan pepper, toasted 1 minute in a dry pan, is the closest substitute."},
-    {"title": "Kemiri substitute", "text": "Macadamia nuts, same amount."},
-    {"title": "Where to shop in Prague", "text": "Sapa market (Praha-Libuš) and Asian grocery shops for galangal, lemongrass, lime leaves, Sichuan pepper and chilies. Regular supermarkets for the rest."}
+    {
+      "title": [
+        "Mixer attachments",
+        "Aksesori mixer"
+      ],
+      "text": [
+        "Flat beater for cakes, cookies and creaming butter. Whisk for egg whites, cream and sponge cake. Dough hook for bread and yeast dough.",
+        "Pengaduk pipih untuk kue, cookies, dan mengocok mentega. Whisk (pengocok kawat) untuk putih telur, krim, dan bolu. Dough hook untuk roti dan adonan beragi."
+      ]
+    },
+    {
+      "title": [
+        "No fan for loaf cakes",
+        "Tanpa kipas untuk kue loaf"
+      ],
+      "text": [
+        "Use top & bottom heat for dense, tall cakes (banana, fruit, loaf). Fan browns and dries the top too fast. If using fan, lower the temperature by about 20°C.",
+        "Pakai api atas & bawah untuk kue padat dan tinggi (pisang, buah, loaf). Kipas membuat bagian atas terlalu cepat cokelat dan kering. Kalau pakai kipas, turunkan suhu sekitar 20°C."
+      ]
+    },
+    {
+      "title": [
+        "Glass tin",
+        "Loyang kaca"
+      ],
+      "text": [
+        "Bake about 10-15°C lower than a metal tin, line with paper, check early, and never set it hot on a cold or wet surface.",
+        "Panggang sekitar 10-15°C lebih rendah daripada loyang logam, alasi dengan kertas, cek lebih awal, dan jangan taruh loyang panas di permukaan dingin atau basah."
+      ]
+    },
+    {
+      "title": [
+        "Dry outside, wet middle",
+        "Luar kering, tengah basah"
+      ],
+      "text": [
+        "Lower heat and bake longer, tent with foil once brown, fill the tin only 2/3, or use a light metal tin.",
+        "Turunkan suhu dan panggang lebih lama, tutup dengan foil setelah cokelat, isi loyang hanya 2/3, atau pakai loyang logam berwarna terang."
+      ]
+    },
+    {
+      "title": [
+        "Andaliman substitute",
+        "Pengganti andaliman"
+      ],
+      "text": [
+        "Sichuan pepper, toasted 1 minute in a dry pan, is the closest substitute.",
+        "Lada Sichuan, disangrai 1 menit di wajan kering, adalah pengganti paling mirip."
+      ]
+    },
+    {
+      "title": [
+        "Kemiri substitute",
+        "Pengganti kemiri"
+      ],
+      "text": [
+        "Macadamia nuts, same amount.",
+        "Kacang macadamia, jumlah yang sama."
+      ]
+    },
+    {
+      "title": [
+        "Where to shop in Prague",
+        "Tempat belanja di Praha"
+      ],
+      "text": [
+        "Sapa market (Praha-Libuš) and Asian grocery shops for galangal, lemongrass, lime leaves, Sichuan pepper and chilies. Regular supermarkets for the rest.",
+        "Pasar Sapa (Praha-Libuš) dan toko Asia untuk lengkuas, serai, daun jeruk, lada Sichuan, dan cabai. Supermarket biasa untuk sisanya."
+      ]
+    }
   ]
 }
