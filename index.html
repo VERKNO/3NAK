@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Andrew's Recipe Book</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chut</title>
+<meta name="description" content="Batak home cooking and baking, adapted for ingredients in Prague.">
+<meta name="theme-color" content="#8A2D52">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/favicon.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chut">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -30,7 +39,7 @@
   --accent: #EC93B5; --accent-soft: #3A2230; --warn: #F2C46B; --warn-soft: #3A2F17; color-scheme: dark; }
 
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; }
-.wrap { max-width: 1100px; margin: 0 auto; padding-block: 28px 48px;
+.wrap { max-width: 1100px; margin: 0 auto; padding-block: calc(28px + env(safe-area-inset-top, 0px)) calc(48px + env(safe-area-inset-bottom, 0px));
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 header.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 22px; }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -0.02em; margin: 0; }
@@ -93,7 +102,7 @@ ol.steps b { display: block; }
 
 <div class="wrap">
   <header class="top">
-    <h1>Andrew's Recipe Book</h1>
+    <h1>Chut</h1>
     <p class="sub">Batak home cooking and baking, adapted for Prague shops.</p>
   </header>
 
@@ -207,7 +216,7 @@ $("q").addEventListener("input", e => { state.q = e.target.value; renderList(); 
     state.current = pick || (state.recipes[0] && state.recipes[0].id);
     renderList(); renderDetail();
   } catch (e) {
-    $("list").innerHTML = '<div class="empty">Couldn\'t load recipes.json. Open this page through a web server or GitHub Pages, not as a local file.</div>';
+    $("list").innerHTML = '<div class="empty">Couldn\'t load recipes.json. Check your connection and reload. Opening the file directly from your computer won\'t work; use the website or a local server.</div>';
   }
   try {
     const k = await (await fetch("kitchen.json", {cache: "no-store"})).json();
@@ -216,6 +225,10 @@ $("q").addEventListener("input", e => { state.q = e.target.value; renderList(); 
     $("tips").innerHTML = items.map(t => `<div><b>${esc(t.title)}</b><span>${esc(t.text)}</span></div>`).join("");
   } catch (e) {}
 })();
+
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}
 </script>
 
 </body>
