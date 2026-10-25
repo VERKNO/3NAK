@@ -3,6 +3,890 @@
   "updated": "2026-10-18",
   "recipes": [
     {
+  "id": "banana-cake-two-sizes",
+  "title": "Banana Cake (Loaf or Round Tin)",
+  "category": "Cake",
+  "cuisine": "American",
+  "description": "A versatile banana cake batter that fits perfectly in either a standard loaf tin or a normal round cake tin.",
+  "servings": 8,
+  "time": "15 min prep + 35-60 min bake",
+  "oven": "175°C top & bottom heat",
+  "equipment": [
+    "loaf tin or round cake tin",
+    "mixing bowl",
+    "fork or whisk"
+  ],
+  "ingredients": [
+    {
+      "amount": 4,
+      "unit": "medium",
+      "name": "overripe bananas, mashed (velmi zralé banány)"
+    },
+    {
+      "amount": 75,
+      "unit": "g",
+      "name": "butter, melted (rozpuštěné máslo)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 1,
+      "unit": "pc",
+      "name": "egg (vejce)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "vanilla extract (vanilkový extrakt)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "baking soda (jedlá soda)"
+    },
+    {
+      "amount": 0.25,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 190,
+      "unit": "g",
+      "name": "plain flour (hladká mouka)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep",
+      "text": "Heat the oven to 175°C. Grease and line your chosen tin (loaf tin or round cake tin)."
+    },
+    {
+      "title": "Mash & Mix",
+      "text": "Mash the bananas in a bowl. Stir in the melted butter, sugar, egg, and vanilla extract."
+    },
+    {
+      "title": "Dry Ingredients",
+      "text": "Sprinkle the baking soda and salt over the mixture and stir. Fold in the flour until just combined. Do not overmix."
+    },
+    {
+      "title": "Bake",
+      "text": "Pour the batter into the tin. For a loaf tin, bake for 50-60 minutes. For a round tin, bake for 35-45 minutes. It is done when a skewer inserted into the center comes out clean."
+    },
+    {
+      "title": "Cool",
+      "text": "Let it cool in the tin for 10 minutes before transferring to a wire rack to cool completely."
+    }
+  ],
+  "notes": [
+    "The round tin bakes faster because the batter is spread thinner than in a deep loaf tin.",
+    "Source recipe adapted from: https://www.simplyrecipes.com/recipes/banana_bread/"
+  ],
+  "tags": [
+    "baking",
+    "banana",
+    "sweet",
+    "cake"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "beer-battered-fish",
+  "title": "Beer-Battered Fish",
+  "category": "Main",
+  "cuisine": "British",
+  "description": "Crispy beer-battered fish fillets for a homemade Fish and Chips experience (fish only). Ingredients adapted for Prague supermarkets.",
+  "servings": 4,
+  "time": "15 min prep + 15 min cook",
+  "oven": null,
+  "equipment": [
+    "deep frying pan or heavy pot",
+    "whisk (metla)",
+    "paper towels (papírové utěrky)"
+  ],
+  "ingredients": [
+    {
+      "amount": 600,
+      "unit": "g",
+      "name": "cod or haddock fillets (filety z tresky, fresh or thawed)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "plain flour (hladká mouka)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "baking powder (prášek do pečiva)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 200,
+      "unit": "ml",
+      "name": "cold light beer (studené světlé pivo, e.g., Pilsner)"
+    },
+    {
+      "amount": 1,
+      "unit": "L",
+      "name": "sunflower or rapeseed oil for frying (slunečnicový nebo řepkový olej)"
+    },
+    {
+      "amount": 2,
+      "unit": "tbsp",
+      "name": "extra flour for dusting (mouka na obalení)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep Fish",
+      "text": "Pat the fish fillets completely dry with paper towels. Cut them into 4 equal portions."
+    },
+    {
+      "title": "Heat Oil",
+      "text": "Pour the oil into a deep pan or pot and heat it to 180°C (or until a drop of batter sizzles and floats immediately)."
+    },
+    {
+      "title": "Make Batter",
+      "text": "In a bowl, mix the 150g flour, baking powder, and salt. Pour in the cold beer and whisk gently until a thick batter forms. A few lumps are fine."
+    },
+    {
+      "title": "Coat",
+      "text": "Dust the fish pieces lightly in the extra flour, then dip them into the beer batter, letting the excess drip off."
+    },
+    {
+      "title": "Fry",
+      "text": "Carefully lower the battered fish away from you into the hot oil. Fry for about 4 to 5 minutes, turning occasionally, until crisp and golden brown."
+    },
+    {
+      "title": "Drain",
+      "text": "Remove the fish with a slotted spoon and let it rest on paper towels to drain excess oil. Serve immediately."
+    }
+  ],
+  "notes": [
+    "Using ice-cold beer is crucial as the thermal shock against the hot oil creates a crispier batter.",
+    "Source recipe adapted from: https://www.bbcgoodfood.com/recipes/golden-beer-battered-fish-with-chips"
+  ],
+  "tags": [
+    "fish",
+    "frying",
+    "british",
+    "main"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "shihlin-fried-chicken",
+  "title": "Taiwanese XXL Fried Chicken (Shihlin Style)",
+  "category": "Main",
+  "cuisine": "Taiwanese",
+  "description": "Crispy, pounded flat chicken breast coated in starch and five-spice, inspired by Shihlin street food.",
+  "servings": 2,
+  "time": "15 min prep + 30 min marinate + 10 min cook",
+  "oven": null,
+  "equipment": [
+    "meat mallet or rolling pin (palička na maso)",
+    "deep frying pan or wok",
+    "tongs (kleště)"
+  ],
+  "ingredients": [
+    {
+      "amount": 2,
+      "unit": "pcs",
+      "name": "large chicken breasts (kuřecí prsa)"
+    },
+    {
+      "amount": 2,
+      "unit": "tbsp",
+      "name": "soy sauce (sójová omáčka)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "rice wine or water (rýžové víno nebo voda)"
+    },
+    {
+      "amount": 2,
+      "unit": "cloves",
+      "name": "garlic, minced (česnek)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "five-spice powder, divided (koření pěti vůní)"
+    },
+    {
+      "amount": 0.75,
+      "unit": "tsp",
+      "name": "white pepper, divided (bílý pepř)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "tapioca starch or potato starch (tapiokový nebo bramborový škrob)"
+    },
+    {
+      "amount": 1,
+      "unit": "L",
+      "name": "vegetable oil for frying (rostlinný olej)"
+    },
+    {
+      "amount": 0.5,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 0.5,
+      "unit": "tsp",
+      "name": "chili powder (chilli v prášku)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep Chicken",
+      "text": "Butterfly the chicken breasts. Place them between cling film and pound them flat to about 0.5 cm thickness."
+    },
+    {
+      "title": "Marinate",
+      "text": "Mix soy sauce, rice wine, garlic, sugar, 0.5 tsp five-spice powder, and 0.25 tsp white pepper. Coat the chicken and marinate for at least 30 minutes."
+    },
+    {
+      "title": "Seasoning Mix",
+      "text": "In a small bowl, mix the salt, chili powder, remaining 0.5 tsp five-spice powder, and remaining 0.5 tsp white pepper. Set aside."
+    },
+    {
+      "title": "Coat",
+      "text": "Dredge the marinated chicken in the tapioca starch, pressing down firmly so it sticks. Let it sit for 5 minutes until the starch looks slightly damp."
+    },
+    {
+      "title": "Fry",
+      "text": "Heat oil to 180°C. Carefully fry the chicken for 4-5 minutes per side until crisp and golden brown."
+    },
+    {
+      "title": "Finish",
+      "text": "Drain on paper towels. Immediately dust generously on both sides with the seasoning mix. Serve hot and whole."
+    }
+  ],
+  "notes": [
+    "Tapioca starch provides the authentic crunchy crust. It is easily found in Prague's Asian markets (like Sapa) or large supermarkets. Potato starch is a good fallback.",
+    "Source recipe adapted from: https://thewoksoflife.com/taiwanese-fried-chicken/"
+  ],
+  "tags": [
+    "chicken",
+    "taiwanese",
+    "street-food",
+    "frying"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "blueberry-muffins",
+  "title": "Classic Blueberry Muffins",
+  "category": "Baking",
+  "cuisine": "American",
+  "description": "Simple, fluffy blueberry muffins suitable for a quick breakfast or snack.",
+  "servings": 12,
+  "time": "10 min prep + 20-25 min bake",
+  "oven": "200°C top & bottom heat",
+  "equipment": [
+    "muffin tin (forma na muffiny)",
+    "paper liners (papírové košíčky)",
+    "mixing bowls (mísa)"
+  ],
+  "ingredients": [
+    {
+      "amount": 250,
+      "unit": "g",
+      "name": "plain flour (hladká mouka)"
+    },
+    {
+      "amount": 2,
+      "unit": "tsp",
+      "name": "baking powder (prášek do pečiva)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 0.5,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 80,
+      "unit": "ml",
+      "name": "vegetable oil (rostlinný olej)"
+    },
+    {
+      "amount": 1,
+      "unit": "pc",
+      "name": "egg (vejce)"
+    },
+    {
+      "amount": 80,
+      "unit": "ml",
+      "name": "milk (mléko)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "fresh or frozen blueberries (čerstvé nebo mražené borůvky)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep",
+      "text": "Preheat the oven to 200°C. Line a muffin tin with paper liners."
+    },
+    {
+      "title": "Dry Ingredients",
+      "text": "In a large bowl, whisk together the flour, baking powder, sugar, and salt."
+    },
+    {
+      "title": "Wet Ingredients",
+      "text": "In a separate measuring jug, whisk the oil, egg, and milk."
+    },
+    {
+      "title": "Combine",
+      "text": "Pour the wet ingredients into the dry ingredients. Stir with a fork or spatula just until combined. Do not overmix; the batter should be lumpy."
+    },
+    {
+      "title": "Add Blueberries",
+      "text": "Gently fold in the blueberries."
+    },
+    {
+      "title": "Bake",
+      "text": "Divide the batter evenly among the 12 muffin cups. Bake for 20-25 minutes, or until a toothpick comes out clean."
+    }
+  ],
+  "notes": [
+    "If using frozen blueberries, do not thaw them beforehand, as they will bleed into the batter.",
+    "Source recipe adapted from: https://www.inspiredtaste.net/18982/our-favorite-easy-blueberry-muffin-recipe/"
+  ],
+  "tags": [
+    "baking",
+    "muffins",
+    "sweet",
+    "breakfast"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "vanilla-cupcakes",
+  "title": "Classic Vanilla Cupcakes with Buttercream",
+  "category": "Baking",
+  "cuisine": "American",
+  "description": "Soft and tender vanilla cupcakes topped with a simple vanilla buttercream frosting.",
+  "servings": 12,
+  "time": "20 min prep + 15-20 min bake",
+  "oven": "175°C top & bottom heat",
+  "equipment": [
+    "muffin tin (forma na muffiny)",
+    "paper liners (papírové košíčky)",
+    "hand mixer or stand mixer (mixér)"
+  ],
+  "ingredients": [
+    {
+      "amount": 195,
+      "unit": "g",
+      "name": "plain flour (hladká mouka)"
+    },
+    {
+      "amount": 1.5,
+      "unit": "tsp",
+      "name": "baking powder (prášek do pečiva)"
+    },
+    {
+      "amount": 0.25,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 115,
+      "unit": "g",
+      "name": "butter, softened (změklé máslo - for cupcakes)"
+    },
+    {
+      "amount": 200,
+      "unit": "g",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 2,
+      "unit": "pcs",
+      "name": "eggs (vejce)"
+    },
+    {
+      "amount": 2,
+      "unit": "tsp",
+      "name": "vanilla extract (vanilkový extrakt - for cupcakes)"
+    },
+    {
+      "amount": 120,
+      "unit": "ml",
+      "name": "milk (mléko)"
+    },
+    {
+      "amount": 115,
+      "unit": "g",
+      "name": "butter, softened (změklé máslo - for buttercream)"
+    },
+    {
+      "amount": 240,
+      "unit": "g",
+      "name": "icing sugar (moučkový cukr)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "vanilla extract (vanilkový extrakt - for buttercream)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "milk or heavy cream (mléko nebo smetana - for buttercream)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep",
+      "text": "Preheat the oven to 175°C. Line a 12-hole muffin tin with paper liners."
+    },
+    {
+      "title": "Mix Dry Ingredients",
+      "text": "In a medium bowl, whisk together the flour, baking powder, and salt."
+    },
+    {
+      "title": "Cream Butter & Sugar",
+      "text": "In a large bowl, use a mixer on medium speed to beat the 115g softened butter and 200g sugar until pale and fluffy (about 3 minutes)."
+    },
+    {
+      "title": "Add Wet Ingredients",
+      "text": "Add the eggs one at a time, mixing well after each. Stir in the 2 tsp vanilla extract."
+    },
+    {
+      "title": "Combine",
+      "text": "On low speed, add a third of the dry ingredients, followed by half the milk. Repeat, ending with the dry ingredients. Mix just until combined."
+    },
+    {
+      "title": "Bake",
+      "text": "Fill the liners about 2/3 full. Bake for 15-20 minutes, or until a toothpick comes out clean. Transfer to a wire rack to cool completely."
+    },
+    {
+      "title": "Make Buttercream",
+      "text": "Beat the remaining 115g softened butter on medium speed until creamy. Gradually add the icing sugar, 1 tsp vanilla, and 1 tbsp milk. Beat on high for 2 minutes until fluffy."
+    },
+    {
+      "title": "Frost",
+      "text": "Once the cupcakes are completely cool, pipe or spread the buttercream on top."
+    }
+  ],
+  "notes": [
+    "Make sure the cupcakes are completely cold before frosting, otherwise the buttercream will melt.",
+    "Source recipe adapted from: https://sallysbakingaddiction.com/simply-sweet-vanilla-cupcakes/"
+  ],
+  "tags": [
+    "baking",
+    "cupcakes",
+    "sweet",
+    "dessert"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "simple-cocoa-brownies",
+  "title": "Simple Cocoa Brownies",
+  "category": "Baking",
+  "cuisine": "American",
+  "description": "Fudgy, dense brownies made entirely with everyday cocoa powder.",
+  "servings": 9,
+  "time": "10 min prep + 20-25 min bake",
+  "oven": "175°C top & bottom heat",
+  "equipment": [
+    "square baking tin (čtvercová forma na pečení)",
+    "mixing bowl (mísa)",
+    "whisk (metla)"
+  ],
+  "ingredients": [
+    {
+      "amount": 115,
+      "unit": "g",
+      "name": "butter, melted (rozpuštěné máslo)"
+    },
+    {
+      "amount": 200,
+      "unit": "g",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 2,
+      "unit": "pcs",
+      "name": "eggs (vejce)"
+    },
+    {
+      "amount": 65,
+      "unit": "g",
+      "name": "unsweetened cocoa powder (holandské kakao)"
+    },
+    {
+      "amount": 60,
+      "unit": "g",
+      "name": "plain flour (hladká mouka)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "vanilla extract (vanilkový extrakt)"
+    },
+    {
+      "amount": 0.25,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep",
+      "text": "Preheat the oven to 175°C. Grease an 8x8-inch (20x20 cm) square tin and line it with baking paper."
+    },
+    {
+      "title": "Wet Ingredients",
+      "text": "In a medium bowl, whisk the melted butter and sugar together until well combined. Whisk in the eggs and vanilla extract until the mixture is smooth and slightly lighter in color."
+    },
+    {
+      "title": "Dry Ingredients",
+      "text": "Sift the cocoa powder, flour, and salt directly into the bowl. Fold gently with a spatula just until the dry ingredients are fully incorporated. Do not overmix."
+    },
+    {
+      "title": "Bake",
+      "text": "Pour the thick batter into the prepared tin and smooth the top. Bake for 20-25 minutes. A toothpick inserted into the center should come out with moist crumbs, not wet batter."
+    },
+    {
+      "title": "Cool",
+      "text": "Allow the brownies to cool completely in the tin before lifting them out and slicing."
+    }
+  ],
+  "notes": [
+    "Using Dutch-processed cocoa powder (holandské kakao) gives a darker, richer flavor.",
+    "Source recipe adapted from: https://cafedelites.com/best-fudgy-cocoa-brownies/"
+  ],
+  "tags": [
+    "baking",
+    "chocolate",
+    "brownies",
+    "sweet"
+  ],
+  "added": "2026-10-25"
+},
+{
+  "id": "simple-hot-cocoa",
+  "title": "Simple Homemade Hot Cocoa",
+  "category": "Drink",
+  "cuisine": "Global",
+  "description": "A quick, comforting mug of hot chocolate using basic pantry cocoa powder.",
+  "servings": 1,
+  "time": "5 min cook",
+  "oven": null,
+  "equipment": [
+    "small saucepan (malý hrnec)",
+    "whisk (metla)",
+    "mug (hrnek)"
+  ],
+  "ingredients": [
+    {
+      "amount": 250,
+      "unit": "ml",
+      "name": "milk (mléko)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "unsweetened cocoa powder (holandské kakao)"
+    },
+    {
+      "amount": 1.5,
+      "unit": "tbsp",
+      "name": "sugar (cukr)"
+    },
+    {
+      "amount": 0.25,
+      "unit": "tsp",
+      "name": "vanilla extract (vanilkový extrakt)"
+    },
+    {
+      "amount": 1,
+      "unit": "pinch",
+      "name": "salt (špetka soli)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Make a Paste",
+      "text": "In the small saucepan, whisk together the cocoa powder, sugar, salt, and about 2 tablespoons of the milk until you form a smooth, dark paste. This prevents lumps."
+    },
+    {
+      "title": "Heat",
+      "text": "Gradually whisk in the rest of the milk. Place the saucepan over medium-low heat."
+    },
+    {
+      "title": "Simmer",
+      "text": "Heat gently, whisking frequently, until the cocoa is steaming hot but not boiling."
+    },
+    {
+      "title": "Finish",
+      "text": "Remove from heat, stir in the vanilla extract, and pour into a mug."
+    }
+  ],
+  "notes": [
+    "You can substitute any plant-based milk (almond, oat) if preferred.",
+    "Source recipe adapted from: https://www.epicurious.com/recipes/food/views/simple-hot-cocoa-395711"
+  ],
+  "tags": [
+    "drink",
+    "chocolate",
+    "quick",
+    "comfort"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "bubur-kacang-hijau",
+  "title": "Bubur Kacang Hijau (Mung Bean Porridge)",
+  "category": "Dessert",
+  "cuisine": "Indonesian",
+  "description": "Sweet and comforting Indonesian mung bean porridge with coconut milk. Ingredients easily found in Prague supermarkets.",
+  "servings": 4,
+  "time": "4 hours soak + 45 min cook",
+  "oven": null,
+  "equipment": [
+    "large pot (velký hrnec)",
+    "ladle (naběračka)"
+  ],
+  "ingredients": [
+    {
+      "amount": 200,
+      "unit": "g",
+      "name": "mung beans (mungo fazole)"
+    },
+    {
+      "amount": 1,
+      "unit": "L",
+      "name": "water (voda)"
+    },
+    {
+      "amount": 1,
+      "unit": "thumb-sized",
+      "name": "fresh ginger, crushed (čerstvý zázvor)"
+    },
+    {
+      "amount": 2,
+      "unit": "pcs",
+      "name": "pandan leaves (pandanové listy - from Asian markets) OR 1 tsp vanilla extract (vanilkový extrakt)"
+    },
+    {
+      "amount": 150,
+      "unit": "g",
+      "name": "palm sugar or brown sugar (palmový nebo třtinový cukr)"
+    },
+    {
+      "amount": 200,
+      "unit": "ml",
+      "name": "coconut milk (kokosové mléko)"
+    },
+    {
+      "amount": 0.5,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Soak",
+      "text": "Wash the mung beans and soak them in water for at least 4 hours, or overnight. Drain before cooking."
+    },
+    {
+      "title": "Boil Beans",
+      "text": "In a large pot, bring the 1L of water to a boil. Add the soaked mung beans, crushed ginger, and pandan leaves (if using)."
+    },
+    {
+      "title": "Simmer",
+      "text": "Lower the heat and simmer for about 30-40 minutes until the beans are completely soft and bursting."
+    },
+    {
+      "title": "Sweeten",
+      "text": "Add the sugar, salt, and vanilla extract (if using instead of pandan). Stir until the sugar is fully dissolved."
+    },
+    {
+      "title": "Coconut Milk",
+      "text": "Pour in the coconut milk. Stir gently and let it simmer for another 5 minutes. Do not let it boil vigorously so the coconut milk doesn't split."
+    },
+    {
+      "title": "Serve",
+      "text": "Remove the ginger and pandan leaves. Serve warm in bowls."
+    }
+  ],
+  "notes": [
+    "Mung beans are widely available in Czech supermarkets, typically in the healthy food or legumes aisle.",
+    "Source recipe adapted from: https://dailycookingquest.com/bubur-kacang-hijau-mung-bean-porridge.html"
+  ],
+  "tags": [
+    "dessert",
+    "indonesian",
+    "sweet",
+    "vegan"
+  ],
+  "added": "2026-10-25"
+},{
+  "id": "beef-rendang",
+  "title": "Beef Rendang (Prague Supermarket Edition)",
+  "category": "Main",
+  "cuisine": "Indonesian",
+  "description": "Indonesian beef rendang adapted to use ingredients easily sourced in standard Czech supermarkets.",
+  "servings": 4,
+  "time": "30 min prep + 3 hours cook",
+  "oven": null,
+  "equipment": [
+    "food processor or blender (mixér)",
+    "heavy-bottomed pot or wok (těžký hrnec nebo wok)",
+    "spatula (stěrka)"
+  ],
+  "ingredients": [
+    {
+      "amount": 500,
+      "unit": "g",
+      "name": "beef chuck or stewing beef, cut into cubes (hovězí krk nebo hovězí na guláš)"
+    },
+    {
+      "amount": 400,
+      "unit": "ml",
+      "name": "coconut milk (kokosové mléko)"
+    },
+    {
+      "amount": 40,
+      "unit": "g",
+      "name": "desiccated coconut (strouhaný kokos - to make kerisik)"
+    },
+    {
+      "amount": 2,
+      "unit": "stalks",
+      "name": "lemongrass, bruised (citronová tráva)"
+    },
+    {
+      "amount": 3,
+      "unit": "pcs",
+      "name": "dried lime leaves (sušené limetkové lístky - check spice aisle)"
+    },
+    {
+      "amount": 1,
+      "unit": "pc",
+      "name": "cinnamon stick (celá skořice)"
+    },
+    {
+      "amount": 3,
+      "unit": "pcs",
+      "name": "cloves (hřebíček)"
+    },
+    {
+      "amount": 2,
+      "unit": "medium",
+      "name": "yellow onions or 4 shallots (cibule nebo šalotka)"
+    },
+    {
+      "amount": 4,
+      "unit": "cloves",
+      "name": "garlic (česnek)"
+    },
+    {
+      "amount": 3,
+      "unit": "pcs",
+      "name": "fresh red chilies (červené chilli)"
+    },
+    {
+      "amount": 1,
+      "unit": "thumb-sized",
+      "name": "fresh ginger (čerstvý zázvor - substituting for galangal/ginger mix)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "turmeric powder (mletá kurkuma)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "ground coriander (mletý koriandr)"
+    },
+    {
+      "amount": 0.5,
+      "unit": "tsp",
+      "name": "ground cumin (mletý římský kmín)"
+    },
+    {
+      "amount": 2,
+      "unit": "tbsp",
+      "name": "vegetable oil (rostlinný olej)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "brown sugar (třtinový cukr)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "lime juice (limetková šťáva - substituting tamarind)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Make Kerisik",
+      "text": "Dry toast the desiccated coconut in a pan over medium-low heat until it turns dark golden brown. Let it cool, then blend or pound it until it releases its oils and becomes a paste."
+    },
+    {
+      "title": "Spice Paste",
+      "text": "Blend the onions, garlic, chilies, ginger, turmeric, coriander, cumin, and a splash of oil or water into a smooth paste."
+    },
+    {
+      "title": "Fry Aromatics",
+      "text": "Heat oil in the pot. Fry the spice paste along with the lemongrass, lime leaves, cinnamon, and cloves for 5 minutes until fragrant and the oil begins to separate."
+    },
+    {
+      "title": "Brown Meat",
+      "text": "Add the beef cubes. Stir well to coat the meat in the spices and cook until the outside is browned."
+    },
+    {
+      "title": "Simmer",
+      "text": "Pour in the coconut milk. Bring to a gentle boil, then lower the heat. Simmer uncovered for about 2 hours, stirring occasionally."
+    },
+    {
+      "title": "Reduce and Caramelize",
+      "text": "Add the toasted coconut paste (kerisik), brown sugar, lime juice, and salt. Continue cooking for another 45-60 minutes. Stir frequently as the liquid evaporates and the oils separate, allowing the meat to fry in the spiced oil until dark brown and tender."
+    }
+  ],
+  "notes": [
+    "Authentic rendang uses galangal and tamarind, but ginger and lime juice provide a highly accessible supermarket alternative.",
+    "Source recipe adapted from: https://rasamalaysia.com/beef-rendang-recipe-rendang-daging/"
+  ],
+  "tags": [
+    "beef",
+    "indonesian",
+    "stew",
+    "spicy"
+  ],
+  "added": "2026-10-25"
+},{
       "id": "candied-fruit-loaf-cake",
       "title": "Candied Fruit Loaf Cake",
       "category": "Cake",
@@ -113,7 +997,112 @@
         "sweet"
       ],
       "added": "2026-10-18"
+    },{
+  "id": "indonesian-bumbu-kacang",
+  "title": "Indonesian Peanut Sauce (Bumbu Kacang)",
+  "category": "Sauce",
+  "cuisine": "Indonesian",
+  "description": "Versatile stock of peanut sauce for tahu goreng, salad (gado-gado), or meat. Ingredients adapted for Czech supermarkets.",
+  "servings": 10,
+  "time": "10 min prep + 15 min cook",
+  "oven": null,
+  "equipment": [
+    "food processor or blender (mixér)",
+    "saucepan (hrnec)",
+    "spatula (stěrka)"
+  ],
+  "ingredients": [
+    {
+      "amount": 250,
+      "unit": "g",
+      "name": "roasted unsalted peanuts (pražené nesolené arašídy)"
     },
+    {
+      "amount": 3,
+      "unit": "cloves",
+      "name": "garlic (česnek)"
+    },
+    {
+      "amount": 2,
+      "unit": "medium",
+      "name": "shallots (šalotka)"
+    },
+    {
+      "amount": 2,
+      "unit": "pcs",
+      "name": "red chili peppers (červené chilli papričky)"
+    },
+    {
+      "amount": 2,
+      "unit": "tbsp",
+      "name": "vegetable oil (rostlinný olej)"
+    },
+    {
+      "amount": 3,
+      "unit": "tbsp",
+      "name": "sweet soy sauce (sladká sójová omáčka / kecap manis)"
+    },
+    {
+      "amount": 2,
+      "unit": "tbsp",
+      "name": "brown sugar (třtinový cukr)"
+    },
+    {
+      "amount": 1,
+      "unit": "tbsp",
+      "name": "lime juice (limetková šťáva)"
+    },
+    {
+      "amount": 1,
+      "unit": "tsp",
+      "name": "salt (sůl)"
+    },
+    {
+      "amount": 400,
+      "unit": "ml",
+      "name": "water (voda)"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Blend Peanuts",
+      "text": "Pulse the roasted peanuts in a blender until finely ground but not entirely turned into butter."
+    },
+    {
+      "title": "Aromatics",
+      "text": "Finely chop or blend the garlic, shallots, and chili peppers into a paste."
+    },
+    {
+      "title": "Sauté",
+      "text": "Heat oil in a saucepan over medium heat. Fry the aromatic paste for 3-5 minutes until fragrant."
+    },
+    {
+      "title": "Simmer",
+      "text": "Add the ground peanuts, water, sweet soy sauce, and brown sugar to the pan. Stir well and bring to a gentle simmer."
+    },
+    {
+      "title": "Reduce",
+      "text": "Cook on low heat for about 10-15 minutes, stirring frequently so the bottom doesn't burn, until the oil separates slightly and the sauce thickens."
+    },
+    {
+      "title": "Finish",
+      "text": "Turn off the heat. Stir in the lime juice and salt. Taste and adjust seasoning if needed."
+    }
+  ],
+  "notes": [
+    "Store in an airtight container in the fridge for up to 1 week, or freeze for longer.",
+    "When ready to eat from the fridge, the sauce will be thick. Add a splash of warm water and stir to reach the desired consistency.",
+    "Source recipe adapted from: https://dailycookingquest.com/bumbu-kacang-indonesian-peanut-sauce.html"
+  ],
+  "tags": [
+    "sauce",
+    "indonesian",
+    "condiment",
+    "vegan",
+    "meal-prep"
+  ],
+  "added": "2026-10-25"
+},
     {
       "id": "arsik-kapr",
       "title": "Arsik Kapr (Batak Carp Arsik)",
