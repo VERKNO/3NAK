@@ -120,6 +120,7 @@ ol.steps b { display: block; }
 .iconbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .iconbtn .count { font-family: var(--mono); color: var(--accent); }
 
+.paste-area { width: 100%; box-sizing: border-box; font: inherit; font-family: var(--mono); font-size: 0.82rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); resize: vertical; }
 .upload-status { font-size: 0.85rem; padding: 8px 10px; border-radius: 8px; }
 .upload-status.ok { background: var(--accent-soft); color: var(--accent); }
 .upload-status.err { background: var(--warn-soft); color: var(--warn); }
@@ -164,7 +165,6 @@ ol.steps b { display: block; }
     <div class="iconbtns">
       <button type="button" class="iconbtn" id="openShopping"><span data-i18n="shoplistBtn">Shopping list</span><span class="count" id="shopCount"></span></button>
       <button type="button" class="iconbtn" id="openUpload"><span data-i18n="addRecipeBtn">Add recipe</span></button>
-      <input type="file" id="fileInput" accept="application/json,.json" hidden>
     </div>
     <p class="sub" data-i18n="tagline">Batak home cooking and baking, adapted for Prague shops.</p>
   </header>
@@ -179,7 +179,6 @@ ol.steps b { display: block; }
       </div>
       <div class="label" data-i18n="recipes">Recipes</div>
       <div class="list" id="list"><div class="empty" data-i18n="loading">Loading recipes…</div></div>
-      <div id="uploadStatus"></div>
     </aside>
 
     <main class="detail" id="detail">
@@ -193,6 +192,23 @@ ol.steps b { display: block; }
       <div class="tiplist" id="tips"></div>
     </div>
   </section>
+</div>
+
+<div class="sheet-backdrop" id="uploadBackdrop">
+  <div class="sheet">
+    <div class="sheet-head">
+      <h3 data-i18n="addRecipeTitle">Add a recipe</h3>
+      <button type="button" class="sheet-close" id="uploadClose" aria-label="Close">✕</button>
+    </div>
+    <button type="button" class="iconbtn" id="chooseFile" style="width:100%;text-align:center" data-i18n="chooseFileBtn">Choose a JSON file</button>
+    <input type="file" id="fileInput" accept="application/json,.json" hidden>
+    <div class="label" data-i18n="orPaste">Or paste the recipe JSON</div>
+    <form id="pasteForm" style="display:flex;flex-direction:column;gap:10px;">
+      <textarea id="pasteInput" class="paste-area" data-i18n-ph="pastePh" placeholder="Paste recipe JSON here" rows="7"></textarea>
+      <button type="submit" class="iconbtn" style="text-align:center" data-i18n="addFromPaste">Add pasted recipe</button>
+    </form>
+    <div id="uploadStatus"></div>
+  </div>
 </div>
 
 <div class="sheet-backdrop" id="shopBackdrop">
@@ -225,7 +241,9 @@ const UI = {
     servings: "servings", fewer: "Fewer servings", more: "More servings",
     loadfail: "Couldn't load the recipes. Check your connection and reload. Opening the file directly from your computer won't work; use the website or a local server.",
     fAll: "All", fSavoury: "Savoury", fSweet: "Sweet", local: "Your own",
-    addRecipeBtn: "Add recipe", uploadOk: "Added “{title}” to the list.",
+    addRecipeBtn: "Add recipe", addRecipeTitle: "Add a recipe", chooseFileBtn: "Choose a JSON file",
+    orPaste: "Or paste the recipe JSON", pastePh: "Paste recipe JSON here", addFromPaste: "Add pasted recipe",
+    uploadOk: "Added “{title}” to the list.",
     uploadErr: "Couldn't read that file: {reason}", uploadDupe: "A recipe with id “{id}” is already in the list.",
     errNotJson: "that's not valid JSON", errNoId: "missing an “id” field", errNoTitle: "missing a “title” field",
     errBadType: "the file isn't a recipe object (or a {“recipes”:[...]} list of them)",
@@ -243,7 +261,9 @@ const UI = {
     servings: "porsi", fewer: "Kurangi porsi", more: "Tambah porsi",
     loadfail: "Resep gagal dimuat. Cek koneksi internet lalu muat ulang. Membuka file langsung dari komputer tidak bisa; pakai situsnya atau server lokal.",
     fAll: "Semua", fSavoury: "Gurih", fSweet: "Manis", local: "Punyamu",
-    addRecipeBtn: "Tambah resep", uploadOk: "“{title}” ditambahkan ke daftar.",
+    addRecipeBtn: "Tambah resep", addRecipeTitle: "Tambah resep", chooseFileBtn: "Pilih file JSON",
+    orPaste: "Atau tempel JSON resep", pastePh: "Tempel JSON resep di sini", addFromPaste: "Tambah dari tempelan",
+    uploadOk: "“{title}” ditambahkan ke daftar.",
     uploadErr: "File tidak bisa dibaca: {reason}", uploadDupe: "Resep dengan id “{id}” sudah ada di daftar.",
     errNotJson: "bukan JSON yang valid", errNoId: "tidak ada field “id”", errNoTitle: "tidak ada field “title”",
     errBadType: "file ini bukan objek resep (atau daftar {“recipes”:[...]})",
@@ -411,9 +431,9 @@ function removeLocalRecipe(id) {
   if (r) showUploadStatus(fmt("removedLocal", { title: L2(r.title) }), true);
   renderList(); renderDetail();
 }
-async function handleRecipeUpload(file) {
-  let text;
-  try { text = await file.text(); } catch (e) { showUploadStatus(fmt("uploadErr", { reason: t("errNotJson") }), false); return; }
+function handleRecipeText(text) {
+  text = String(text || "").trim();
+  if (!text) return;
   let data;
   try { data = JSON.parse(text); } catch (e) { showUploadStatus(fmt("uploadErr", { reason: t("errNotJson") }), false); return; }
   const list = Array.isArray(data) ? data : (Array.isArray(data?.recipes) ? data.recipes : [data]);
@@ -427,6 +447,11 @@ async function handleRecipeUpload(file) {
   }
   if (added === 0 && firstErr) showUploadStatus(fmt("uploadErr", { reason: firstErr }), false);
   else if (added === 1) showUploadStatus(fmt("uploadOk", { title: lastTitle }), true);
+}
+async function handleRecipeFile(file) {
+  let text;
+  try { text = await file.text(); } catch (e) { showUploadStatus(fmt("uploadErr", { reason: t("errNotJson") }), false); return; }
+  handleRecipeText(text);
 }
 
 /* ---- Shopping list ---- */
@@ -493,12 +518,20 @@ $("typefilter").addEventListener("click", e => {
   setTypeFilter(b.dataset.type);
 });
 
-/* Add-recipe upload */
-$("openUpload").addEventListener("click", () => $("fileInput").click());
+/* Add-recipe sheet: file upload or paste */
+$("openUpload").addEventListener("click", () => { $("uploadBackdrop").classList.add("open"); $("pasteInput").focus(); });
+$("uploadClose").addEventListener("click", () => $("uploadBackdrop").classList.remove("open"));
+$("uploadBackdrop").addEventListener("click", e => { if (e.target === $("uploadBackdrop")) $("uploadBackdrop").classList.remove("open"); });
+$("chooseFile").addEventListener("click", () => $("fileInput").click());
 $("fileInput").addEventListener("change", e => {
   const file = e.target.files && e.target.files[0];
   e.target.value = "";
-  if (file) handleRecipeUpload(file);
+  if (file) handleRecipeFile(file);
+});
+$("pasteForm").addEventListener("submit", e => {
+  e.preventDefault();
+  handleRecipeText($("pasteInput").value);
+  $("pasteInput").value = "";
 });
 
 /* Shopping list sheet */
