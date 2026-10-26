@@ -66,6 +66,7 @@ All recipes live in one file, `recipes.json`. Text is written in both languages 
   "title": ["Name in English", "Nama dalam Bahasa Indonesia"],
   "category": ["Meat", "Daging"],
   "cuisine": "Batak",
+  "type": "savoury",
   "description": ["One or two sentences", "Satu atau dua kalimat"],
   "servings": 4,
   "time": ["20 min prep + 40 min cooking", "20 menit persiapan + 40 menit masak"],
@@ -81,10 +82,16 @@ All recipes live in one file, `recipes.json`. Text is written in both languages 
 ```
 
 - `oven` is `null` for stovetop dishes.
+- `type` is `"savoury"` or `"sweet"` — used by the filter chips above the recipe list. Defaults to `"savoury"` if left out.
 - `unit` is `null` for countable items (eggs, shallots); the name then carries the noun ("garlic cloves"). Units `tsp`, `tbsp` and `cup` are shown as `sdt`, `sdm` and `cangkir` in Indonesian.
 - Amounts are for the given `servings`; the app scales them.
 
 Kitchen tips at the bottom of the page come from `kitchen.json` (`tips`: a list of `{title, text}`, both as language pairs). Button and label texts are in the `UI` object at the top of the script in `index.html`.
+
+You don't need to edit `recipes.json` by hand: in the app, tap **Add recipe** to paste or upload one recipe's JSON
+(this same shape, or `{"recipes": [...]}` for several at once) — the **Show recipe JSON structure** link in that
+sheet shows and copies the template above. Recipes added this way stay in your own browser only (not shared with
+other people or synced back to this repo).
 
 ### Files
 

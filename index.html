@@ -116,11 +116,13 @@ ol.steps b { display: block; }
 /* Header icon buttons (add recipe / shopping list) */
 .iconbtns { display: flex; gap: 6px; }
 .iconbtn { all: unset; cursor: pointer; font-size: 0.85rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); color: var(--fg); background: var(--surface); white-space: nowrap; }
+.addall-shop { margin-bottom: 10px; display: inline-block; color: var(--accent); border-color: var(--accent-soft); }
 .iconbtn:hover { border-color: var(--accent); color: var(--accent); }
 .iconbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .iconbtn .count { font-family: var(--mono); color: var(--accent); }
 
 .paste-area { width: 100%; box-sizing: border-box; font: inherit; font-family: var(--mono); font-size: 0.82rem; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); resize: vertical; }
+.template-link { all: unset; cursor: pointer; color: var(--accent); font-size: 0.85rem; align-self: flex-start; }
 .upload-status { font-size: 0.85rem; padding: 8px 10px; border-radius: 8px; }
 .upload-status.ok { background: var(--accent-soft); color: var(--accent); }
 .upload-status.err { background: var(--warn-soft); color: var(--warn); }
@@ -130,7 +132,7 @@ ol.steps b { display: block; }
 /* Shopping list panel */
 .sheet-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.35); display: none; align-items: flex-start; justify-content: center; padding: 10vh 16px; z-index: 20; }
 .sheet-backdrop.open { display: flex; }
-.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; max-width: 440px; width: 100%; max-height: 76vh; display: flex; flex-direction: column; gap: 14px; }
+.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; max-width: 440px; width: 100%; max-height: 76vh; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; }
 .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .sheet-head h3 { margin: 0; }
 .sheet-close { all: unset; cursor: pointer; font-size: 1.1rem; color: var(--muted); padding: 2px 6px; }
@@ -208,6 +210,14 @@ ol.steps b { display: block; }
       <button type="submit" class="iconbtn" style="text-align:center" data-i18n="addFromPaste">Add pasted recipe</button>
     </form>
     <div id="uploadStatus"></div>
+    <button type="button" class="template-link" id="toggleTemplate">Show recipe JSON structure</button>
+    <div id="templateBlock" hidden>
+      <textarea id="templateArea" class="paste-area" rows="16" readonly></textarea>
+      <div class="sheet-add" style="margin-top:8px;">
+        <button type="button" class="iconbtn" id="copyTemplate" data-i18n="copyTemplate">Copy</button>
+        <span id="copyFeedback" class="upload-status ok" style="display:none;"></span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -250,7 +260,9 @@ const UI = {
     removeLocal: "Remove", removedLocal: "Removed “{title}”.",
     shoplistBtn: "Shopping list", shoplistTitle: "Shopping list", shopAddPh: "Add an item",
     add: "Add", clearChecked: "Clear checked", clearAll: "Clear all", shopEmpty: "Nothing on the list yet.",
-    addToShop: "+ list"
+    addToShop: "+ list", addAllToShop: "+ Add all ingredients to shopping list",
+    viewTemplate: "Show recipe JSON structure", hideTemplate: "Hide recipe JSON structure",
+    copyTemplate: "Copy", copied: "Copied!"
   },
   id: {
     tagline: "Masakan rumahan dan kue khas Batak, disesuaikan dengan bahan di Praha.",
@@ -270,11 +282,31 @@ const UI = {
     removeLocal: "Hapus", removedLocal: "“{title}” dihapus.",
     shoplistBtn: "Daftar belanja", shoplistTitle: "Daftar belanja", shopAddPh: "Tambah barang",
     add: "Tambah", clearChecked: "Hapus yang dicentang", clearAll: "Hapus semua", shopEmpty: "Daftar masih kosong.",
-    addToShop: "+ daftar"
+    addToShop: "+ daftar", addAllToShop: "+ Tambah semua bahan ke daftar belanja",
+    viewTemplate: "Lihat struktur JSON resep", hideTemplate: "Sembunyikan struktur JSON resep",
+    copyTemplate: "Salin", copied: "Tersalin!"
   }
 };
 const UNITS = { id: { tsp: "sdt", tbsp: "sdm", cup: "cangkir" } };
 const LANG_KEY = "chut.lang";
+const RECIPE_TEMPLATE = JSON.stringify({
+  id: "kebab-case-id",
+  title: ["Name in English", "Nama dalam Bahasa Indonesia"],
+  category: ["Meat", "Daging"],
+  cuisine: "Batak",
+  type: "savoury",
+  description: ["One or two sentences", "Satu atau dua kalimat"],
+  servings: 4,
+  time: ["20 min prep + 40 min cooking", "20 menit persiapan + 40 menit masak"],
+  oven: ["160°C top & bottom heat, no fan", "160°C api atas & bawah, tanpa kipas"],
+  equipment: [["chopper", "chopper"], ["gas stove", "kompor gas"]],
+  ingredients: [{ amount: 200, unit: "g", name: ["plain flour", "tepung terigu"] }],
+  steps: [{ title: ["Short title", "Judul singkat"], text: ["What to do", "Apa yang dilakukan"] }],
+  notes: [["Tip", "Tips"]],
+  shopping: [{ items: ["galangal, lemongrass", "lengkuas, serai"], where: ["Sapa or Asian shops", "Sapa atau toko Asia"] }],
+  tags: ["batak", "oven"],
+  added: "YYYY-MM-DD"
+}, null, 2);
 const LOCAL_KEY = "chut.localRecipes";
 const SHOP_KEY = "chut.shopping";
 
@@ -321,6 +353,7 @@ function applyStatic() {
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); el.setAttribute("aria-label", t(el.dataset.i18nPh)); });
   document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === state.lang)));
+  $("toggleTemplate").textContent = t($("templateBlock").hidden ? "viewTemplate" : "hideTemplate");
 }
 
 function sorted() {
@@ -367,6 +400,7 @@ function renderDetail() {
         <h3>${esc(t("ingredients"))}
           <span class="serv"><button id="minus" aria-label="${esc(t("fewer"))}">−</button><output id="sv">${s}</output><button id="plus" aria-label="${esc(t("more"))}">+</button> ${esc(t("servings"))}</span>
         </h3>
+        <button type="button" class="iconbtn addall-shop" id="addAllShop">${esc(t("addAllToShop"))}</button>
         <ul class="ing">${(r.ingredients || []).map(i => `<li><span class="q">${fmtAmount(i.amount != null ? i.amount * k : null, i.unit)}</span><span>${esc(L2(i.name))}<button type="button" class="add-to-shop" data-item="${esc(L2(i.name))}">${esc(t("addToShop"))}</button></span></li>`).join("")}</ul>
         ${shop.length ? `<div class="shop"><h3>${esc(t("shop"))}</h3><ul>${shop.map(x => `<li><span>${esc(L2(x.items))}</span><span>${esc(L2(x.where))}</span></li>`).join("")}</ul></div>` : ""}
       </section>
@@ -382,6 +416,7 @@ function renderDetail() {
   $("plus").onclick = () => { state.servings = s + 1; renderDetail(); };
   $("back").onclick = () => { $("grid").classList.remove("open"); };
   $("detail").querySelectorAll(".add-to-shop").forEach(b => b.onclick = () => addShoppingItem(b.dataset.item));
+  $("addAllShop").onclick = () => addRecipeToShopping(r);
   const rmBtn = $("removeLocal"); if (rmBtn) rmBtn.onclick = () => removeLocalRecipe(r.id);
 }
 
@@ -455,12 +490,23 @@ async function handleRecipeFile(file) {
 }
 
 /* ---- Shopping list ---- */
-function addShoppingItem(text) {
+function pushShoppingItem(text) {
   text = String(text || "").trim();
   if (!text) return;
+  const existing = state.shopping.find(x => x.text.toLowerCase() === text.toLowerCase());
+  if (existing) { existing.done = false; return; } // already on the list: just make sure it's not checked off
   state.shopping.push({ text, done: false });
+}
+function addShoppingItem(text) {
+  pushShoppingItem(text);
   saveLocal(SHOP_KEY, state.shopping);
   renderShopping();
+}
+function addRecipeToShopping(r) {
+  (r.ingredients || []).forEach(i => pushShoppingItem(L2(i.name)));
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+  $("shopBackdrop").classList.add("open");
 }
 function toggleShoppingItem(i) {
   if (!state.shopping[i]) return;
@@ -532,6 +578,19 @@ $("pasteForm").addEventListener("submit", e => {
   e.preventDefault();
   handleRecipeText($("pasteInput").value);
   $("pasteInput").value = "";
+});
+$("toggleTemplate").addEventListener("click", () => {
+  const open = $("templateBlock").hidden;
+  $("templateBlock").hidden = !open;
+  $("toggleTemplate").textContent = t(open ? "hideTemplate" : "viewTemplate");
+  if (open) $("templateArea").value = RECIPE_TEMPLATE;
+});
+$("copyTemplate").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(RECIPE_TEMPLATE); }
+  catch (e) { $("templateArea").select(); try { document.execCommand("copy"); } catch (e2) {} }
+  const fb = $("copyFeedback");
+  fb.textContent = t("copied"); fb.style.display = "inline-block";
+  setTimeout(() => { fb.style.display = "none"; }, 1500);
 });
 
 /* Shopping list sheet */
