@@ -105,6 +105,48 @@ ol.steps b { display: block; }
 @media (max-width: 560px) { .shop li { grid-template-columns: 1fr; } }
 .status { color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .item { transition: background .15s; } }
+
+/* Type filter chips */
+.typefilter { display: flex; gap: 6px; flex-wrap: wrap; }
+.typefilter button { all: unset; cursor: pointer; font-size: 0.85rem; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.typefilter button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.typefilter button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.item .badge { display: inline-block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px; }
+
+/* Header icon buttons (add recipe / shopping list) */
+.iconbtns { display: flex; gap: 6px; }
+.iconbtn { all: unset; cursor: pointer; font-size: 0.85rem; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); color: var(--fg); background: var(--surface); white-space: nowrap; }
+.iconbtn:hover { border-color: var(--accent); color: var(--accent); }
+.iconbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.iconbtn .count { font-family: var(--mono); color: var(--accent); }
+
+.upload-status { font-size: 0.85rem; padding: 8px 10px; border-radius: 8px; }
+.upload-status.ok { background: var(--accent-soft); color: var(--accent); }
+.upload-status.err { background: var(--warn-soft); color: var(--warn); }
+.local-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 10px; }
+.remove-local { all: unset; cursor: pointer; font-size: 0.8rem; color: var(--warn); }
+
+/* Shopping list panel */
+.sheet-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.35); display: none; align-items: flex-start; justify-content: center; padding: 10vh 16px; z-index: 20; }
+.sheet-backdrop.open { display: flex; }
+.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; max-width: 440px; width: 100%; max-height: 76vh; display: flex; flex-direction: column; gap: 14px; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sheet-head h3 { margin: 0; }
+.sheet-close { all: unset; cursor: pointer; font-size: 1.1rem; color: var(--muted); padding: 2px 6px; }
+.sheet-add { display: flex; gap: 8px; }
+.sheet-add input { flex: 1; min-width: 0; font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg); }
+.sheet-add button { all: unset; cursor: pointer; padding: 8px 14px; border-radius: 8px; background: var(--accent); color: var(--surface); font-weight: 600; text-align: center; }
+.shoplist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+.shoplist li { display: flex; align-items: center; gap: 10px; padding: 8px 4px; border-bottom: 1px dashed var(--line); }
+.shoplist li.done span { text-decoration: line-through; color: var(--muted); }
+.shoplist input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+.shoplist span { flex: 1; word-break: break-word; }
+.shoplist button { all: unset; cursor: pointer; color: var(--muted); font-size: 0.9rem; padding: 2px 6px; }
+.shoplist button:hover { color: var(--warn); }
+.sheet-foot { display: flex; justify-content: space-between; gap: 8px; font-size: 0.85rem; }
+.sheet-foot button { all: unset; cursor: pointer; color: var(--muted); }
+.sheet-foot button:hover { color: var(--accent); }
+.add-to-shop { all: unset; cursor: pointer; color: var(--accent); font-size: 0.78rem; margin-left: 8px; vertical-align: middle; }
 </style>
 </head>
 <body>
@@ -119,14 +161,25 @@ ol.steps b { display: block; }
         <button type="button" data-lang="id" aria-pressed="false">ID</button>
       </div>
     </div>
+    <div class="iconbtns">
+      <button type="button" class="iconbtn" id="openShopping"><span data-i18n="shoplistBtn">Shopping list</span><span class="count" id="shopCount"></span></button>
+      <button type="button" class="iconbtn" id="openUpload"><span data-i18n="addRecipeBtn">Add recipe</span></button>
+      <input type="file" id="fileInput" accept="application/json,.json" hidden>
+    </div>
     <p class="sub" data-i18n="tagline">Batak home cooking and baking, adapted for Prague shops.</p>
   </header>
 
   <div class="grid" id="grid">
     <aside class="index">
       <input class="search" id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" data-i18n-ph="search">
+      <div class="typefilter" id="typefilter" role="group" aria-label="Filter by type">
+        <button type="button" data-type="all" aria-pressed="true" data-i18n="fAll">All</button>
+        <button type="button" data-type="savoury" aria-pressed="false" data-i18n="fSavoury">Savoury</button>
+        <button type="button" data-type="sweet" aria-pressed="false" data-i18n="fSweet">Sweet</button>
+      </div>
       <div class="label" data-i18n="recipes">Recipes</div>
       <div class="list" id="list"><div class="empty" data-i18n="loading">Loading recipes…</div></div>
+      <div id="uploadStatus"></div>
     </aside>
 
     <main class="detail" id="detail">
@@ -142,6 +195,24 @@ ol.steps b { display: block; }
   </section>
 </div>
 
+<div class="sheet-backdrop" id="shopBackdrop">
+  <div class="sheet">
+    <div class="sheet-head">
+      <h3 data-i18n="shoplistTitle">Shopping list</h3>
+      <button type="button" class="sheet-close" id="shopClose" aria-label="Close">✕</button>
+    </div>
+    <form class="sheet-add" id="shopAddForm">
+      <input type="text" id="shopInput" data-i18n-ph="shopAddPh" placeholder="Add an item">
+      <button type="submit" data-i18n="add">Add</button>
+    </form>
+    <ul class="shoplist" id="shoplist"></ul>
+    <div class="sheet-foot">
+      <button type="button" id="shopClearDone" data-i18n="clearChecked">Clear checked</button>
+      <button type="button" id="shopClearAll" data-i18n="clearAll">Clear all</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // Text is either a plain string or an [en, id] pair (same convention as C3KO).
 const UI = {
@@ -152,7 +223,16 @@ const UI = {
     nomatch: "No recipe matches that search.", recipe: "Recipe", back: "← All recipes",
     ingredients: "Ingredients", method: "Method", notes: "Notes", shop: "Where to buy in Prague",
     servings: "servings", fewer: "Fewer servings", more: "More servings",
-    loadfail: "Couldn't load the recipes. Check your connection and reload. Opening the file directly from your computer won't work; use the website or a local server."
+    loadfail: "Couldn't load the recipes. Check your connection and reload. Opening the file directly from your computer won't work; use the website or a local server.",
+    fAll: "All", fSavoury: "Savoury", fSweet: "Sweet", local: "Your own",
+    addRecipeBtn: "Add recipe", uploadOk: "Added “{title}” to the list.",
+    uploadErr: "Couldn't read that file: {reason}", uploadDupe: "A recipe with id “{id}” is already in the list.",
+    errNotJson: "that's not valid JSON", errNoId: "missing an “id” field", errNoTitle: "missing a “title” field",
+    errBadType: "the file isn't a recipe object (or a {“recipes”:[...]} list of them)",
+    removeLocal: "Remove", removedLocal: "Removed “{title}”.",
+    shoplistBtn: "Shopping list", shoplistTitle: "Shopping list", shopAddPh: "Add an item",
+    add: "Add", clearChecked: "Clear checked", clearAll: "Clear all", shopEmpty: "Nothing on the list yet.",
+    addToShop: "+ list"
   },
   id: {
     tagline: "Masakan rumahan dan kue khas Batak, disesuaikan dengan bahan di Praha.",
@@ -161,23 +241,44 @@ const UI = {
     nomatch: "Tidak ada resep yang cocok.", recipe: "Resep", back: "← Semua resep",
     ingredients: "Bahan", method: "Cara membuat", notes: "Catatan", shop: "Tempat beli di Praha",
     servings: "porsi", fewer: "Kurangi porsi", more: "Tambah porsi",
-    loadfail: "Resep gagal dimuat. Cek koneksi internet lalu muat ulang. Membuka file langsung dari komputer tidak bisa; pakai situsnya atau server lokal."
+    loadfail: "Resep gagal dimuat. Cek koneksi internet lalu muat ulang. Membuka file langsung dari komputer tidak bisa; pakai situsnya atau server lokal.",
+    fAll: "Semua", fSavoury: "Gurih", fSweet: "Manis", local: "Punyamu",
+    addRecipeBtn: "Tambah resep", uploadOk: "“{title}” ditambahkan ke daftar.",
+    uploadErr: "File tidak bisa dibaca: {reason}", uploadDupe: "Resep dengan id “{id}” sudah ada di daftar.",
+    errNotJson: "bukan JSON yang valid", errNoId: "tidak ada field “id”", errNoTitle: "tidak ada field “title”",
+    errBadType: "file ini bukan objek resep (atau daftar {“recipes”:[...]})",
+    removeLocal: "Hapus", removedLocal: "“{title}” dihapus.",
+    shoplistBtn: "Daftar belanja", shoplistTitle: "Daftar belanja", shopAddPh: "Tambah barang",
+    add: "Tambah", clearChecked: "Hapus yang dicentang", clearAll: "Hapus semua", shopEmpty: "Daftar masih kosong.",
+    addToShop: "+ daftar"
   }
 };
 const UNITS = { id: { tsp: "sdt", tbsp: "sdm", cup: "cangkir" } };
 const LANG_KEY = "chut.lang";
+const LOCAL_KEY = "chut.localRecipes";
+const SHOP_KEY = "chut.shopping";
 
 function detectLang() {
   try { const v = localStorage.getItem(LANG_KEY); if (v === "en" || v === "id") return v; } catch (e) {}
   return (navigator.language || "").toLowerCase().startsWith("id") ? "id" : "en";
 }
-const state = { recipes: [], tips: [], current: null, servings: null, q: "", lang: detectLang(), failed: false };
+function loadLocal(key, fallback) {
+  try { const v = JSON.parse(localStorage.getItem(key)); return Array.isArray(v) ? v : fallback; } catch (e) { return fallback; }
+}
+function saveLocal(key, v) { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} }
+
+const state = {
+  recipes: [], localRecipes: loadLocal(LOCAL_KEY, []), tips: [], current: null, servings: null,
+  q: "", type: "all", lang: detectLang(), failed: false, shopping: loadLocal(SHOP_KEY, [])
+};
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const L2 = (x) => Array.isArray(x) ? (state.lang === "id" ? (x[1] || x[0]) : x[0]) : (x ?? "");
 const t = (k) => UI[state.lang][k] ?? UI.en[k] ?? k;
+const fmt = (k, vars) => t(k).replace(/\{(\w+)\}/g, (_, n) => esc(vars[n] ?? ""));
 const both = (x) => Array.isArray(x) ? x.join(" ") : (x ?? "");
 const fold = (s) => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+const allRecipes = () => state.recipes.concat(state.localRecipes);
 
 function fmtAmount(a, unit) {
   if (a == null || a === "") return "";
@@ -203,7 +304,7 @@ function applyStatic() {
 }
 
 function sorted() {
-  return state.recipes.slice().sort((a, b) => L2(a.title).localeCompare(L2(b.title), state.lang));
+  return allRecipes().slice().sort((a, b) => L2(a.title).localeCompare(L2(b.title), state.lang));
 }
 
 function renderList() {
@@ -211,19 +312,20 @@ function renderList() {
   if (state.failed) { el.innerHTML = `<div class="empty">${esc(t("loadfail"))}</div>`; return; }
   const q = fold(state.q.trim());
   const rows = sorted().filter(r => {
+    if (state.type !== "all" && r.type !== state.type) return false;
     if (!q) return true;
     const hay = [r.title, r.category, r.description, ...(r.ingredients || []).map(i => i.name), ...(r.tags || [])].map(both).join(" ");
     return fold(hay).includes(q);
   });
-  if (!state.recipes.length) { el.innerHTML = `<div class="empty">${esc(t("empty"))}</div>`; return; }
+  if (!allRecipes().length) { el.innerHTML = `<div class="empty">${esc(t("empty"))}</div>`; return; }
   if (!rows.length) { el.innerHTML = `<div class="empty">${esc(t("nomatch"))}</div>`; return; }
   el.innerHTML = rows.map(r => `<button class="item" data-id="${esc(r.id)}" aria-current="${state.current === r.id}">
-      <span class="t">${esc(L2(r.title))}</span>
+      <span class="t">${esc(L2(r.title))}${r.isLocal ? `<span class="badge">${esc(t("local"))}</span>` : ""}</span>
       <span class="m">${esc([L2(r.category), L2(r.time)].filter(Boolean).join(" · "))}</span></button>`).join("");
 }
 
 function renderDetail() {
-  const r = state.recipes.find(x => x.id === state.current);
+  const r = allRecipes().find(x => x.id === state.current);
   if (!r) return;
   const base = Number(r.servings) || 1;
   const s = state.servings ?? base;
@@ -236,7 +338,7 @@ function renderDetail() {
   const shop = Array.isArray(r.shopping) ? r.shopping : [];
   $("detail").innerHTML = `<div class="card">
     <button class="back" id="back">${esc(t("back"))}</button>
-    <div class="label">${esc(L2(r.category) || t("recipe"))}</div>
+    <div class="label">${esc(L2(r.category) || t("recipe"))}${r.isLocal ? `<span class="badge">${esc(t("local"))}</span>` : ""}</div>
     <h2>${esc(L2(r.title))}</h2>
     ${r.description ? `<p class="desc">${esc(L2(r.description))}</p>` : ""}
     <div class="facts">${chips}</div>
@@ -245,7 +347,7 @@ function renderDetail() {
         <h3>${esc(t("ingredients"))}
           <span class="serv"><button id="minus" aria-label="${esc(t("fewer"))}">−</button><output id="sv">${s}</output><button id="plus" aria-label="${esc(t("more"))}">+</button> ${esc(t("servings"))}</span>
         </h3>
-        <ul class="ing">${(r.ingredients || []).map(i => `<li><span class="q">${fmtAmount(i.amount != null ? i.amount * k : null, i.unit)}</span><span>${esc(L2(i.name))}</span></li>`).join("")}</ul>
+        <ul class="ing">${(r.ingredients || []).map(i => `<li><span class="q">${fmtAmount(i.amount != null ? i.amount * k : null, i.unit)}</span><span>${esc(L2(i.name))}<button type="button" class="add-to-shop" data-item="${esc(L2(i.name))}">${esc(t("addToShop"))}</button></span></li>`).join("")}</ul>
         ${shop.length ? `<div class="shop"><h3>${esc(t("shop"))}</h3><ul>${shop.map(x => `<li><span>${esc(L2(x.items))}</span><span>${esc(L2(x.where))}</span></li>`).join("")}</ul></div>` : ""}
       </section>
       <section>
@@ -254,10 +356,13 @@ function renderDetail() {
       </section>
     </div>
     ${(r.notes || []).length ? `<div class="notes"><h3>${esc(t("notes"))}</h3><ul>${r.notes.map(n => `<li>${esc(L2(n))}</li>`).join("")}</ul></div>` : ""}
+    ${r.isLocal ? `<div class="local-row"><span></span><button type="button" class="remove-local" id="removeLocal">${esc(t("removeLocal"))}</button></div>` : ""}
   </div>`;
   $("minus").onclick = () => { state.servings = Math.max(1, s - 1); renderDetail(); };
   $("plus").onclick = () => { state.servings = s + 1; renderDetail(); };
   $("back").onclick = () => { $("grid").classList.remove("open"); };
+  $("detail").querySelectorAll(".add-to-shop").forEach(b => b.onclick = () => addShoppingItem(b.dataset.item));
+  const rmBtn = $("removeLocal"); if (rmBtn) rmBtn.onclick = () => removeLocalRecipe(r.id);
 }
 
 function renderTips() {
@@ -265,7 +370,108 @@ function renderTips() {
   $("tips").innerHTML = state.tips.map(x => `<div><b>${esc(L2(x.title))}</b><span>${esc(L2(x.text))}</span></div>`).join("");
 }
 
-function renderAll() { applyStatic(); renderList(); renderDetail(); renderTips(); }
+function renderAll() { applyStatic(); renderList(); renderDetail(); renderTips(); renderShopping(); }
+
+/* ---- Sweet / savoury filter ---- */
+function setTypeFilter(ty) {
+  state.type = ty;
+  $("typefilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.type === ty)));
+  renderList();
+}
+
+/* ---- Add a recipe from a JSON file ---- */
+function validateRecipe(obj) {
+  if (!obj || typeof obj !== "object" || Array.isArray(obj)) return t("errBadType");
+  if (!obj.id) return t("errNoId");
+  if (!obj.title) return t("errNoTitle");
+  return null;
+}
+function showUploadStatus(msg, ok) {
+  $("uploadStatus").innerHTML = `<div class="upload-status ${ok ? "ok" : "err"}">${msg}</div>`;
+}
+function addLocalRecipe(recipe) {
+  recipe = Object.assign({}, recipe, { isLocal: true });
+  if (!recipe.type) recipe.type = "savoury";
+  const dupe = allRecipes().some(r => r.id === recipe.id);
+  if (dupe) { showUploadStatus(fmt("uploadDupe", { id: recipe.id }), false); return; }
+  state.localRecipes.push(recipe);
+  saveLocal(LOCAL_KEY, state.localRecipes);
+  showUploadStatus(fmt("uploadOk", { title: L2(recipe.title) }), true);
+  renderList(); renderDetail();
+}
+function removeLocalRecipe(id) {
+  const r = state.localRecipes.find(x => x.id === id);
+  state.localRecipes = state.localRecipes.filter(x => x.id !== id);
+  saveLocal(LOCAL_KEY, state.localRecipes);
+  if (state.current === id) {
+    const first = sorted()[0];
+    state.current = first ? first.id : null;
+    $("grid").classList.remove("open");
+  }
+  if (r) showUploadStatus(fmt("removedLocal", { title: L2(r.title) }), true);
+  renderList(); renderDetail();
+}
+async function handleRecipeUpload(file) {
+  let text;
+  try { text = await file.text(); } catch (e) { showUploadStatus(fmt("uploadErr", { reason: t("errNotJson") }), false); return; }
+  let data;
+  try { data = JSON.parse(text); } catch (e) { showUploadStatus(fmt("uploadErr", { reason: t("errNotJson") }), false); return; }
+  const list = Array.isArray(data) ? data : (Array.isArray(data?.recipes) ? data.recipes : [data]);
+  let added = 0, lastTitle = "", firstErr = null;
+  for (const obj of list) {
+    const err = validateRecipe(obj);
+    if (err) { firstErr = err; continue; }
+    const before = state.localRecipes.length;
+    addLocalRecipe(obj);
+    if (state.localRecipes.length > before) { added++; lastTitle = L2(obj.title); }
+  }
+  if (added === 0 && firstErr) showUploadStatus(fmt("uploadErr", { reason: firstErr }), false);
+  else if (added === 1) showUploadStatus(fmt("uploadOk", { title: lastTitle }), true);
+}
+
+/* ---- Shopping list ---- */
+function addShoppingItem(text) {
+  text = String(text || "").trim();
+  if (!text) return;
+  state.shopping.push({ text, done: false });
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+}
+function toggleShoppingItem(i) {
+  if (!state.shopping[i]) return;
+  state.shopping[i].done = !state.shopping[i].done;
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+}
+function removeShoppingItem(i) {
+  state.shopping.splice(i, 1);
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+}
+function clearCheckedShopping() {
+  state.shopping = state.shopping.filter(x => !x.done);
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+}
+function clearAllShopping() {
+  state.shopping = [];
+  saveLocal(SHOP_KEY, state.shopping);
+  renderShopping();
+}
+function renderShopping() {
+  const left = state.shopping.filter(x => !x.done).length;
+  $("shopCount").textContent = left ? ` (${left})` : "";
+  const el = $("shoplist");
+  if (!el) return;
+  if (!state.shopping.length) { el.innerHTML = `<li class="empty" style="border:none">${esc(t("shopEmpty"))}</li>`; return; }
+  el.innerHTML = state.shopping.map((x, i) => `<li class="${x.done ? "done" : ""}">
+      <input type="checkbox" data-i="${i}" ${x.done ? "checked" : ""} aria-label="${esc(x.text)}">
+      <span>${esc(x.text)}</span>
+      <button type="button" data-i="${i}" aria-label="${esc(t("removeLocal"))}">✕</button>
+    </li>`).join("");
+  el.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.onchange = () => toggleShoppingItem(+cb.dataset.i));
+  el.querySelectorAll("button[data-i]").forEach(b => b.onclick = () => removeShoppingItem(+b.dataset.i));
+}
 
 function openRecipe(id) {
   state.current = id; state.servings = null;
@@ -282,6 +488,31 @@ document.querySelector(".langs").addEventListener("click", e => {
   try { localStorage.setItem(LANG_KEY, state.lang); } catch (err) {}
   renderAll();
 });
+$("typefilter").addEventListener("click", e => {
+  const b = e.target.closest("button[data-type]"); if (!b) return;
+  setTypeFilter(b.dataset.type);
+});
+
+/* Add-recipe upload */
+$("openUpload").addEventListener("click", () => $("fileInput").click());
+$("fileInput").addEventListener("change", e => {
+  const file = e.target.files && e.target.files[0];
+  e.target.value = "";
+  if (file) handleRecipeUpload(file);
+});
+
+/* Shopping list sheet */
+$("openShopping").addEventListener("click", () => { $("shopBackdrop").classList.add("open"); renderShopping(); });
+$("shopClose").addEventListener("click", () => $("shopBackdrop").classList.remove("open"));
+$("shopBackdrop").addEventListener("click", e => { if (e.target === $("shopBackdrop")) $("shopBackdrop").classList.remove("open"); });
+$("shopAddForm").addEventListener("submit", e => {
+  e.preventDefault();
+  addShoppingItem($("shopInput").value);
+  $("shopInput").value = "";
+  $("shopInput").focus();
+});
+$("shopClearDone").addEventListener("click", clearCheckedShopping);
+$("shopClearAll").addEventListener("click", clearAllShopping);
 
 applyStatic();
 (async () => {

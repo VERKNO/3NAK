@@ -1,6 +1,6 @@
 // Offline support. Pages and recipe data: network first (new recipes show up
 // right away), cached copy when offline. Icons and fonts: cache first.
-const CACHE = "chut-v2";
+const CACHE = "chut-v3";
 const SHELL = ["./", "index.html", "recipes.json", "kitchen.json", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png", "icons/favicon.png"];
 
