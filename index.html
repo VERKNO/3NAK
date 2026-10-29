@@ -98,6 +98,17 @@ ol.steps b { display: block; }
 .langs button { all: unset; cursor: pointer; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.05em; padding: 4px 12px; border-radius: 999px; color: var(--muted); }
 .langs button[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
 .langs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.apphub { position: relative; }
+.hub-btn { all: unset; cursor: pointer; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); color: var(--muted); font-family: var(--body); font-size: 0.85rem; padding: 7px 14px; border-radius: 999px; }
+.hub-btn:hover, .hub-btn:focus-visible { border-color: var(--accent); color: var(--fg); outline: none; }
+.hub-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.hub-menu { position: absolute; left: 0; top: calc(100% + 8px); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; min-width: 220px; padding: 6px; box-shadow: 0 12px 28px -14px rgba(20,30,60,.5); z-index: 10; }
+.hub-menu-label { margin: 0; padding: 4px 10px 8px; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); }
+.hub-item { display: block; padding: 9px 10px; border-radius: 8px; text-decoration: none; color: var(--fg); font-size: 0.88rem; }
+.hub-item:hover { background: var(--accent-soft); }
+.hub-current { color: var(--accent); cursor: default; }
+.hub-current:hover { background: transparent; }
 .shop { margin-top: 22px; }
 .shop ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .shop li { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 4px 16px; padding: 8px 12px; border-radius: 8px; background: var(--bg); }
@@ -163,6 +174,17 @@ ol.steps b { display: block; }
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
         <button type="button" data-lang="id" aria-pressed="false">ID</button>
       </div>
+      <nav class="apphub" aria-label="Switch app">
+        <button id="hubBtn" class="hub-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <span class="hub-dot"></span> Apps
+        </button>
+        <div id="hubMenu" class="hub-menu" hidden>
+          <p class="hub-menu-label">Andrew's apps</p>
+          <a href="#" class="hub-item hub-current">3NAK — Batak recipes</a>
+          <a href="https://verkno.github.io/L4NG/" class="hub-item">L4NG — Language grammar</a>
+          <a href="https://verkno.github.io/GY3/" class="hub-item">GY3 — Gym basics</a>
+        </div>
+      </nav>
     </div>
     <div class="iconbtns">
       <button type="button" class="iconbtn" id="openShopping"><span data-i18n="shoplistBtn">Shopping list</span><span class="count" id="shopCount"></span></button>
@@ -624,6 +646,18 @@ applyStatic();
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }
+</script>
+<script>
+/* apps-hub dropdown: switch to other apps (L4NG, GY3) */
+(function () {
+  var btn = document.getElementById("hubBtn"), menu = document.getElementById("hubMenu");
+  if (!btn || !menu) return;
+  function close() { menu.hidden = true; btn.setAttribute("aria-expanded", "false"); }
+  function open() { menu.hidden = false; btn.setAttribute("aria-expanded", "true"); }
+  btn.addEventListener("click", function (e) { e.stopPropagation(); if (menu.hidden) open(); else close(); });
+  document.addEventListener("click", function (e) { if (!menu.hidden && !menu.contains(e.target) && e.target !== btn) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+})();
 </script>
 
 </body>
