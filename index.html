@@ -94,6 +94,16 @@ ol.steps b { display: block; }
   .grid:not(.open) .detail { display: none; }
   .back { display: inline-block; }
 }
+
+/* Collapsible sidebar (desktop) */
+.sidebar-toggle { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; font-size: 0.8rem; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+.sidebar-toggle:hover, .sidebar-toggle:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
+@media (min-width: 781px) {
+  .grid.sidebar-collapsed { grid-template-columns: 46px 1fr; }
+  .grid.sidebar-collapsed .index > *:not(.sidebar-toggle) { display: none; }
+  .grid.sidebar-collapsed .sidebar-toggle span.lbl { display: none; }
+}
+@media (max-width: 780px) { .sidebar-toggle { display: none; } }
 .headr { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .langs { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 2px; background: var(--surface); }
 .langs button { all: unset; cursor: pointer; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.05em; padding: 4px 12px; border-radius: 999px; color: var(--muted); }
@@ -215,6 +225,9 @@ ol.steps b { display: block; }
 
   <div class="grid" id="grid">
     <aside class="index">
+      <button type="button" class="sidebar-toggle" id="sidebarToggle" aria-expanded="true">
+        <span id="sidebarToggleIcon" aria-hidden="true">‹</span><span class="lbl" id="sidebarToggleLabel" data-i18n="collapseList">Hide list</span>
+      </button>
       <input class="search" id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" data-i18n-ph="search">
       <div class="sectiontabs" id="sectiontabs" role="group" aria-label="Section">
         <button type="button" data-section="food" aria-pressed="true" data-i18n="secFood">Food</button>
@@ -225,6 +238,12 @@ ol.steps b { display: block; }
         <button type="button" data-type="all" aria-pressed="true" data-i18n="fAll">All</button>
         <button type="button" data-type="savoury" aria-pressed="false" data-i18n="fSavoury">Savoury</button>
         <button type="button" data-type="sweet" aria-pressed="false" data-i18n="fSweet">Sweet</button>
+      </div>
+      <div class="facetrow" id="coursefilter" role="group" aria-label="Filter by course" hidden>
+        <span class="flabel" data-i18n="courseLabel">Show</span>
+        <button type="button" data-course="all" aria-pressed="true" data-i18n="courseAll">All</button>
+        <button type="button" data-course="meal" aria-pressed="false" data-i18n="courseMeal">Dishes</button>
+        <button type="button" data-course="extra" aria-pressed="false" data-i18n="courseExtra">Extras</button>
       </div>
       <div class="facetrow" id="drinkfilter" role="group" aria-label="Filter by drink type" hidden>
         <span class="flabel" data-i18n="drinkLabel">Type</span>
@@ -327,6 +346,8 @@ const UI = {
     coffeeGuideBtn: "Coffee types & differences", coffeeGuideTitle: "Coffee types & differences",
     coffeeGuideIntro: "How common coffee drinks differ, roughly by the proportion of espresso, milk, foam or water in each — plus a couple of Indonesian styles.",
     fAll: "All", fSavoury: "Savoury", fSweet: "Sweet", local: "Your own",
+    courseLabel: "Show", courseAll: "All", courseMeal: "Dishes", courseExtra: "Extras",
+    collapseList: "Hide list", expandList: "Show list",
     addRecipeBtn: "Add recipe", addRecipeTitle: "Add a recipe", chooseFileBtn: "Choose a JSON file",
     orPaste: "Or paste the recipe JSON", pastePh: "Paste recipe JSON here", addFromPaste: "Add pasted recipe",
     uploadOk: "Added “{title}” to the list.",
@@ -354,6 +375,8 @@ const UI = {
     coffeeGuideBtn: "Jenis kopi & perbedaannya", coffeeGuideTitle: "Jenis kopi & perbedaannya",
     coffeeGuideIntro: "Perbedaan minuman kopi umum, kurang lebih berdasarkan proporsi espresso, susu, buih, atau air di masing-masing — plus beberapa gaya khas Indonesia.",
     fAll: "Semua", fSavoury: "Gurih", fSweet: "Manis", local: "Punyamu",
+    courseLabel: "Tampilkan", courseAll: "Semua", courseMeal: "Masakan", courseExtra: "Pelengkap",
+    collapseList: "Sembunyikan daftar", expandList: "Tampilkan daftar",
     addRecipeBtn: "Tambah resep", addRecipeTitle: "Tambah resep", chooseFileBtn: "Pilih file JSON",
     orPaste: "Atau tempel JSON resep", pastePh: "Tempel JSON resep di sini", addFromPaste: "Tambah dari tempelan",
     uploadOk: "“{title}” ditambahkan ke daftar.",
@@ -429,8 +452,9 @@ function saveLocal(key, v) { try { localStorage.setItem(key, JSON.stringify(v));
 
 const state = {
   recipes: [], localRecipes: loadLocal(LOCAL_KEY, []), tips: [], current: null, servings: null,
-  q: "", section: "food", type: "all", drink: "all", temp: "all",
-  lang: detectLang(), failed: false, shopping: loadLocal(SHOP_KEY, [])
+  q: "", section: "food", type: "all", course: "all", drink: "all", temp: "all",
+  lang: detectLang(), failed: false, shopping: loadLocal(SHOP_KEY, []),
+  sidebarCollapsed: (() => { try { return localStorage.getItem("chut.sidebarCollapsed") === "1"; } catch (e) { return false; } })()
 };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -463,6 +487,15 @@ function applyStatic() {
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); el.setAttribute("aria-label", t(el.dataset.i18nPh)); });
   document.querySelectorAll(".langs button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === state.lang)));
   $("toggleTemplate").textContent = t($("templateBlock").hidden ? "viewTemplate" : "hideTemplate");
+  $("grid").classList.toggle("sidebar-collapsed", state.sidebarCollapsed);
+  $("sidebarToggle").setAttribute("aria-expanded", String(!state.sidebarCollapsed));
+  $("sidebarToggleIcon").textContent = state.sidebarCollapsed ? "›" : "‹";
+  $("sidebarToggleLabel").textContent = t(state.sidebarCollapsed ? "expandList" : "collapseList");
+}
+function setSidebarCollapsed(v) {
+  state.sidebarCollapsed = v;
+  try { localStorage.setItem("chut.sidebarCollapsed", v ? "1" : "0"); } catch (e) {}
+  applyStatic();
 }
 
 function sorted() {
@@ -474,6 +507,7 @@ function matchesFacets(r) {
   if (recipeSection(r) !== state.section) return false;
   if (state.section === "food") {
     if (state.type !== "all" && r.type !== state.type) return false;
+    if (state.course !== "all" && (r.course || "meal") !== state.course) return false;
   } else if (state.section === "beverage") {
     if (state.drink !== "all" && r.drink !== state.drink) return false;
     if (state.temp !== "all") {
@@ -556,6 +590,7 @@ function renderAll() { applyStatic(); renderList(); renderDetail(); renderTips()
 /* ---- Section tabs (Food / Beverage / Make your own) and their facet rows ---- */
 function updateFacetVisibility() {
   $("typefilter").hidden = state.section !== "food";
+  $("coursefilter").hidden = state.section !== "food";
   $("drinkfilter").hidden = state.section !== "beverage";
   $("tempfilter").hidden = state.section !== "beverage";
   $("coffeeGuideBtn").hidden = state.section !== "beverage";
@@ -569,6 +604,11 @@ function setSection(sec) {
 function setTypeFilter(ty) {
   state.type = ty;
   $("typefilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.type === ty)));
+  renderList();
+}
+function setCourseFilter(co) {
+  state.course = co;
+  $("coursefilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.course === co)));
   renderList();
 }
 function setDrinkFilter(d) {
@@ -727,6 +767,11 @@ $("typefilter").addEventListener("click", e => {
   const b = e.target.closest("button[data-type]"); if (!b) return;
   setTypeFilter(b.dataset.type);
 });
+$("coursefilter").addEventListener("click", e => {
+  const b = e.target.closest("button[data-course]"); if (!b) return;
+  setCourseFilter(b.dataset.course);
+});
+$("sidebarToggle").addEventListener("click", () => setSidebarCollapsed(!state.sidebarCollapsed));
 $("sectiontabs").addEventListener("click", e => {
   const b = e.target.closest("button[data-section]"); if (!b) return;
   setSection(b.dataset.section);

@@ -2488,7 +2488,8 @@
       ],
       "added": "2026-10-18",
       "type": "savoury",
-      "section": "food"
+      "section": "food",
+      "course": "extra"
     },
     {
       "id": "babi-panggang-karo",
@@ -3230,6 +3231,7 @@
       "cuisine": "Indonesian",
       "section": "food",
       "type": "savoury",
+      "course": "extra",
       "description": [
         "A simple peanut sauce for gado-gado style salad, fried tofu/tempeh, or as a satay dipping sauce — adjust the water to make it thinner or thicker.",
         "Bumbu kacang sederhana untuk salad gado-gado, tahu/tempe goreng, atau cocolan sate — atur air untuk kekentalan sesuai kebutuhan."
