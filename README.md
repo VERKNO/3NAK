@@ -14,7 +14,7 @@ Chut is a free recipe app in **English and Bahasa Indonesia**. It works in any b
 
 The app has three sections, as tabs above the recipe list:
 
-- **Food**: Batak dishes (arsik, saksang, BPK, babi panggang Toba, babi goreng, mie gomak, daun ubi tumbuk, ayam panggang andaliman, sambal andaliman), simple cakes and baking, and a versatile peanut sauce (bumbu kacang) for salads, fried tofu/tempeh or satay. Filterable by **Savoury / Sweet**.
+- **Food**: Batak dishes (arsik, saksang, BPK, babi panggang Toba, babi goreng, mie gomak, daun ubi tumbuk, ayam panggang andaliman, sambal andaliman), simple cakes and baking, and a versatile peanut sauce (bumbu kacang) for salads, fried tofu/tempeh or satay. Filterable by **Savoury / Sweet** and by **Dishes / Extras** (the sauce and sambal are condiments, not standalone dishes). The **Dough & batter guide** link compares bread, pizza and bun doughs, cake/muffin batter, and frying batters (bakwan, bakwan jagung, fried chicken) by ingredient ratio, and explains yeast vs baking powder/soda leavening.
 - **Beverage**: coffee and non-coffee drinks, filterable by **Coffee / Non-coffee** and **Hot / Cold** — including Indonesian drinks (kopi tubruk, es kopi susu, es teh manis, wedang jahe, bandrek, es cendol). The **Coffee types & differences** link shows how common coffee drinks compare (espresso, latte, cappuccino, cold brew, kopi tubruk and more), with a simple diagram of each one's proportions.
 - **Make your own**: how to ferment your own tempeh and grow your own bean sprouts (tauge) at home, from soybeans or mung beans.
 - **Kitchen notes**: substitutes and shopping tips at the bottom of the page.

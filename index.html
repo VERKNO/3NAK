@@ -152,6 +152,17 @@ ol.steps b { display: block; }
 .cg-bar span { display: block; }
 .cg-legend { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-top: 8px; font-size: 0.78rem; color: var(--muted); }
 .cg-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+
+/* Dough & batter guide */
+.dg-leavening-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 4px; }
+.dg-group-title { font-family: var(--display); font-weight: 600; font-size: 0.95rem; margin: 20px 0 10px; }
+.dg-group-title:first-of-type { margin-top: 6px; }
+.dg-rows { display: flex; flex-direction: column; gap: 6px; margin-top: 2px; }
+.dg-row { display: grid; grid-template-columns: 84px 1fr 108px; align-items: center; gap: 8px; }
+.dg-label { font-size: 0.78rem; color: var(--muted); }
+.dg-track { height: 10px; border-radius: 4px; background: var(--bg); overflow: hidden; border: 1px solid var(--line); }
+.dg-fill { display: block; height: 100%; }
+.dg-val { font-size: 0.75rem; color: var(--muted); text-align: right; }
 .item .badge { display: inline-block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px; }
 
 /* Header icon buttons (add recipe / shopping list) */
@@ -245,6 +256,7 @@ ol.steps b { display: block; }
         <button type="button" data-course="meal" aria-pressed="false" data-i18n="courseMeal">Dishes</button>
         <button type="button" data-course="extra" aria-pressed="false" data-i18n="courseExtra">Extras</button>
       </div>
+      <button type="button" class="coffeeguide-link" id="doughGuideBtn" data-i18n="doughGuideBtn" hidden>Dough &amp; batter guide</button>
       <div class="facetrow" id="drinkfilter" role="group" aria-label="Filter by drink type" hidden>
         <span class="flabel" data-i18n="drinkLabel">Type</span>
         <button type="button" data-drink="all" aria-pressed="true" data-i18n="dAll">All</button>
@@ -311,6 +323,18 @@ ol.steps b { display: block; }
   </div>
 </div>
 
+<div class="sheet-backdrop" id="doughGuideBackdrop">
+  <div class="sheet" style="max-width:720px;">
+    <div class="sheet-head">
+      <h3 data-i18n="doughGuideTitle">Dough &amp; batter guide</h3>
+      <button type="button" class="sheet-close" id="doughGuideClose" aria-label="Close">✕</button>
+    </div>
+    <p class="desc" data-i18n="doughGuideIntro" style="margin:0;">Ratios shown as a percentage of the main ingredient's weight (flour, or corn for bakwan jagung) — a common way bakers compare doughs regardless of batch size.</p>
+    <div class="dg-leavening-grid" id="doughLeaveningGrid"></div>
+    <div id="doughGuideGrid"></div>
+  </div>
+</div>
+
 <div class="sheet-backdrop" id="shopBackdrop">
   <div class="sheet">
     <div class="sheet-head">
@@ -345,6 +369,11 @@ const UI = {
     tempLabel: "Temp", hAll: "All", hHot: "Hot", hCold: "Cold",
     coffeeGuideBtn: "Coffee types & differences", coffeeGuideTitle: "Coffee types & differences",
     coffeeGuideIntro: "How common coffee drinks differ, roughly by the proportion of espresso, milk, foam or water in each — plus a couple of Indonesian styles.",
+    doughGuideBtn: "Dough & batter guide", doughGuideTitle: "Dough & batter guide",
+    doughGuideIntro: "Ratios shown as a percentage of the main ingredient's weight (flour, or corn for bakwan jagung) — a common way bakers compare doughs regardless of batch size.",
+    dgYeastTitle: "Yeast (biological)", dgYeastDesc: "A living organism that ferments sugars into CO2 and alcohol — needs time (and warmth) to rise, but builds flavor and a chewy, airy texture. Used in bread, pizza and buns.",
+    dgChemTitle: "Baking powder / soda (chemical)", dgChemDesc: "An acid-base reaction that releases CO2 almost instantly once wet (and again with heat) — no rising time needed, but the texture is tender and crumbly rather than chewy. Used in cakes, muffins, pancakes and most fritter batters.",
+    dgGroupYeast: "Yeast-leavened dough", dgGroupChemical: "Chemically-leavened batter", dgGroupBatter: "Fry batter & coating",
     fAll: "All", fSavoury: "Savoury", fSweet: "Sweet", local: "Your own",
     courseLabel: "Show", courseAll: "All", courseMeal: "Dishes", courseExtra: "Extras",
     collapseList: "Hide list", expandList: "Show list",
@@ -374,6 +403,11 @@ const UI = {
     tempLabel: "Suhu", hAll: "Semua", hHot: "Panas", hCold: "Dingin",
     coffeeGuideBtn: "Jenis kopi & perbedaannya", coffeeGuideTitle: "Jenis kopi & perbedaannya",
     coffeeGuideIntro: "Perbedaan minuman kopi umum, kurang lebih berdasarkan proporsi espresso, susu, buih, atau air di masing-masing — plus beberapa gaya khas Indonesia.",
+    doughGuideBtn: "Panduan adonan & tepung celup", doughGuideTitle: "Panduan adonan & tepung celup",
+    doughGuideIntro: "Rasio ditampilkan sebagai persentase dari berat bahan utama (tepung, atau jagung untuk bakwan jagung) — cara umum yang dipakai tukang roti untuk membandingkan adonan terlepas dari ukuran adonannya.",
+    dgYeastTitle: "Ragi (biologis)", dgYeastDesc: "Organisme hidup yang memfermentasi gula menjadi CO2 dan alkohol — butuh waktu (dan kehangatan) untuk mengembang, tapi menghasilkan rasa dan tekstur kenyal berpori. Dipakai untuk roti, pizza, dan bun.",
+    dgChemTitle: "Baking powder / soda kue (kimiawi)", dgChemDesc: "Reaksi asam-basa yang melepaskan CO2 hampir instan begitu basah (dan lagi saat dipanaskan) — tanpa perlu waktu mengembang, tapi teksturnya lembut dan mudah hancur, bukan kenyal. Dipakai untuk kue, muffin, panekuk, dan kebanyakan adonan gorengan.",
+    dgGroupYeast: "Adonan dengan ragi", dgGroupChemical: "Adonan dengan baking powder/soda", dgGroupBatter: "Adonan gorengan & pelapis",
     fAll: "Semua", fSavoury: "Gurih", fSweet: "Manis", local: "Punyamu",
     courseLabel: "Tampilkan", courseAll: "Semua", courseMeal: "Masakan", courseExtra: "Pelengkap",
     collapseList: "Sembunyikan daftar", expandList: "Tampilkan daftar",
@@ -437,6 +471,50 @@ const COFFEE_GUIDE = [
   { id: "kopitubruk", title: ["Kopi Tubruk", "Kopi Tubruk"], desc: ["Indonesian-style: finely ground coffee boiled directly with sugar and poured unfiltered — the grounds settle at the bottom of the cup.", "Khas Indonesia: kopi giling halus direbus langsung bersama gula dan dituang tanpa disaring — ampasnya mengendap di dasar gelas."], parts: [["coffee", 1], ["sugar", 0.3]] },
   { id: "kopisusu", title: ["Es Kopi Susu", "Es Kopi Susu"], desc: ["Indonesian iced coffee with sweetened condensed milk or palm sugar syrup — much sweeter and creamier than a Western iced latte.", "Kopi dingin khas Indonesia dengan susu kental manis atau gula aren cair — jauh lebih manis dan creamy dibanding iced latte ala Barat."], parts: [["coffee", 1], ["condensed", 1], ["ice", 1]] },
   { id: "pourover", title: ["Pour-over / Filter", "Pour-over / Filter"], desc: ["Hot water poured slowly over ground coffee in a filter — clean-tasting, no sediment, the easiest way to make good coffee at home without a machine.", "Air panas dituang perlahan di atas kopi giling dalam filter — rasanya bersih, tanpa ampas, cara termudah membuat kopi enak di rumah tanpa mesin."], parts: [["coffee", 1], ["water", 2]] }
+];
+const DOUGH_PART_COLORS = {
+  flour: "#8a8577", corn: "#d9b64a", water: "#7fb0d8", milk: "#f0d9a8", yeast: "#c98a2e",
+  bakingpowder: "#b07fc9", salt: "#bdbdbd", sugar: "#e2879f", fat: "#a8703a", egg: "#e8c468", starch: "#c9b89a"
+};
+const DOUGH_PART_LABELS = {
+  flour: ["flour", "tepung"], corn: ["corn kernels", "jagung pipil"], water: ["water / milk", "air / susu"],
+  milk: ["milk", "susu"], yeast: ["yeast", "ragi"], bakingpowder: ["baking powder", "baking powder"],
+  salt: ["salt", "garam"], sugar: ["sugar", "gula"], fat: ["butter / oil", "mentega / minyak"],
+  egg: ["egg", "telur"], starch: ["flour / starch", "tepung / pati"]
+};
+const DOUGH_GUIDE = [
+  { id: "whitebread", group: "yeast",
+    title: ["Basic White Bread (lean dough)", "Roti Tawar Dasar (adonan ramping)"],
+    desc: ["Simple everyday bread dough leavened by yeast — needs time to rise but keeps ingredients minimal.", "Adonan roti sehari-hari yang dikembangkan dengan ragi — butuh waktu mengembang tapi bahannya minim."],
+    ratios: [["flour", 100, "100%"], ["water", 62, "60-65%"], ["yeast", 1.5, "1-2%"], ["salt", 2, "2%"], ["sugar", 1, "0-2%, optional"], ["fat", 1, "0-2%, optional"]] },
+  { id: "pizzadough", group: "yeast",
+    title: ["Pizza Dough (Neapolitan-style)", "Adonan Pizza (gaya Napoli)"],
+    desc: ["Higher-hydration dough for a chewy, blistered crust — less yeast with a longer cold rise gives more flavor.", "Adonan dengan hidrasi lebih tinggi untuk kulit kenyal berbintik — ragi lebih sedikit dengan fermentasi dingin lebih lama memberi rasa lebih baik."],
+    ratios: [["flour", 100, "100%"], ["water", 65, "60-70%"], ["yeast", 0.5, "0.2-1%"], ["salt", 2.5, "2-3%"], ["fat", 1.5, "0-3% olive oil"]] },
+  { id: "savourybun", group: "yeast",
+    title: ["Savoury Bun (burger bun)", "Roti Bun Gurih (roti burger)"],
+    desc: ["Soft, enriched dough with butter and egg for a tender burger or hot-dog bun that still holds its shape.", "Adonan lembut kaya mentega dan telur, untuk roti burger yang empuk tapi tetap kokoh."],
+    ratios: [["flour", 100, "100%"], ["water", 52, "50-55% susu/air"], ["yeast", 2, "1.5-2%"], ["sugar", 7, "6-8%"], ["salt", 1.8, "1.5-2%"], ["fat", 9, "8-10%"], ["egg", 9, "8-10%"]] },
+  { id: "sweetbun", group: "yeast",
+    title: ["Sweet Bun (for chocolate or sweet filling)", "Roti Bun Manis (untuk isian cokelat/manis)"],
+    desc: ["Richer, sweeter milk-bread dough — soft enough to wrap around chocolate, pandan or other sweet fillings.", "Adonan roti susu yang lebih kaya dan manis — cukup lembut untuk membungkus isian cokelat, pandan, atau isian manis lain."],
+    ratios: [["flour", 100, "100%"], ["water", 45, "40-50% susu"], ["yeast", 1.8, "1.5-2%"], ["sugar", 17, "15-20%"], ["salt", 1, "1%"], ["fat", 12, "10-15%"], ["egg", 12, "10-15%"]] },
+  { id: "cakebatter", group: "chemical",
+    title: ["Cake & Muffin Batter", "Adonan Kue & Muffin"],
+    desc: ["Leavened instantly by baking powder/soda instead of yeast — no rising time, ready for the oven as soon as it's mixed.", "Dikembangkan langsung dengan baking powder/soda, bukan ragi — tanpa waktu mengembang, siap dipanggang segera setelah diaduk."],
+    ratios: [["flour", 100, "100%"], ["sugar", 80, "60-100%"], ["fat", 50, "40-60%"], ["egg", 30, "20-40%"], ["milk", 40, "30-50%"], ["bakingpowder", 2.5, "2-3%"]] },
+  { id: "bakwan", group: "batter",
+    title: ["Bakwan (Vegetable Fritter Batter)", "Adonan Bakwan Sayur"],
+    desc: ["Thin, pourable batter that coats shredded vegetables for frying — baking powder gives extra crispness.", "Adonan cair yang membalut sayuran iris untuk digoreng — baking powder memberi tekstur lebih renyah."],
+    ratios: [["flour", 100, "100%"], ["water", 100, "90-110%, cair"], ["egg", 15, "0-20%, optional"], ["bakingpowder", 1.5, "1-2%, optional"]] },
+  { id: "bakwanjagung", group: "batter",
+    title: ["Bakwan Jagung Manado (Corn Fritter)", "Bakwan Jagung Manado"],
+    desc: ["Corn is the main bulk here, not flour — just enough flour and egg to bind the kernels together.", "Jagung jadi bahan utama di sini, bukan tepung — tepung dan telur hanya secukupnya untuk mengikat jagung."],
+    ratios: [["corn", 100, "100%, bahan utama"], ["flour", 25, "20-30% dari berat jagung"], ["egg", 12, "10-15%"], ["bakingpowder", 1, "~1%, optional"]] },
+  { id: "friedchicken", group: "batter",
+    title: ["Fried Chicken Batter / Coating", "Adonan/Pelapis Ayam Goreng"],
+    desc: ["A wet starch batter (or a dry starch dredge) that puffs and crisps in hot oil — baking powder helps it blister and crackle.", "Adonan tepung/pati basah (atau pelapis kering) yang mengembang dan renyah saat digoreng — baking powder membuat teksturnya pecah-pecah."],
+    ratios: [["starch", 100, "100% tepung/pati"], ["water", 90, "80-100% air/buttermilk"], ["bakingpowder", 1.5, "1-2%"]] }
 ];
 const LOCAL_KEY = "chut.localRecipes";
 const SHOP_KEY = "chut.shopping";
@@ -594,6 +672,7 @@ function updateFacetVisibility() {
   $("drinkfilter").hidden = state.section !== "beverage";
   $("tempfilter").hidden = state.section !== "beverage";
   $("coffeeGuideBtn").hidden = state.section !== "beverage";
+  $("doughGuideBtn").hidden = state.section !== "food";
 }
 function setSection(sec) {
   state.section = sec;
@@ -634,6 +713,32 @@ function renderCoffeeGuide() {
         <div class="cg-bar">${bar}</div>
         <div class="cg-legend">${legend}</div>
       </div>`;
+  }).join("");
+}
+
+/* ---- Dough & batter guide ---- */
+function renderDoughGuide() {
+  $("doughLeaveningGrid").innerHTML = `
+    <div class="cg-card"><h4>${esc(t("dgYeastTitle"))}</h4><p>${esc(t("dgYeastDesc"))}</p></div>
+    <div class="cg-card"><h4>${esc(t("dgChemTitle"))}</h4><p>${esc(t("dgChemDesc"))}</p></div>`;
+  const groups = [["yeast", "dgGroupYeast"], ["chemical", "dgGroupChemical"], ["batter", "dgGroupBatter"]];
+  $("doughGuideGrid").innerHTML = groups.map(([gid, labelKey]) => {
+    const items = DOUGH_GUIDE.filter(d => d.group === gid);
+    if (!items.length) return "";
+    const cards = items.map(d => {
+      const rows = d.ratios.map(([key, val, disp]) => `<div class="dg-row">
+          <span class="dg-label">${esc(L2(DOUGH_PART_LABELS[key] || [key, key]))}</span>
+          <div class="dg-track"><span class="dg-fill" style="width:${Math.min(val, 130) / 130 * 100}%;background:${DOUGH_PART_COLORS[key] || "#999"}"></span></div>
+          <span class="dg-val">${esc(disp)}</span>
+        </div>`).join("");
+      return `<div class="cg-card">
+          <h4>${esc(L2(d.title))}</h4>
+          <p>${esc(L2(d.desc))}</p>
+          <div class="dg-rows">${rows}</div>
+        </div>`;
+    }).join("");
+    return `<div class="dg-group-title">${esc(t(labelKey))}</div>
+      <div class="coffeeguide-grid">${cards}</div>`;
   }).join("");
 }
 
@@ -787,6 +892,9 @@ $("tempfilter").addEventListener("click", e => {
 $("coffeeGuideBtn").addEventListener("click", () => { renderCoffeeGuide(); $("coffeeGuideBackdrop").classList.add("open"); });
 $("coffeeGuideClose").addEventListener("click", () => $("coffeeGuideBackdrop").classList.remove("open"));
 $("coffeeGuideBackdrop").addEventListener("click", e => { if (e.target === $("coffeeGuideBackdrop")) $("coffeeGuideBackdrop").classList.remove("open"); });
+$("doughGuideBtn").addEventListener("click", () => { renderDoughGuide(); $("doughGuideBackdrop").classList.add("open"); });
+$("doughGuideClose").addEventListener("click", () => $("doughGuideBackdrop").classList.remove("open"));
+$("doughGuideBackdrop").addEventListener("click", e => { if (e.target === $("doughGuideBackdrop")) $("doughGuideBackdrop").classList.remove("open"); });
 
 /* Add-recipe sheet: file upload or paste */
 $("openUpload").addEventListener("click", () => { $("uploadBackdrop").classList.add("open"); $("pasteInput").focus(); });
