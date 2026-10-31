@@ -1,7 +1,7 @@
 {
-  "name": "Chut – Batak recipes",
+  "name": "Chut – Indonesian recipes",
   "short_name": "Chut",
-  "description": "Batak home cooking and baking, adapted for ingredients in Prague.",
+  "description": "Recipes for Indonesian taste, adapted for ingredients in Prague.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

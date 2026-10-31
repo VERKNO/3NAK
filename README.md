@@ -1,6 +1,6 @@
 # Chut
 
-**Batak home cooking and baking, adapted for ingredients you can buy in Prague.**
+**Recipes for Indonesian taste, adapted for ingredients you can buy in Prague.**
 
 Chut is a free recipe app in **English and Bahasa Indonesia**. It works in any browser, can be installed on your phone like a normal app, and keeps working offline once you've opened it. No account, no sign-in, nothing to set up.
 
@@ -8,7 +8,7 @@ Chut is a free recipe app in **English and Bahasa Indonesia**. It works in any b
 
 *Chuť* is Czech for "taste".
 
-> **Bahasa Indonesia:** Chut adalah aplikasi resep gratis untuk masakan Batak dan kue, disesuaikan dengan bahan yang bisa dibeli di Praha. Tekan **ID** di bagian atas untuk Bahasa Indonesia. Bisa dipasang di HP: di Android buka di Chrome → menu **⋮** → **Instal aplikasi**; di iPhone buka di Safari → **Bagikan** → **Tambahkan ke Layar Utama**. Tidak perlu akun.
+> **Bahasa Indonesia:** Chut adalah aplikasi resep gratis untuk cita rasa Indonesia, disesuaikan dengan bahan yang bisa dibeli di Praha. Tekan **ID** di bagian atas untuk Bahasa Indonesia. Bisa dipasang di HP: di Android buka di Chrome → menu **⋮** → **Instal aplikasi**; di iPhone buka di Safari → **Bagikan** → **Tambahkan ke Layar Utama**. Tidak perlu akun.
 
 ## What's inside
 
