@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated": "2026-10-19",
+  "updated": "2026-10-31",
   "recipes": [
     {
       "id": "banana-cake-two-sizes",
@@ -91,7 +91,8 @@
         "cake"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "beer-battered-fish",
@@ -181,7 +182,8 @@
         "main"
       ],
       "added": "2026-10-25",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "shihlin-fried-chicken",
@@ -291,7 +293,8 @@
         "frying"
       ],
       "added": "2026-10-25",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "blueberry-muffins",
@@ -386,7 +389,8 @@
         "breakfast"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "vanilla-cupcakes",
@@ -509,7 +513,8 @@
         "dessert"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "simple-cocoa-brownies",
@@ -595,7 +600,8 @@
         "sweet"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "simple-hot-cocoa",
@@ -667,7 +673,12 @@
         "comfort"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "beverage",
+      "drink": "noncoffee",
+      "temp": [
+        "hot"
+      ]
     },
     {
       "id": "bubur-kacang-hijau",
@@ -756,7 +767,8 @@
         "vegan"
       ],
       "added": "2026-10-25",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "beef-rendang",
@@ -901,7 +913,8 @@
         "spicy"
       ],
       "added": "2026-10-25",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "candied-fruit-loaf-cake",
@@ -1125,7 +1138,8 @@
         "sweet"
       ],
       "added": "2026-10-18",
-      "type": "sweet"
+      "type": "sweet",
+      "section": "food"
     },
     {
       "id": "arsik-kapr",
@@ -1394,7 +1408,8 @@
         "stovetop"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "saksang-santan",
@@ -1659,7 +1674,8 @@
         "multicooker"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "mie-gomak-spaghetti",
@@ -1900,7 +1916,8 @@
         "quick"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "daun-ubi-tumbuk",
@@ -2133,7 +2150,8 @@
         "side"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "ayam-panggang-andaliman",
@@ -2311,7 +2329,8 @@
         "oven"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "sambal-andaliman",
@@ -2468,7 +2487,8 @@
         "no-cook"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "babi-panggang-karo",
@@ -2732,7 +2752,8 @@
         "oven"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "babi-panggang-toba",
@@ -2966,7 +2987,8 @@
         "oven"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
     },
     {
       "id": "babi-goreng-batak",
@@ -3192,7 +3214,1225 @@
         "multicooker"
       ],
       "added": "2026-10-18",
-      "type": "savoury"
+      "type": "savoury",
+      "section": "food"
+    },
+    {
+      "id": "bumbu-kacang-serbaguna",
+      "title": [
+        "Versatile Peanut Sauce (Bumbu Kacang)",
+        "Bumbu Kacang Serbaguna"
+      ],
+      "category": [
+        "Sauce",
+        "Saus"
+      ],
+      "cuisine": "Indonesian",
+      "section": "food",
+      "type": "savoury",
+      "description": [
+        "A simple peanut sauce for gado-gado style salad, fried tofu/tempeh, or as a satay dipping sauce — adjust the water to make it thinner or thicker.",
+        "Bumbu kacang sederhana untuk salad gado-gado, tahu/tempe goreng, atau cocolan sate — atur air untuk kekentalan sesuai kebutuhan."
+      ],
+      "servings": 4,
+      "time": [
+        "10 min",
+        "10 menit"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "chopper or blender",
+          "chopper atau blender"
+        ],
+        [
+          "small pan",
+          "panci kecil"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 200,
+          "unit": "g",
+          "name": [
+            "roasted peanuts (unsalted), or smooth peanut butter",
+            "kacang tanah goreng tanpa garam, atau selai kacang halus"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": null,
+          "name": [
+            "garlic cloves",
+            "siung bawang putih"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "small shallot",
+            "bawang merah kecil"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "small red chili, optional",
+            "cabai merah kecil, opsional"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "name": [
+            "palm sugar or brown sugar",
+            "gula aren atau gula merah/cokelat"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": "tbsp",
+          "name": [
+            "tamarind juice or lime juice",
+            "air asam jawa atau air jeruk nipis"
+          ]
+        },
+        {
+          "amount": 0.5,
+          "unit": "tsp",
+          "name": [
+            "salt",
+            "garam"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "ml",
+          "name": [
+            "warm water, to thin (adjust as needed)",
+            "air hangat, untuk mengencerkan (sesuaikan)"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Grind the peanuts",
+            "Haluskan kacang"
+          ],
+          "text": [
+            "If using whole roasted peanuts, blend or chop until mostly smooth (a little texture is fine). Skip this step if using peanut butter.",
+            "Jika memakai kacang tanah utuh, haluskan dengan blender atau chopper sampai cukup halus (sedikit tekstur tidak masalah). Lewati langkah ini jika memakai selai kacang."
+          ]
+        },
+        {
+          "title": [
+            "Blend the aromatics",
+            "Haluskan bumbu"
+          ],
+          "text": [
+            "Blend the garlic, shallot and chili (if using) into a smooth paste.",
+            "Haluskan bawang putih, bawang merah, dan cabai (jika pakai) sampai menjadi pasta halus."
+          ]
+        },
+        {
+          "title": [
+            "Combine and warm",
+            "Campur dan panaskan"
+          ],
+          "text": [
+            "In a small pan, warm the paste with 2-3 tbsp water for a minute, then stir in the ground peanuts, sugar, tamarind/lime juice and salt.",
+            "Dalam panci kecil, panaskan pasta bumbu dengan 2-3 sdm air selama satu menit, lalu masukkan kacang halus, gula, air asam/jeruk nipis, dan garam."
+          ]
+        },
+        {
+          "title": [
+            "Thin to taste",
+            "Encerkan sesuai kebutuhan"
+          ],
+          "text": [
+            "Add warm water a little at a time, stirring, until pourable for a salad dressing or thicker for a dip. Taste and adjust sugar/salt/sour.",
+            "Tambahkan air hangat sedikit demi sedikit sambil diaduk, sampai cukup cair untuk saus salad atau lebih kental untuk cocolan. Cicipi, sesuaikan gula/garam/asam."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "For gado-gado or lotek: thin it more so it coats vegetables easily.",
+          "Untuk gado-gado atau lotek: encerkan lebih supaya mudah melapisi sayuran."
+        ],
+        [
+          "For fried tofu/tempeh or satay: keep it thicker, almost like a dip.",
+          "Untuk tahu/tempe goreng atau sate: buat lebih kental, hampir seperti cocolan."
+        ],
+        [
+          "Keeps in the fridge about a week in a sealed jar; it thickens when cold, loosen with a splash of warm water before serving.",
+          "Tahan di kulkas sekitar satu minggu dalam toples tertutup; akan mengental saat dingin, encerkan lagi dengan sedikit air hangat sebelum disajikan."
+        ]
+      ],
+      "shopping": [
+        {
+          "items": [
+            "palm sugar, tamarind",
+            "gula aren, asam jawa"
+          ],
+          "where": [
+            "Sapa or Asian shops",
+            "Sapa atau toko Asia"
+          ]
+        }
+      ],
+      "tags": [
+        "indonesian",
+        "sauce",
+        "peanut",
+        "vegan"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "tempe-rumahan",
+      "title": [
+        "Homemade Tempeh (Soybean)",
+        "Tempe Rumahan (Kedelai)"
+      ],
+      "category": [
+        "Ferment",
+        "Fermentasi"
+      ],
+      "cuisine": "Indonesian",
+      "section": "ferment",
+      "description": [
+        "Fermented soybean cake made from scratch with tempeh starter (ragi tempe) — needs a warm spot and 24-48 hours, but very little hands-on work.",
+        "Kedelai yang difermentasi dari awal dengan ragi tempe — butuh tempat hangat dan 24-48 jam, tapi kerja tangannya sedikit."
+      ],
+      "servings": 6,
+      "time": [
+        "30 min active + 24-48 hours fermenting",
+        "30 menit kerja aktif + 24-48 jam fermentasi"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "large pot",
+          "panci besar"
+        ],
+        [
+          "colander",
+          "saringan"
+        ],
+        [
+          "clean kitchen towel",
+          "lap dapur bersih"
+        ],
+        [
+          "perforated plastic bags or banana leaves",
+          "plastik berlubang atau daun pisang"
+        ],
+        [
+          "a warm spot around 30°C (oven with the light on, or near a radiator)",
+          "tempat hangat sekitar 30°C (oven dengan lampu menyala, atau dekat radiator)"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 250,
+          "unit": "g",
+          "name": [
+            "dried soybeans",
+            "kedelai kering"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": "g",
+          "name": [
+            "tempeh starter (ragi tempe, Rhizopus culture) — follow your packet's dose",
+            "ragi tempe (ragi Rhizopus) — ikuti dosis pada kemasan"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Soak and split",
+            "Rendam dan belah"
+          ],
+          "text": [
+            "Rinse the soybeans, then soak in plenty of water for 8-12 hours (overnight) until they split into halves easily.",
+            "Cuci kedelai, lalu rendam dalam banyak air selama 8-12 jam (semalaman) sampai mudah terbelah dua."
+          ]
+        },
+        {
+          "title": [
+            "Dehull and boil",
+            "Kupas kulit dan rebus"
+          ],
+          "text": [
+            "Rub the soaked beans between your hands (or pulse briefly in a blender with water) to loosen the thin yellow skins, then rinse the skins away. Boil the dehulled beans 30-45 minutes until tender.",
+            "Gosok kedelai yang sudah direndam di antara telapak tangan (atau blender sebentar dengan air) untuk melepas kulit kuning tipisnya, lalu bilas kulitnya. Rebus kedelai yang sudah dikupas 30-45 menit sampai empuk."
+          ]
+        },
+        {
+          "title": [
+            "Drain and dry",
+            "Tiriskan dan keringkan"
+          ],
+          "text": [
+            "Drain very well and spread on a clean towel until dry to the touch and no longer steaming — damp beans will spoil the ferment.",
+            "Tiriskan dengan baik dan hamparkan di atas lap bersih sampai kering saat disentuh dan tidak lagi berasap — kedelai yang masih lembap akan merusak fermentasi."
+          ]
+        },
+        {
+          "title": [
+            "Mix in the starter",
+            "Campur ragi"
+          ],
+          "text": [
+            "Once just warm (not hot), sprinkle the tempeh starter over the beans per the dose on your packet, and mix thoroughly so every bean is coated.",
+            "Setelah hangat (bukan panas), taburkan ragi tempe sesuai dosis pada kemasan, lalu campur rata sampai setiap biji kedelai terlapisi."
+          ]
+        },
+        {
+          "title": [
+            "Pack and perforate",
+            "Kemas dan lubangi"
+          ],
+          "text": [
+            "Pack the beans into perforated plastic bags or wrap in banana leaves, about 2cm thick, and poke small holes every few centimetres for airflow.",
+            "Masukkan kedelai ke plastik berlubang atau bungkus daun pisang, tebal sekitar 2cm, lalu tusuk lubang-lubang kecil setiap beberapa sentimeter untuk sirkulasi udara."
+          ]
+        },
+        {
+          "title": [
+            "Ferment",
+            "Fermentasi"
+          ],
+          "text": [
+            "Leave in a warm spot (around 30°C) for 24-48 hours. It's ready when the beans are bound by a firm white mycelium and the cake holds its shape when sliced; a faint ammonia smell is normal, a strong rotten smell or dark patches means it's spoiled.",
+            "Diamkan di tempat hangat (sekitar 30°C) selama 24-48 jam. Tempe siap saat kedelai terikat oleh miselium putih yang padat dan bisa diiris rapi; bau amonia samar itu normal, tapi bau busuk menyengat atau bercak gelap berarti gagal."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Tempeh starter isn't sold in regular Prague supermarkets — order online (search “ragi tempe” or “tempeh starter culture”) or check Asian grocery shops; it keeps for months in the freezer.",
+          "Ragi tempe tidak dijual di supermarket biasa di Praha — pesan online (cari “ragi tempe” atau “tempeh starter culture”) atau cek toko Asia; tahan berbulan-bulan di freezer."
+        ],
+        [
+          "No perforated bags? A regular freezer bag poked with a fork every 2-3cm works fine.",
+          "Tidak ada plastik berlubang? Kantong freezer biasa yang ditusuk garpu setiap 2-3cm juga bisa."
+        ],
+        [
+          "Once fermented, keep in the fridge up to a week, or slice and freeze for longer.",
+          "Setelah jadi, simpan di kulkas sampai satu minggu, atau iris dan simpan di freezer untuk lebih lama."
+        ]
+      ],
+      "shopping": [
+        {
+          "items": [
+            "dried soybeans, tempeh starter",
+            "kedelai kering, ragi tempe"
+          ],
+          "where": [
+            "Asian shops, or online for the starter",
+            "toko Asia, atau online untuk raginya"
+          ]
+        }
+      ],
+      "tags": [
+        "indonesian",
+        "ferment",
+        "soy",
+        "vegan",
+        "diy"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "tauge-rumahan",
+      "title": [
+        "Homemade Bean Sprouts (Tauge)",
+        "Tauge Rumahan"
+      ],
+      "category": [
+        "Sprouts",
+        "Tauge"
+      ],
+      "cuisine": "Indonesian",
+      "section": "ferment",
+      "description": [
+        "Crunchy fresh bean sprouts from mung beans (or soybeans) with no special equipment — just rinsing twice a day for a few days.",
+        "Tauge segar dan renyah dari kacang hijau (atau kedelai) tanpa alat khusus — cukup dibilas dua kali sehari selama beberapa hari."
+      ],
+      "servings": 4,
+      "time": [
+        "5 min a day active + 2-4 days sprouting",
+        "5 menit per hari kerja aktif + 2-4 hari penyemaian"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "large jar or bowl",
+          "toples atau mangkuk besar"
+        ],
+        [
+          "clean cloth or fine sieve",
+          "kain bersih atau saringan halus"
+        ],
+        [
+          "a dark cupboard or covered container",
+          "lemari gelap atau wadah tertutup"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": [
+            "dried mung beans (or dried soybeans)",
+            "kacang hijau kering (atau kedelai kering)"
+          ]
+        },
+        {
+          "amount": 500,
+          "unit": "ml",
+          "name": [
+            "water, for soaking and rinsing (fresh water each time)",
+            "air, untuk merendam dan membilas (air baru setiap kali)"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Soak overnight",
+            "Rendam semalaman"
+          ],
+          "text": [
+            "Rinse the beans, then soak in plenty of water for 8-12 hours.",
+            "Cuci kacang, lalu rendam dalam banyak air selama 8-12 jam."
+          ]
+        },
+        {
+          "title": [
+            "Rest in the dark",
+            "Simpan di tempat gelap"
+          ],
+          "text": [
+            "Drain well and spread the beans in a jar or bowl lined with a damp cloth, no more than 3-4cm deep. Cover loosely (a cloth, or a lid with holes) and keep somewhere dark and warm.",
+            "Tiriskan dengan baik dan hamparkan kacang dalam toples atau mangkuk yang dilapisi kain lembap, tidak lebih dari 3-4cm tebalnya. Tutup longgar (kain, atau penutup berlubang) dan simpan di tempat gelap dan hangat."
+          ]
+        },
+        {
+          "title": [
+            "Rinse twice a day",
+            "Bilas dua kali sehari"
+          ],
+          "text": [
+            "Every morning and evening, rinse the beans with fresh water and drain thoroughly — this keeps them from rotting and washes away the heat they generate as they grow.",
+            "Setiap pagi dan sore, bilas kacang dengan air bersih dan tiriskan sampai benar-benar kering — ini mencegah pembusukan dan membuang panas yang dihasilkan saat tumbuh."
+          ]
+        },
+        {
+          "title": [
+            "Harvest",
+            "Panen"
+          ],
+          "text": [
+            "After 2-3 days (mung beans) or 3-4 days (soybeans) the sprouts are ready, with a short white-yellow shoot. Rinse once more, drain, and use within 2-3 days in the fridge.",
+            "Setelah 2-3 hari (kacang hijau) atau 3-4 hari (kedelai) tauge siap, dengan kecambah putih-kuning pendek. Bilas sekali lagi, tiriskan, dan gunakan dalam 2-3 hari di kulkas."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Keeping them in the dark gives the pale, crunchy sprouts you see in shops; in light they turn greener and slightly more bitter — both are fine to eat.",
+          "Menyimpan di tempat gelap menghasilkan tauge pucat dan renyah seperti yang dijual di toko; kalau terkena cahaya akan lebih hijau dan agak pahit — keduanya tetap aman dimakan."
+        ],
+        [
+          "If they smell sour or feel slimy, rinse more often (3x a day) or discard and start again — that's over-fermentation, not normal.",
+          "Kalau berbau asam atau berlendir, bilas lebih sering (3x sehari) atau buang dan ulangi dari awal — itu tanda fermentasi berlebihan, bukan hal normal."
+        ]
+      ],
+      "tags": [
+        "indonesian",
+        "sprouts",
+        "mungbean",
+        "soy",
+        "vegan",
+        "diy"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "kopi-tubruk",
+      "title": [
+        "Kopi Tubruk",
+        "Kopi Tubruk"
+      ],
+      "category": [
+        "Coffee",
+        "Kopi"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "coffee",
+      "temp": [
+        "hot"
+      ],
+      "description": [
+        "Traditional Indonesian boiled coffee: finely ground coffee and sugar steeped directly in hot water, unfiltered — the grounds settle at the bottom.",
+        "Kopi tradisional Indonesia: kopi giling halus dan gula diseduh langsung dengan air panas, tanpa disaring — ampasnya mengendap di dasar gelas."
+      ],
+      "servings": 1,
+      "time": [
+        "5 min",
+        "5 menit"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "kettle",
+          "ketel"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "name": [
+            "finely ground coffee (robusta for the traditional taste, if you can find it)",
+            "kopi giling halus (robusta untuk rasa tradisional, kalau ada)"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": "tbsp",
+          "name": [
+            "sugar, to taste",
+            "gula, sesuai selera"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "ml",
+          "name": [
+            "just-boiled water",
+            "air yang baru mendidih"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Add coffee and sugar",
+            "Masukkan kopi dan gula"
+          ],
+          "text": [
+            "Put the ground coffee and sugar directly into a sturdy cup or glass.",
+            "Masukkan kopi giling dan gula langsung ke gelas atau cangkir yang kokoh."
+          ]
+        },
+        {
+          "title": [
+            "Pour and stir",
+            "Tuang dan aduk"
+          ],
+          "text": [
+            "Pour the just-boiled water over it and stir well.",
+            "Tuang air yang baru mendidih di atasnya dan aduk rata."
+          ]
+        },
+        {
+          "title": [
+            "Let it settle",
+            "Diamkan"
+          ],
+          "text": [
+            "Let it sit 1-2 minutes so the grounds sink to the bottom before drinking — sip from the top, don't stir again near the end.",
+            "Diamkan 1-2 menit sampai ampas mengendap di dasar sebelum diminum — seruput dari atas, jangan diaduk lagi menjelang habis."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Traditionally made with robusta for a stronger, more bitter cup; arabica works too but tastes milder.",
+          "Biasanya memakai robusta untuk rasa yang lebih kuat dan pahit; arabica juga bisa, rasanya lebih ringan."
+        ]
+      ],
+      "tags": [
+        "indonesian",
+        "coffee",
+        "hot"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "es-kopi-susu",
+      "title": [
+        "Es Kopi Susu",
+        "Es Kopi Susu"
+      ],
+      "category": [
+        "Coffee",
+        "Kopi"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "coffee",
+      "temp": [
+        "cold"
+      ],
+      "description": [
+        "Indonesian iced coffee with sweetened condensed milk (or palm sugar syrup) — sweeter and creamier than a Western iced latte.",
+        "Kopi dingin khas Indonesia dengan susu kental manis (atau sirop gula aren) — lebih manis dan creamy dibanding iced latte ala Barat."
+      ],
+      "servings": 1,
+      "time": [
+        "5 min, plus brewing the coffee",
+        "5 menit, ditambah waktu menyeduh kopi"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "glass",
+          "gelas"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 60,
+          "unit": "ml",
+          "name": [
+            "strong brewed coffee (kopi tubruk or strong filter coffee), cooled",
+            "kopi pekat yang sudah diseduh (kopi tubruk atau filter kuat), didinginkan"
+          ]
+        },
+        {
+          "amount": 3,
+          "unit": "tbsp",
+          "name": [
+            "sweetened condensed milk, or 2 tbsp palm sugar syrup",
+            "susu kental manis, atau 2 sdm sirop gula aren"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "g",
+          "name": [
+            "ice cubes",
+            "es batu"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Brew and cool the coffee",
+            "Seduh dan dinginkan kopi"
+          ],
+          "text": [
+            "Make a strong batch of coffee (see Kopi Tubruk, just extra strong) and let it cool to room temperature, or chill it.",
+            "Buat kopi pekat (lihat Kopi Tubruk, tapi dibuat lebih kuat) dan biarkan dingin sampai suhu ruang, atau simpan di kulkas."
+          ]
+        },
+        {
+          "title": [
+            "Fill the glass with ice",
+            "Isi gelas dengan es"
+          ],
+          "text": [
+            "Fill a glass with ice cubes.",
+            "Isi gelas dengan es batu."
+          ]
+        },
+        {
+          "title": [
+            "Add milk and coffee",
+            "Tambahkan susu dan kopi"
+          ],
+          "text": [
+            "Pour in the condensed milk or palm sugar syrup, then pour the coffee on top. Stir well before drinking.",
+            "Tuang susu kental manis atau sirop gula aren, lalu tuang kopi di atasnya. Aduk rata sebelum diminum."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "No condensed milk? Mix 2 tbsp sugar with 1 tbsp hot water for a quick syrup, then add a splash of regular milk or cream separately.",
+          "Tidak ada susu kental manis? Campur 2 sdm gula dengan 1 sdm air panas untuk sirop cepat, lalu tambahkan sedikit susu cair atau krim secara terpisah."
+        ]
+      ],
+      "tags": [
+        "indonesian",
+        "coffee",
+        "iced",
+        "sweet"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "es-teh-manis",
+      "title": [
+        "Sweet Iced Tea (Es Teh Manis)",
+        "Es Teh Manis"
+      ],
+      "category": [
+        "Tea",
+        "Teh"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "noncoffee",
+      "temp": [
+        "cold"
+      ],
+      "description": [
+        "Indonesia's everyday drink: strong black tea sweetened while hot, then served over ice.",
+        "Minuman sehari-hari di Indonesia: teh hitam pekat yang dimaniskan saat masih panas, lalu disajikan dengan es."
+      ],
+      "servings": 1,
+      "time": [
+        "10 min (mostly steeping)",
+        "10 menit (sebagian besar waktu menyeduh)"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "kettle",
+          "ketel"
+        ],
+        [
+          "glass",
+          "gelas"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "black tea bag, or 1 tsp loose black tea",
+            "kantong teh hitam, atau 1 sdt teh hitam curah"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "ml",
+          "name": [
+            "just-boiled water",
+            "air yang baru mendidih"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "name": [
+            "sugar, to taste",
+            "gula, sesuai selera"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "g",
+          "name": [
+            "ice cubes",
+            "es batu"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Steep strong",
+            "Seduh pekat"
+          ],
+          "text": [
+            "Steep the tea bag or loose tea in the just-boiled water for 4-5 minutes — stronger than for a hot cup, since it'll be diluted by the ice.",
+            "Seduh kantong teh atau teh curah dalam air mendidih selama 4-5 menit — lebih pekat dari biasanya untuk teh panas, karena nanti akan terkena es."
+          ]
+        },
+        {
+          "title": [
+            "Sweeten while hot",
+            "Maniskan saat masih panas"
+          ],
+          "text": [
+            "Remove the tea bag/leaves and stir in the sugar while the tea is still hot, so it dissolves completely.",
+            "Angkat kantong teh/ampasnya dan aduk gula saat teh masih panas, supaya larut sempurna."
+          ]
+        },
+        {
+          "title": [
+            "Pour over ice",
+            "Tuang di atas es"
+          ],
+          "text": [
+            "Fill a glass with ice and pour the sweetened tea over it.",
+            "Isi gelas dengan es dan tuang teh manis di atasnya."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Start with 2 tbsp sugar and adjust — some warungs make it sweeter still.",
+          "Mulai dengan 2 sdm gula dan sesuaikan — beberapa warung membuatnya lebih manis lagi."
+        ]
+      ],
+      "tags": [
+        "indonesian",
+        "tea",
+        "iced",
+        "sweet"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "wedang-jahe",
+      "title": [
+        "Ginger Tea (Wedang Jahe)",
+        "Wedang Jahe"
+      ],
+      "category": [
+        "Tea",
+        "Teh"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "noncoffee",
+      "temp": [
+        "hot"
+      ],
+      "description": [
+        "A warming, spiced ginger drink — good for cold weather or an upset stomach.",
+        "Minuman jahe hangat berbumbu — enak untuk cuaca dingin atau perut kurang nyaman."
+      ],
+      "servings": 1,
+      "time": [
+        "15 min",
+        "15 menit"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "small pan",
+          "panci kecil"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 30,
+          "unit": "g",
+          "name": [
+            "fresh ginger, sliced and lightly crushed",
+            "jahe segar, iris dan memarkan"
+          ]
+        },
+        {
+          "amount": 250,
+          "unit": "ml",
+          "name": [
+            "water",
+            "air"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "name": [
+            "palm sugar or brown sugar",
+            "gula aren atau gula merah/cokelat"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "pandan leaf, tied in a knot, optional",
+            "daun pandan, diikat simpul, opsional"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "cinnamon stick, optional",
+            "batang kayu manis, opsional"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Simmer the ginger",
+            "Rebus jahe"
+          ],
+          "text": [
+            "Bring the water to a boil with the crushed ginger (and cinnamon/pandan if using), then lower the heat and simmer 10 minutes.",
+            "Didihkan air bersama jahe yang dimemarkan (dan kayu manis/daun pandan jika pakai), lalu kecilkan api dan rebus selama 10 menit."
+          ]
+        },
+        {
+          "title": [
+            "Sweeten and strain",
+            "Maniskan dan saring"
+          ],
+          "text": [
+            "Stir in the sugar until dissolved, then strain into a cup.",
+            "Aduk gula sampai larut, lalu saring ke dalam cangkir."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Crushing (not just slicing) the ginger releases more flavour — smash it lightly with the back of a knife or a pestle.",
+          "Memarkan (bukan sekadar mengiris) jahe mengeluarkan rasa lebih kuat — pukul perlahan dengan punggung pisau atau alu."
+        ]
+      ],
+      "tags": [
+        "indonesian",
+        "ginger",
+        "hot",
+        "spiced"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "bandrek",
+      "title": [
+        "Spiced Ginger Coconut Drink (Bandrek)",
+        "Bandrek"
+      ],
+      "category": [
+        "Spiced drink",
+        "Minuman rempah"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "noncoffee",
+      "temp": [
+        "hot"
+      ],
+      "description": [
+        "A rich, spiced ginger drink from West Java, often with coconut milk and whole spices — stronger and more warming than wedang jahe.",
+        "Minuman jahe berempah dari Jawa Barat, biasanya dengan santan dan rempah utuh — lebih kuat dan menghangatkan dibanding wedang jahe."
+      ],
+      "servings": 1,
+      "time": [
+        "20 min",
+        "20 menit"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "small pan",
+          "panci kecil"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 40,
+          "unit": "g",
+          "name": [
+            "fresh ginger, sliced and crushed",
+            "jahe segar, iris dan memarkan"
+          ]
+        },
+        {
+          "amount": 250,
+          "unit": "ml",
+          "name": [
+            "water",
+            "air"
+          ]
+        },
+        {
+          "amount": 50,
+          "unit": "ml",
+          "name": [
+            "coconut milk, optional, for a creamier version",
+            "santan, opsional, untuk versi lebih creamy"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": "tbsp",
+          "name": [
+            "palm sugar",
+            "gula aren"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": null,
+          "name": [
+            "cloves",
+            "cengkih"
+          ]
+        },
+        {
+          "amount": 1,
+          "unit": null,
+          "name": [
+            "cinnamon stick",
+            "batang kayu manis"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": null,
+          "name": [
+            "black peppercorns, lightly crushed",
+            "lada hitam butiran, dimemarkan"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Simmer ginger and spices",
+            "Rebus jahe dan rempah"
+          ],
+          "text": [
+            "Boil the water with the ginger, cloves, cinnamon and peppercorns, then simmer 15 minutes until fragrant and slightly reduced.",
+            "Didihkan air bersama jahe, cengkih, kayu manis, dan lada, lalu rebus selama 15 menit sampai harum dan sedikit menyusut."
+          ]
+        },
+        {
+          "title": [
+            "Add sugar and coconut milk",
+            "Tambahkan gula dan santan"
+          ],
+          "text": [
+            "Stir in the palm sugar until dissolved. If using coconut milk, add it now and warm through without boiling hard (to avoid curdling).",
+            "Aduk gula aren sampai larut. Jika memakai santan, masukkan sekarang dan panaskan tanpa mendidih keras (agar tidak pecah)."
+          ]
+        },
+        {
+          "title": [
+            "Strain and serve hot",
+            "Saring dan sajikan hangat"
+          ],
+          "text": [
+            "Strain out the whole spices and ginger, and serve hot.",
+            "Saring rempah utuh dan jahe, lalu sajikan hangat."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "Traditionally served with a little toasted coconut or bread on the side — skip these if not available in Prague.",
+          "Biasanya disajikan dengan sedikit kelapa parut sangrai atau roti sebagai pelengkap — boleh dilewati jika tidak tersedia di Praha."
+        ]
+      ],
+      "shopping": [
+        {
+          "items": [
+            "palm sugar, cloves",
+            "gula aren, cengkih"
+          ],
+          "where": [
+            "Sapa or Asian shops",
+            "Sapa atau toko Asia"
+          ]
+        }
+      ],
+      "tags": [
+        "indonesian",
+        "ginger",
+        "spiced",
+        "hot",
+        "coconut"
+      ],
+      "added": "2026-10-31"
+    },
+    {
+      "id": "es-cendol",
+      "title": [
+        "Es Cendol",
+        "Es Cendol"
+      ],
+      "category": [
+        "Dessert drink",
+        "Minuman dessert"
+      ],
+      "cuisine": "Indonesian",
+      "section": "beverage",
+      "drink": "noncoffee",
+      "temp": [
+        "cold"
+      ],
+      "description": [
+        "A dessert drink of chewy green rice-flour noodles (cendol) in coconut milk and palm sugar syrup, over ice — the Prague version uses food colouring since pandan extract is hard to find.",
+        "Minuman dessert berisi cendol (mi dari tepung beras berwarna hijau, kenyal) dalam santan dan sirop gula aren, dengan es — versi Praha memakai pewarna makanan karena ekstrak pandan sulit ditemukan."
+      ],
+      "servings": 2,
+      "time": [
+        "40 min",
+        "40 menit"
+      ],
+      "oven": null,
+      "equipment": [
+        [
+          "small pan",
+          "panci kecil"
+        ],
+        [
+          "piping bag, or a bottle with holes poked in the cap",
+          "plastik segitiga, atau botol yang tutupnya dilubangi"
+        ],
+        [
+          "bowl of ice water",
+          "mangkuk berisi air es"
+        ]
+      ],
+      "ingredients": [
+        {
+          "amount": 50,
+          "unit": "g",
+          "name": [
+            "rice flour",
+            "tepung beras"
+          ]
+        },
+        {
+          "amount": 15,
+          "unit": "g",
+          "name": [
+            "tapioca starch",
+            "tepung tapioka"
+          ]
+        },
+        {
+          "amount": 200,
+          "unit": "ml",
+          "name": [
+            "water",
+            "air"
+          ]
+        },
+        {
+          "amount": 2,
+          "unit": null,
+          "name": [
+            "drops green food colouring (stands in for pandan)",
+            "tetes pewarna hijau (pengganti pandan)"
+          ]
+        },
+        {
+          "amount": 200,
+          "unit": "ml",
+          "name": [
+            "coconut milk",
+            "santan"
+          ]
+        },
+        {
+          "amount": 0.25,
+          "unit": "tsp",
+          "name": [
+            "salt",
+            "garam"
+          ]
+        },
+        {
+          "amount": 100,
+          "unit": "g",
+          "name": [
+            "palm sugar, melted with 3 tbsp water into a syrup",
+            "gula aren, dilelehkan dengan 3 sdm air menjadi sirop"
+          ]
+        },
+        {
+          "amount": 150,
+          "unit": "g",
+          "name": [
+            "ice cubes",
+            "es batu"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "title": [
+            "Make the batter",
+            "Buat adonan"
+          ],
+          "text": [
+            "Whisk the rice flour, tapioca starch, water and food colouring together in a pan until smooth.",
+            "Aduk rata tepung beras, tepung tapioka, air, dan pewarna makanan dalam panci sampai halus."
+          ]
+        },
+        {
+          "title": [
+            "Cook until thick",
+            "Masak sampai mengental"
+          ],
+          "text": [
+            "Cook over medium heat, stirring constantly, until it thickens into a smooth, pipeable paste (a few minutes).",
+            "Masak dengan api sedang, aduk terus, sampai mengental menjadi pasta yang halus dan bisa dicetak (beberapa menit)."
+          ]
+        },
+        {
+          "title": [
+            "Shape into strands",
+            "Bentuk menjadi untaian"
+          ],
+          "text": [
+            "While still hot, pipe or push the batter through small holes directly into the bowl of ice water, so it forms short noodle-like strands that firm up immediately.",
+            "Selagi masih panas, cetak adonan melalui lubang kecil langsung ke mangkuk air es, sehingga membentuk untaian seperti mi pendek yang langsung mengeras."
+          ]
+        },
+        {
+          "title": [
+            "Warm the coconut milk",
+            "Panaskan santan"
+          ],
+          "text": [
+            "Gently warm the coconut milk with the salt (don't boil hard), then let it cool.",
+            "Panaskan santan perlahan dengan garam (jangan sampai mendidih keras), lalu biarkan dingin."
+          ]
+        },
+        {
+          "title": [
+            "Assemble",
+            "Rangkai"
+          ],
+          "text": [
+            "Drain the cendol strands. In a glass, layer ice, cendol, coconut milk and palm sugar syrup. Stir before drinking.",
+            "Tiriskan untaian cendol. Dalam gelas, tata es, cendol, santan, dan sirop gula aren secara berlapis. Aduk sebelum diminum."
+          ]
+        }
+      ],
+      "notes": [
+        [
+          "No piping bag? A zip-top bag with a small corner snipped off, or a bottle cap with holes poked through, works the same way.",
+          "Tidak ada plastik segitiga? Kantong plastik berpenutup zip yang ujungnya digunting kecil, atau tutup botol yang dilubangi, bisa dipakai juga."
+        ]
+      ],
+      "shopping": [
+        {
+          "items": [
+            "palm sugar, tapioca starch",
+            "gula aren, tepung tapioka"
+          ],
+          "where": [
+            "Sapa or Asian shops",
+            "Sapa atau toko Asia"
+          ]
+        }
+      ],
+      "tags": [
+        "indonesian",
+        "dessert",
+        "iced",
+        "coconut",
+        "rice-flour"
+      ],
+      "added": "2026-10-31"
     }
   ],
   "languages": [

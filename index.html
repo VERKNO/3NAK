@@ -38,6 +38,7 @@
   --bg: #131714; --surface: #1B201C; --fg: #E8ECE7; --muted: #9AA59D; --line: #2D352F;
   --accent: #EC93B5; --accent-soft: #3A2230; --warn: #F2C46B; --warn-soft: #3A2F17; color-scheme: dark; }
 
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; }
 .wrap { max-width: 1100px; margin: 0 auto; padding-block: calc(28px + env(safe-area-inset-top, 0px)) calc(48px + env(safe-area-inset-bottom, 0px));
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -122,6 +123,25 @@ ol.steps b { display: block; }
 .typefilter button { all: unset; cursor: pointer; font-size: 0.85rem; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
 .typefilter button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
 .typefilter button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Section tabs (Food / Beverage / Make your own) */
+.sectiontabs { display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.sectiontabs button { all: unset; cursor: pointer; font-size: 0.88rem; font-weight: 600; padding: 6px 4px; color: var(--muted); border-bottom: 2px solid transparent; }
+.sectiontabs button[aria-pressed="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.sectiontabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.facetrow { display: flex; gap: 6px; flex-wrap: wrap; }
+.facetrow .flabel { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 2px; }
+
+/* Coffee guide */
+.coffeeguide-link { all: unset; cursor: pointer; color: var(--accent); font-size: 0.85rem; text-align: left; }
+.coffeeguide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+.cg-card { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.cg-card h4 { margin: 0 0 6px; font-family: var(--display); font-weight: 600; font-size: 1rem; }
+.cg-card p { margin: 6px 0 10px; color: var(--muted); font-size: 0.88rem; }
+.cg-bar { display: flex; height: 16px; border-radius: 5px; overflow: hidden; border: 1px solid var(--line); }
+.cg-bar span { display: block; }
+.cg-legend { display: flex; flex-wrap: wrap; gap: 8px 12px; margin-top: 8px; font-size: 0.78rem; color: var(--muted); }
+.cg-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
 .item .badge { display: inline-block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-left: 6px; }
 
 /* Header icon buttons (add recipe / shopping list) */
@@ -196,11 +216,29 @@ ol.steps b { display: block; }
   <div class="grid" id="grid">
     <aside class="index">
       <input class="search" id="q" type="search" placeholder="Search recipes or ingredients" aria-label="Search recipes" data-i18n-ph="search">
+      <div class="sectiontabs" id="sectiontabs" role="group" aria-label="Section">
+        <button type="button" data-section="food" aria-pressed="true" data-i18n="secFood">Food</button>
+        <button type="button" data-section="beverage" aria-pressed="false" data-i18n="secBeverage">Beverage</button>
+        <button type="button" data-section="ferment" aria-pressed="false" data-i18n="secFerment">Make your own</button>
+      </div>
       <div class="typefilter" id="typefilter" role="group" aria-label="Filter by type">
         <button type="button" data-type="all" aria-pressed="true" data-i18n="fAll">All</button>
         <button type="button" data-type="savoury" aria-pressed="false" data-i18n="fSavoury">Savoury</button>
         <button type="button" data-type="sweet" aria-pressed="false" data-i18n="fSweet">Sweet</button>
       </div>
+      <div class="facetrow" id="drinkfilter" role="group" aria-label="Filter by drink type" hidden>
+        <span class="flabel" data-i18n="drinkLabel">Type</span>
+        <button type="button" data-drink="all" aria-pressed="true" data-i18n="dAll">All</button>
+        <button type="button" data-drink="coffee" aria-pressed="false" data-i18n="dCoffee">Coffee</button>
+        <button type="button" data-drink="noncoffee" aria-pressed="false" data-i18n="dNonCoffee">Non-coffee</button>
+      </div>
+      <div class="facetrow" id="tempfilter" role="group" aria-label="Filter by temperature" hidden>
+        <span class="flabel" data-i18n="tempLabel">Temp</span>
+        <button type="button" data-temp="all" aria-pressed="true" data-i18n="hAll">All</button>
+        <button type="button" data-temp="hot" aria-pressed="false" data-i18n="hHot">Hot</button>
+        <button type="button" data-temp="cold" aria-pressed="false" data-i18n="hCold">Cold</button>
+      </div>
+      <button type="button" class="coffeeguide-link" id="coffeeGuideBtn" data-i18n="coffeeGuideBtn" hidden>Coffee types &amp; differences</button>
       <div class="label" data-i18n="recipes">Recipes</div>
       <div class="list" id="list"><div class="empty" data-i18n="loading">Loading recipes…</div></div>
     </aside>
@@ -243,6 +281,17 @@ ol.steps b { display: block; }
   </div>
 </div>
 
+<div class="sheet-backdrop" id="coffeeGuideBackdrop">
+  <div class="sheet" style="max-width:720px;">
+    <div class="sheet-head">
+      <h3 data-i18n="coffeeGuideTitle">Coffee types &amp; differences</h3>
+      <button type="button" class="sheet-close" id="coffeeGuideClose" aria-label="Close">✕</button>
+    </div>
+    <p class="desc" data-i18n="coffeeGuideIntro" style="margin:0;">How common coffee drinks differ, roughly by the proportion of espresso, milk, foam or water in each — plus a couple of Indonesian styles.</p>
+    <div class="coffeeguide-grid" id="coffeeGuideGrid"></div>
+  </div>
+</div>
+
 <div class="sheet-backdrop" id="shopBackdrop">
   <div class="sheet">
     <div class="sheet-head">
@@ -272,6 +321,11 @@ const UI = {
     ingredients: "Ingredients", method: "Method", notes: "Notes", shop: "Where to buy in Prague",
     servings: "servings", fewer: "Fewer servings", more: "More servings",
     loadfail: "Couldn't load the recipes. Check your connection and reload. Opening the file directly from your computer won't work; use the website or a local server.",
+    secFood: "Food", secBeverage: "Beverage", secFerment: "Make your own",
+    drinkLabel: "Type", dAll: "All", dCoffee: "Coffee", dNonCoffee: "Non-coffee",
+    tempLabel: "Temp", hAll: "All", hHot: "Hot", hCold: "Cold",
+    coffeeGuideBtn: "Coffee types & differences", coffeeGuideTitle: "Coffee types & differences",
+    coffeeGuideIntro: "How common coffee drinks differ, roughly by the proportion of espresso, milk, foam or water in each — plus a couple of Indonesian styles.",
     fAll: "All", fSavoury: "Savoury", fSweet: "Sweet", local: "Your own",
     addRecipeBtn: "Add recipe", addRecipeTitle: "Add a recipe", chooseFileBtn: "Choose a JSON file",
     orPaste: "Or paste the recipe JSON", pastePh: "Paste recipe JSON here", addFromPaste: "Add pasted recipe",
@@ -294,6 +348,11 @@ const UI = {
     ingredients: "Bahan", method: "Cara membuat", notes: "Catatan", shop: "Tempat beli di Praha",
     servings: "porsi", fewer: "Kurangi porsi", more: "Tambah porsi",
     loadfail: "Resep gagal dimuat. Cek koneksi internet lalu muat ulang. Membuka file langsung dari komputer tidak bisa; pakai situsnya atau server lokal.",
+    secFood: "Makanan", secBeverage: "Minuman", secFerment: "Buat sendiri",
+    drinkLabel: "Jenis", dAll: "Semua", dCoffee: "Kopi", dNonCoffee: "Non-kopi",
+    tempLabel: "Suhu", hAll: "Semua", hHot: "Panas", hCold: "Dingin",
+    coffeeGuideBtn: "Jenis kopi & perbedaannya", coffeeGuideTitle: "Jenis kopi & perbedaannya",
+    coffeeGuideIntro: "Perbedaan minuman kopi umum, kurang lebih berdasarkan proporsi espresso, susu, buih, atau air di masing-masing — plus beberapa gaya khas Indonesia.",
     fAll: "Semua", fSavoury: "Gurih", fSweet: "Manis", local: "Punyamu",
     addRecipeBtn: "Tambah resep", addRecipeTitle: "Tambah resep", chooseFileBtn: "Pilih file JSON",
     orPaste: "Atau tempel JSON resep", pastePh: "Tempel JSON resep di sini", addFromPaste: "Tambah dari tempelan",
@@ -316,6 +375,7 @@ const RECIPE_TEMPLATE = JSON.stringify({
   title: ["Name in English", "Nama dalam Bahasa Indonesia"],
   category: ["Meat", "Daging"],
   cuisine: "Batak",
+  section: "food",
   type: "savoury",
   description: ["One or two sentences", "Satu atau dua kalimat"],
   servings: 4,
@@ -327,8 +387,34 @@ const RECIPE_TEMPLATE = JSON.stringify({
   notes: [["Tip", "Tips"]],
   shopping: [{ items: ["galangal, lemongrass", "lengkuas, serai"], where: ["Sapa or Asian shops", "Sapa atau toko Asia"] }],
   tags: ["batak", "oven"],
-  added: "YYYY-MM-DD"
+  added: "YYYY-MM-DD",
+  _note_section: "section is \"food\", \"beverage\" or \"ferment\". For \"beverage\" also set drink (\"coffee\"/\"noncoffee\") and temp (array, e.g. [\"hot\"] or [\"cold\",\"hot\"]) instead of type. Delete this _note_section line — it's not a real field."
 }, null, 2);
+const PART_COLORS = {
+  espresso: "#4b2e1a", coffee: "#5c3a21", coldbrew: "#3b2416", water: "#bcd2e0",
+  milk: "#f3e6d1", foam: "#fffaf5", chocolate: "#6b3410", sugar: "#caa35b",
+  ice: "#cfe8f0", icecream: "#fdf1da", condensed: "#f0dfb0"
+};
+const PART_LABELS = {
+  espresso: ["espresso", "espresso"], coffee: ["coffee", "kopi"], coldbrew: ["cold brew concentrate", "konsentrat cold brew"],
+  water: ["hot water", "air panas"], milk: ["milk", "susu"], foam: ["foam", "buih"],
+  chocolate: ["chocolate", "cokelat"], sugar: ["sugar", "gula"], ice: ["ice", "es"],
+  icecream: ["ice cream", "es krim"], condensed: ["sweetened milk", "susu kental manis"]
+};
+const COFFEE_GUIDE = [
+  { id: "espresso", title: ["Espresso", "Espresso"], desc: ["Pure, concentrated coffee pulled fast under pressure — the base for most other coffee drinks.", "Kopi pekat yang diseduh cepat dengan tekanan tinggi — dasar dari hampir semua minuman kopi lain."], parts: [["espresso", 1]] },
+  { id: "americano", title: ["Americano", "Americano"], desc: ["Espresso topped up with hot water — lighter and milder than straight espresso.", "Espresso ditambah air panas — lebih ringan dan lembut dibanding espresso murni."], parts: [["espresso", 1], ["water", 3]] },
+  { id: "cappuccino", title: ["Cappuccino", "Cappuccino"], desc: ["Equal parts espresso, steamed milk and milk foam — the foam is thick enough to hold its shape.", "Espresso, susu kukus, dan buih susu dalam jumlah sama — buihnya cukup tebal untuk mempertahankan bentuknya."], parts: [["espresso", 1], ["milk", 1], ["foam", 1]] },
+  { id: "latte", title: ["Caffè Latte", "Caffè Latte"], desc: ["Espresso with a lot more steamed milk and just a thin layer of foam.", "Espresso dengan lebih banyak susu kukus dan hanya lapisan buih yang tipis."], parts: [["espresso", 1], ["milk", 3], ["foam", 0.3]] },
+  { id: "flatwhite", title: ["Flat White", "Flat White"], desc: ["Espresso with steamed milk that has very little foam — stronger-tasting than a latte because there's less milk.", "Espresso dengan susu kukus yang hampir tanpa buih — rasanya lebih kuat dari latte karena susunya lebih sedikit."], parts: [["espresso", 1], ["milk", 1.5]] },
+  { id: "macchiato", title: ["Espresso Macchiato", "Espresso Macchiato"], desc: ["Espresso “stained” with just a spoonful of milk foam — mostly espresso.", "Espresso yang “dicoreng” sedikit buih susu — rasanya tetap dominan espresso."], parts: [["espresso", 1], ["foam", 0.2]] },
+  { id: "mocha", title: ["Caffè Mocha", "Caffè Mocha"], desc: ["A latte with chocolate added — sweeter and dessert-like.", "Latte dengan tambahan cokelat — lebih manis, seperti dessert."], parts: [["espresso", 1], ["chocolate", 0.5], ["milk", 2], ["foam", 0.3]] },
+  { id: "coldbrew", title: ["Cold Brew", "Cold Brew"], desc: ["Coarse coffee steeped in cold water for 12-24 hours, never heated — smoother and less acidic than iced hot-brewed coffee.", "Kopi kasar diseduh dengan air dingin selama 12-24 jam, tanpa dipanaskan — lebih halus dan tidak terlalu asam dibanding kopi panas yang didinginkan."], parts: [["coldbrew", 1], ["ice", 1]] },
+  { id: "affogato", title: ["Affogato", "Affogato"], desc: ["A scoop of vanilla ice cream “drowned” in a hot shot of espresso — dessert, not a drink to sip slowly.", "Satu sendok es krim vanila yang “ditenggelamkan” dalam espresso panas — ini dessert, bukan minuman untuk diseruput santai."], parts: [["icecream", 2], ["espresso", 1]] },
+  { id: "kopitubruk", title: ["Kopi Tubruk", "Kopi Tubruk"], desc: ["Indonesian-style: finely ground coffee boiled directly with sugar and poured unfiltered — the grounds settle at the bottom of the cup.", "Khas Indonesia: kopi giling halus direbus langsung bersama gula dan dituang tanpa disaring — ampasnya mengendap di dasar gelas."], parts: [["coffee", 1], ["sugar", 0.3]] },
+  { id: "kopisusu", title: ["Es Kopi Susu", "Es Kopi Susu"], desc: ["Indonesian iced coffee with sweetened condensed milk or palm sugar syrup — much sweeter and creamier than a Western iced latte.", "Kopi dingin khas Indonesia dengan susu kental manis atau gula aren cair — jauh lebih manis dan creamy dibanding iced latte ala Barat."], parts: [["coffee", 1], ["condensed", 1], ["ice", 1]] },
+  { id: "pourover", title: ["Pour-over / Filter", "Pour-over / Filter"], desc: ["Hot water poured slowly over ground coffee in a filter — clean-tasting, no sediment, the easiest way to make good coffee at home without a machine.", "Air panas dituang perlahan di atas kopi giling dalam filter — rasanya bersih, tanpa ampas, cara termudah membuat kopi enak di rumah tanpa mesin."], parts: [["coffee", 1], ["water", 2]] }
+];
 const LOCAL_KEY = "chut.localRecipes";
 const SHOP_KEY = "chut.shopping";
 
@@ -343,7 +429,8 @@ function saveLocal(key, v) { try { localStorage.setItem(key, JSON.stringify(v));
 
 const state = {
   recipes: [], localRecipes: loadLocal(LOCAL_KEY, []), tips: [], current: null, servings: null,
-  q: "", type: "all", lang: detectLang(), failed: false, shopping: loadLocal(SHOP_KEY, [])
+  q: "", section: "food", type: "all", drink: "all", temp: "all",
+  lang: detectLang(), failed: false, shopping: loadLocal(SHOP_KEY, [])
 };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -382,16 +469,33 @@ function sorted() {
   return allRecipes().slice().sort((a, b) => L2(a.title).localeCompare(L2(b.title), state.lang));
 }
 
-function renderList() {
-  const el = $("list");
-  if (state.failed) { el.innerHTML = `<div class="empty">${esc(t("loadfail"))}</div>`; return; }
-  const q = fold(state.q.trim());
-  const rows = sorted().filter(r => {
+function recipeSection(r) { return r.section || "food"; }
+function matchesFacets(r) {
+  if (recipeSection(r) !== state.section) return false;
+  if (state.section === "food") {
     if (state.type !== "all" && r.type !== state.type) return false;
+  } else if (state.section === "beverage") {
+    if (state.drink !== "all" && r.drink !== state.drink) return false;
+    if (state.temp !== "all") {
+      const temps = Array.isArray(r.temp) ? r.temp : (r.temp ? [r.temp] : []);
+      if (!temps.includes(state.temp)) return false;
+    }
+  }
+  return true;
+}
+function visibleRecipes() {
+  const q = fold(state.q.trim());
+  return sorted().filter(r => {
+    if (!matchesFacets(r)) return false;
     if (!q) return true;
     const hay = [r.title, r.category, r.description, ...(r.ingredients || []).map(i => i.name), ...(r.tags || [])].map(both).join(" ");
     return fold(hay).includes(q);
   });
+}
+function renderList() {
+  const el = $("list");
+  if (state.failed) { el.innerHTML = `<div class="empty">${esc(t("loadfail"))}</div>`; return; }
+  const rows = visibleRecipes();
   if (!allRecipes().length) { el.innerHTML = `<div class="empty">${esc(t("empty"))}</div>`; return; }
   if (!rows.length) { el.innerHTML = `<div class="empty">${esc(t("nomatch"))}</div>`; return; }
   el.innerHTML = rows.map(r => `<button class="item" data-id="${esc(r.id)}" aria-current="${state.current === r.id}">
@@ -449,11 +553,48 @@ function renderTips() {
 
 function renderAll() { applyStatic(); renderList(); renderDetail(); renderTips(); renderShopping(); }
 
-/* ---- Sweet / savoury filter ---- */
+/* ---- Section tabs (Food / Beverage / Make your own) and their facet rows ---- */
+function updateFacetVisibility() {
+  $("typefilter").hidden = state.section !== "food";
+  $("drinkfilter").hidden = state.section !== "beverage";
+  $("tempfilter").hidden = state.section !== "beverage";
+  $("coffeeGuideBtn").hidden = state.section !== "beverage";
+}
+function setSection(sec) {
+  state.section = sec;
+  $("sectiontabs").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.section === sec)));
+  updateFacetVisibility();
+  renderList();
+}
 function setTypeFilter(ty) {
   state.type = ty;
   $("typefilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.type === ty)));
   renderList();
+}
+function setDrinkFilter(d) {
+  state.drink = d;
+  $("drinkfilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.drink === d)));
+  renderList();
+}
+function setTempFilter(te) {
+  state.temp = te;
+  $("tempfilter").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.temp === te)));
+  renderList();
+}
+
+/* ---- Coffee guide ---- */
+function renderCoffeeGuide() {
+  $("coffeeGuideGrid").innerHTML = COFFEE_GUIDE.map(g => {
+    const total = g.parts.reduce((s, p) => s + p[1], 0);
+    const bar = g.parts.map(([key, val]) => `<span style="flex:${val} 0 0;background:${PART_COLORS[key] || "#999"}"></span>`).join("");
+    const legend = g.parts.map(([key]) => `<span><i style="background:${PART_COLORS[key] || "#999"}"></i>${esc(L2(PART_LABELS[key] || [key, key]))}</span>`).join("");
+    return `<div class="cg-card">
+        <h4>${esc(L2(g.title))}</h4>
+        <p>${esc(L2(g.desc))}</p>
+        <div class="cg-bar">${bar}</div>
+        <div class="cg-legend">${legend}</div>
+      </div>`;
+  }).join("");
 }
 
 /* ---- Add a recipe from a JSON file ---- */
@@ -468,7 +609,8 @@ function showUploadStatus(msg, ok) {
 }
 function addLocalRecipe(recipe) {
   recipe = Object.assign({}, recipe, { isLocal: true });
-  if (!recipe.type) recipe.type = "savoury";
+  if (!recipe.section) recipe.section = "food";
+  if (recipe.section === "food" && !recipe.type) recipe.type = "savoury";
   const dupe = allRecipes().some(r => r.id === recipe.id);
   if (dupe) { showUploadStatus(fmt("uploadDupe", { id: recipe.id }), false); return; }
   state.localRecipes.push(recipe);
@@ -481,7 +623,7 @@ function removeLocalRecipe(id) {
   state.localRecipes = state.localRecipes.filter(x => x.id !== id);
   saveLocal(LOCAL_KEY, state.localRecipes);
   if (state.current === id) {
-    const first = sorted()[0];
+    const first = sorted().find(x => recipeSection(x) === state.section) || sorted()[0];
     state.current = first ? first.id : null;
     $("grid").classList.remove("open");
   }
@@ -585,6 +727,21 @@ $("typefilter").addEventListener("click", e => {
   const b = e.target.closest("button[data-type]"); if (!b) return;
   setTypeFilter(b.dataset.type);
 });
+$("sectiontabs").addEventListener("click", e => {
+  const b = e.target.closest("button[data-section]"); if (!b) return;
+  setSection(b.dataset.section);
+});
+$("drinkfilter").addEventListener("click", e => {
+  const b = e.target.closest("button[data-drink]"); if (!b) return;
+  setDrinkFilter(b.dataset.drink);
+});
+$("tempfilter").addEventListener("click", e => {
+  const b = e.target.closest("button[data-temp]"); if (!b) return;
+  setTempFilter(b.dataset.temp);
+});
+$("coffeeGuideBtn").addEventListener("click", () => { renderCoffeeGuide(); $("coffeeGuideBackdrop").classList.add("open"); });
+$("coffeeGuideClose").addEventListener("click", () => $("coffeeGuideBackdrop").classList.remove("open"));
+$("coffeeGuideBackdrop").addEventListener("click", e => { if (e.target === $("coffeeGuideBackdrop")) $("coffeeGuideBackdrop").classList.remove("open"); });
 
 /* Add-recipe sheet: file upload or paste */
 $("openUpload").addEventListener("click", () => { $("uploadBackdrop").classList.add("open"); $("pasteInput").focus(); });
@@ -635,9 +792,19 @@ applyStatic();
     state.recipes = data.recipes || [];
     let last = null; try { last = localStorage.getItem("lastRecipe"); } catch (e) {}
     const hash = location.hash.slice(1);
-    const pick = [hash, last].find(id => state.recipes.some(r => r.id === id));
-    const first = sorted()[0];
-    state.current = pick || (first && first.id);
+    const pickId = [hash, last].find(id => state.recipes.some(r => r.id === id));
+    const pickRecipe = pickId && state.recipes.find(r => r.id === pickId);
+    if (pickRecipe) {
+      state.section = recipeSection(pickRecipe);
+      state.current = pickRecipe.id;
+    } else {
+      state.section = "food";
+      const firstInSection = sorted().find(r => recipeSection(r) === "food");
+      const fallback = firstInSection || sorted()[0];
+      state.current = fallback && fallback.id;
+    }
+    $("sectiontabs").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.section === state.section)));
+    updateFacetVisibility();
   } catch (e) { state.failed = true; }
   try { state.tips = (await (await fetch("kitchen.json", {cache: "no-store"})).json()).tips || []; } catch (e) {}
   renderAll();
